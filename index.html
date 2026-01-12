@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/new-logo-sb.png">
+    <title>Sami BENDRISS - Portfolio Communication</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Ajoutez cette ligne pour ForkAwesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <img src="assets/sb-logo.svg" alt="SB Logo" class="loader-logo">
+    </div>
+    
+    <!-- Page Transition -->
+    <div class="page-transition" id="pageTransition"></div>
+    
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Basculer le thème">
+        <svg class="moon-icon" viewBox="0 0 24 24">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+        <svg class="sun-icon" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="5" fill="#fff"/>
+            <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+    </button>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+    
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo logo-home">
+                <img src="assets/new-logo-sb.svg" alt="SB Logo" class="logo-svg-home">
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a class="nav-link" data-page="about">À propos</a></li>
+                <li><a class="nav-link" data-page="experience">Mes expériences</a></li>
+                <li><a class="nav-link" data-page="projects">Mes projets</a></li>
+                <li><button class="nav-cta-btn">Me contacter</button></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Home Page -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="gradient-sphere sphere-1"></div>
+            <div class="gradient-sphere sphere-2"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span style="--index: 0">SAMI</span> <span style="--index: 1">BENDRISS</span>
+            </h1>
+            <div class="typewriter-container">
+                <span class="typewriter-static">Je suis</span>
+                <span class="typewriter-dynamic">
+                    <span class="typewriter-text" id="typewriter"></span>
+                    <span class="typewriter-cursor">|</span>
+                </span>
+            </div>
+            <p class="hero-subtitle"><mark>Bonjour et bienvenue sur mon portfolio !</mark>
+                <span class="spacer" aria-hidden="true"></span>
+                Je suis à la recherche active d’un stage de 3 mois et demi pour le <b><span style="color: var(--primary);">16 mars 2025</span></b>.</p>
+            <div class="hero-cta">
+            </div>
+        </div>
+    </section>
+        
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Sami Bendriss. • Site conçu avec ❤ • Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

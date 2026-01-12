@@ -1,0 +1,4065 @@
+/* ===== STYLES DE BASE ===== */
+
+/* Playfair Display (bold) — fichier local */
+@font-face {
+    font-family: "PlayfairDisplay-Bold";
+    src: url("fonts/PlayfairDisplay-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Inter (variable) — fichier local */
+@font-face {
+    font-family: "Inter";
+    src: url("fonts/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+    font-weight: 200 800; /* plage de graisses du fichier variable */
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Manrope (variable) — fichier local */
+@font-face {
+    font-family: "Manrope";
+    src: url("fonts/Manrope-VariableFont_wght.ttf") format("truetype");
+    font-weight: 200 800; /* plage de graisses du fichier variable */
+    font-style: normal;
+    font-display: swap;
+}
+
+html {
+    font-synthesis-weight: none;
+    font-synthesis-style: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #3B82F6;
+    --secondary: #1E1E1E;
+    --accent: #10B981;
+    --light: #F7F7F7;
+    --gradient-1: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+    --gradient-2: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-3: linear-gradient(135deg, #FDE68A 0%, #3B82F6 100%);
+    --red: #DC2626;
+    --blue: var(--primary); /* ⟵ AJOUTER ceci */
+    --bg-primary-dark: #0a0a0a;
+    /* Couleurs pour les catégories */
+    --cat-strategies: #7C3AED;
+    --cat-creations:  #EA580C;
+    --cat-analyses:   #0C9488;
+    /* variantes “soft” (mêmes teintes que .tech-tag) */
+    --cat-strategies-soft: rgba(124, 58, 237, 0.15);
+    --cat-creations-soft:  rgba(234, 88, 11,  0.15);
+    --cat-analyses-soft:   rgba(12,  148,136, 0.15);
+}
+
+.spacer { display:block; height:15px; }
+
+mark {
+    background-color: var(--primary); /* fond rouge */
+    color: #FFFFFF;             /* texte blanc */
+    font-weight: bold;               /* AJOUTÉ : force le texte en gras */
+    padding: 0.1em 0.2em;     /* optionnel : un peu d'espace autour */
+    border-radius: 4px;       /* optionnel : coins arrondis */
+}
+
+mark.red {
+    background-color: var(--red); /* fond rouge */
+}
+
+/* Mode clair (par défaut) */
+body {
+    --bg-primary: #ffffff;
+    --bg-secondary: rgba(59, 130, 246, 0.1);
+    --bg-secondary-hover: rgba(59, 130, 246, 0.15);
+    --bg-nav: rgba(255, 255, 255, 0.9);
+    --bg-nav-scrolled: rgba(255, 255, 255, 0.95);
+    --text-primary: #000000;
+    --text-secondary: #4a4a4a;
+    --text-muted: #6a6a6a;
+    --text-dim: #8a8a8a;
+    --border-color: rgba(0, 0, 0, 0.1);
+    --card-bg: rgba(59, 130, 246, 0.05);
+    --card-bg-hover: rgba(59, 130, 246, 0.08);
+    --input-bg: rgba(0, 0, 0, 0.05);
+    --placeholder-color: rgba(0, 0, 0, 0.5);
+    
+    font-family: 'Inter', sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    cursor: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    --background-primary: rgba(59, 130, 246, 0.15)
+}
+
+/* Mode sombre */
+body.dark-mode {
+    --bg-primary: var(--bg-primary-dark);
+    --bg-secondary: rgba(255, 255, 255, 0.05);
+    --bg-secondary-hover: rgba(255, 255, 255, 0.08);
+    --bg-nav: rgba(10, 10, 10, 0.8);
+    --bg-nav-scrolled: rgba(10, 10, 10, 0.95);
+    --text-primary: #fff;
+    --text-secondary: #ccc;
+    --text-muted: #888;
+    --text-dim: #666;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --card-bg-hover: rgba(255, 255, 255, 0.05);
+    --input-bg: rgba(255, 255, 255, 0.05);
+    --placeholder-color: rgba(255, 255, 255, 0.5);
+}
+
+/* === Packages de couleur dominante (rouge/bleu) === */
+.theme-red {
+    --dom: var(--red);                    /* couleur principale */
+    --dom-bg: rgba(220, 38, 38, 0.10);    /* fond léger (mêmes nuances que le reste du site) */
+    --dom-bg-hover: rgba(220, 38, 38, 0.15);
+    --dom-shadow: rgba(220, 38, 38, 0.40);
+}
+  
+.theme-blue {
+    --dom: var(--blue);
+    --dom-bg: rgba(59, 130, 246, 0.10);
+    --dom-bg-hover: rgba(59, 130, 246, 0.15);
+    --dom-shadow: rgba(59, 130, 246, 0.40);
+}
+  
+/* Appliquer la couleur dominante au titre de section de la timeline */
+.timeline-section .section-timeline-title {
+    color: var(--dom, var(--text-primary));
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--gradient-1);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
+}
+
+.theme-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 30px rgba(59, 130, 246, 0.6);
+}
+
+.theme-toggle svg {
+    width: 24px;
+    height: 24px;
+    fill: #fff;  /* Ceci s'applique déjà aux deux icônes */
+    transition: all 0.3s ease;
+}
+
+/* Par défaut (mode clair) : afficher la lune */
+.theme-toggle .moon-icon {
+    display: block;
+}
+
+.theme-toggle .sun-icon {
+    display: none;
+}
+
+/* Mode sombre : afficher le soleil */
+body.dark-mode .theme-toggle .moon-icon {
+    display: none;
+}
+
+body.dark-mode .theme-toggle .sun-icon {
+    display: block;
+}
+
+/* Mobile theme toggle position */
+@media (max-width: 768px) {
+    .theme-toggle {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* Custom Cursor */
+.cursor {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgb(59, 130, 246); /* Reste bleu */
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transition: all 0.1s ease;
+}
+
+.cursor-follower {
+    width: 40px;
+    height: 40px;
+    background: rgba(59, 110, 255, 0.1); /* Reste bleu transparent */
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9998;
+    transition: all 0.3s ease;
+}
+
+/* Forcer le curseur par défaut sur mobile */
+@media (max-width: 768px) {
+    *, *::before, *::after {
+        cursor: auto !important;
+    }
+    
+    /* Supprimer tous les curseurs personnalisés */
+    .cursor {
+        display: none !important;
+    }
+}
+
+/* Page Container */
+.page-container {
+    min-height: auto;       /* ne force plus 100vh */
+    flex: 1 0 auto;         /* prend l'espace disponible (pousse le footer) */
+    display: none;
+    animation: pageIn 0.6s ease;
+}
+
+.page-container.active {
+    display: block;
+}
+
+@keyframes pageIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Loader */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--bg-primary); /* au lieu de #0a0a0a */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    transition: opacity 1s ease, visibility 1s ease;
+}
+
+.loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-logo {
+    height: 8rem;
+    width: auto;
+    animation: pulse 1.5s ease infinite;
+}
+
+.loader-text {
+    font-size: 4rem;
+    font-weight: 900;
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: pulse 1.5s ease infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 50px;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    background: var(--bg-nav); /* au lieu de rgba(10, 10, 10, 0.8) */
+    border-bottom: 1px solid var(--border-color); /* au lieu de rgba(255, 255, 255, 0.1) */
+    transition: all 0.3s ease;
+    min-height: 80px; /* AJOUTER : Hauteur minimale fixe */
+}
+
+nav.scrolled {
+    padding: 15px 50px;
+    background: var(--bg-nav-scrolled);
+    min-height: 70px; /* AJOUTER : Hauteur réduite mais fixe au scroll */
+}
+
+/* Mobile - Hauteur fixe aussi */
+@media (max-width: 800px) {
+    nav {
+        padding: 15px 20px;
+        min-height: 70px; /* AJOUTER : Hauteur fixe en mobile */
+    }
+    
+    nav.scrolled {
+        min-height: 60px; /* AJOUTER : Hauteur fixe réduite en mobile */
+    }
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo-svg {
+    height: 2rem; /* Ajustez la taille selon vos besoins */
+    width: auto;
+    display: block;
+}
+
+/* Supprimer le dégradé CSS du .logo puisque votre SVG a déjà le dégradé */
+.logo {
+    cursor: pointer;
+    display: inline-block;
+    /* background: var(--gradient-1); */ /* SUPPRIMER ces 3 lignes */
+    /* -webkit-background-clip: text; */
+    /* -webkit-text-fill-color: transparent; */
+    position: relative; /* AJOUTER pour positionner le pseudo-élément */
+    transition: all 0.3s ease; /* AJOUTER pour la transition */
+}
+
+/* AJOUTER : Barre horizontale sous le logo */
+.logo::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: width 0.3s ease;
+}
+
+/* AJOUTER : Effet au survol du logo */
+.logo:hover::after {
+    width: 100%;
+}
+
+/* Logo spécifique pour la page d'accueil */
+.logo-home {
+    position: relative;
+}
+
+.logo-svg-home {
+    height: 2.5rem; /* Plus grand que les 2rem normaux */
+    width: auto;
+    display: block;
+}
+
+/* Supprimer la barre horizontale pour le logo home */
+.logo-home::after {
+    display: none !important;
+}
+
+.logo-home:hover::after {
+    display: none !important;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--text-primary); /* au lieu de #fff */
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* FORCER la couleur primaire sur les liens actifs */
+.nav-links a.active {
+    color: var(--primary) !important;
+}
+
+/* Ajoutez cette règle pour le soulignement */
+.nav-links a.active::after {
+    width: 100% !important;
+    background: var(--primary) !important;
+}
+
+/* Mode sombre - garder la même couleur */
+body.dark-mode .nav-links a.active {
+    color: var(--primary) !important;
+}
+
+/* Garder le soulignement visible en mode sombre */
+body.dark-mode .nav-links a.active::after {
+    background: var(--primary) !important;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.nav-cta-btn {
+    padding: 10px 25px;
+    background: var(--gradient-1);
+    border: none;
+    border-radius: 25px;
+    color: #fff; /* au lieu de var(--text-primary)*/
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.nav-cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(59, 130, 246, 0.4);
+}
+
+/* Mobile Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+    position: relative;       /* AJOUT */
+    width: 44px;              /* AJOUT : hit area confortable */
+    height: 44px;             /* AJOUT */
+    justify-content: center;  /* AJOUT */
+    align-items: center;      /* AJOUT */
+    -webkit-tap-highlight-color: transparent; /* AJOUT (mobile) */
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 2px;
+    background: var(--text-primary); /* Utilise la couleur du texte principal */
+    transition: all 0.3s ease;
+}
+
+/* Croix blanche UNIQUEMENT quand le menu est ouvert */
+.nav-links.active ~ .menu-toggle span,
+.menu-toggle.active span {
+    background: #fff !important;
+}
+
+.menu-toggle.active { gap: 0; } /* centre l'ensemble */
+.menu-toggle.active span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 22px;    /* même largeur que le hamburger */
+    transform-origin: center;
+}
+.menu-toggle.active span:nth-child(1) {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* Forcer la croix à rester à droite même avec .scrolled */
+.menu-toggle.active {
+    position: fixed !important;
+    left: var(--menu-x) !important;  /* X du hamburger au moment du clic */
+    top:  var(--menu-y) !important;  /* Y du hamburger au moment du clic */
+    z-index: 10000 !important;
+}
+
+/* Ou si vous voulez être plus précis avec le responsive */
+@media (max-width: 800px) {
+    .menu-toggle.active {
+        position: fixed !important;
+        left: var(--menu-x) !important;  /* X du hamburger au moment du clic */
+        top:  var(--menu-y) !important;  /* Y du hamburger au moment du clic */
+        z-index: 10000 !important;
+    }
+}
+
+/* Mobile - Centrage vertical */
+@media (max-width: 800px) {
+    nav {
+        padding: 15px 20px;
+        min-height: 70px;
+    }
+    
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1400px;
+        margin: 0 auto;
+        height: 100%; /* AJOUTER : Prend toute la hauteur */
+        min-height: 40px; /* AJOUTER : Hauteur minimale pour le centrage */
+    }
+    
+    /* S'assurer que le logo et hamburger sont bien centrés */
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+    
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        cursor: pointer;
+        align-items: center; /* AJOUTER : Centre les barres du hamburger */
+        justify-content: center; /* AJOUTER : Centre verticalement */
+    }
+}
+
+
+
+/* ===== HOME PAGE ===== */
+
+.hero {
+    min-height: 85svh;   /* garde la taille minimale actuelle */
+    height: auto;        /* autorise l’agrandissement */
+    flex: 1 0 auto;      /* prend l’espace dispo et pousse le footer en bas */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0; /* Supprime l'espace après */
+}
+
+#home {
+    min-height: auto;
+    height: auto;
+}
+
+#home .hero {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.gradient-sphere {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.5;
+    animation: float 20s ease-in-out infinite;
+}
+
+.sphere-1 {
+    width: 600px;
+    height: 600px;
+    background: var(--gradient-1);
+    top: -200px;
+    right: -200px;
+}
+
+.sphere-2 {
+    width: 400px;
+    height: 400px;
+    background: var(--gradient-2);
+    bottom: -100px;
+    left: -100px;
+    animation-delay: -10s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    33% { transform: translate(30px, -30px) rotate(120deg); }
+    66% { transform: translate(-20px, 20px) rotate(240deg); }
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 1;
+    max-width: 1200px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Prend toute la hauteur du hero */
+    transform: translateY(60px); /* Descendez plus ou moins selon vos besoins */
+}
+
+.hero-title {
+    font-family: "PlayfairDisplay-Bold", serif;
+    font-size: clamp(3rem, 10vw, 8rem);
+    font-weight: 700; /* correspond au TTF fourni */
+    line-height: 1;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.hero-title span {
+    display: inline-block;
+    animation: slideUp 1s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+    animation-delay: calc(var(--index) * 0.1s);
+    transform: translateY(100%);
+}
+
+@keyframes slideUp {
+    to { transform: translateY(0); }
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    color: var(--text-muted);
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.8s;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+/* Typewriter Animation */
+.typewriter-container {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    margin: 20px 0 30px 0;
+    margin-bottom: 70px; /* Ajuste la valeur selon le rendu souhaité */
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.6s;
+}
+
+.typewriter-static {
+    color: var(--text-primary);
+    font-weight: 300;
+}
+
+.typewriter-dynamic {
+    display: inline-flex;
+    align-items: center;
+    min-width: 200px;
+}
+
+.typewriter-text {
+    color: var(--primary);
+    font-weight: bold;
+    display: inline-block;
+}
+
+.typewriter-cursor {
+    color: var(--primary);
+    font-weight: 300;
+    animation: blink 1s infinite;
+    display: inline-block;
+    margin-left: 2px;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+/* Animation de typing */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes deleteTyping {
+    from { width: 100%; }
+    to { width: 0; }
+}
+
+.hero-cta {
+    display: inline-flex;
+    gap: 20px;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.btn {
+    padding: 15px 40px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary {
+    background: var(--gradient-1);
+    color: #fff; /* au lieu de var(--text-primary)*/
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--text-primary);
+    border: 2px solid var(--text-primary); /* au lieu de #fff */
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
+}
+
+html, body { height: 100%; }
+
+body {
+    min-height: 100svh;          /* viewport “small” -> fiable sur mobile */
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+/* ===== ABOUT PAGE ===== */
+
+.about-page {
+    padding: 120px 50px 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-bottom: 12px !important;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 50px; /* RÉDUIT de 80px à 50px pour rapprocher les colonnes du titre */
+}
+
+/* Si la page-subtitle est vide ou inexistante, augmenter l'espace */
+.page-header:not(:has(.page-subtitle)) .page-title,
+.page-header .page-subtitle:empty + .page-title {
+    margin-bottom: 100px; /* au lieu de 20px par défaut */
+}
+
+
+.page-title {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 900;
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: slideUpFade 0.8s ease forwards;
+}
+
+@keyframes slideUpFade {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    opacity: 0;
+    animation: slideUpFade 0.8s ease forwards;
+    animation-delay: 0.2s;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px; /* Réduit de 80px à 40px */
+    align-items: start;
+    margin-bottom: 80px;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr; /* Une seule colonne */
+        gap: 30px; /* Réduit l'espace entre éléments */
+        margin-top: 20px; /* Encore moins d'espace en mobile */
+    }
+    
+    .about-text {
+        max-width: 100%; /* Le texte prend toute la largeur disponible */
+    }
+    
+    /* .about-image {
+        order: -1; /* Met l'image avant le texte si elle existe */
+    } */
+}
+
+.about-text {
+    opacity: 0;
+    animation: slideRightFade 0.8s ease forwards;
+    animation-delay: 0.4s;
+}
+
+@keyframes slideRightFade {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--primary);
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.about-image {
+    position: relative;
+    opacity: 0;
+    animation: slideLeftFade 0.8s ease forwards;
+    animation-delay: 0.6s;
+}
+
+@keyframes slideLeftFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.profile-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.profile-img-placeholder {
+    width: 100%;
+    aspect-ratio: 1;
+    background: var(--gradient-1);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8rem;
+    font-weight: 900;
+    color: rgba(255,255,255,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-img-placeholder::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+    transform: rotate(45deg);
+    animation: shine 3s ease-in-out infinite;
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+/* Section Compétences : même logique d'espacement que Logiciels */
+.skills-section { 
+    margin-bottom: 80px;
+    --primary: var(--red);
+    --bg-secondary: rgba(220, 38, 38, 0.1);
+    --bg-secondary-hover: rgba(220, 38, 38, 0.15);
+}
+
+/* Conserver les mêmes effets visuels que les logiciels, mais en rouge */
+.skills-section .software-card:hover {
+    border-color: var(--red);
+    box-shadow: 0 10px 30px rgba(220, 38, 38, 0.4);
+}
+
+/* Assombrissement au survol de la “vignette” d’icône (équivalent logiciels) */
+.skills-section .software-card:hover .software-logo,
+.skills-section .skill-card:hover .skill-icon {
+    background: rgba(220, 38, 38, 0.4);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* On réutilise .software-card pour la base (hover, fond, border, etc.)
+   => Dans le HTML, chaque carte a les 2 classes: "software-card skill-card" */
+.skill-card .skill-icon {
+    width: 75px; height: 75px; min-width: 75px;
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    padding: 10px; overflow: hidden; transition: all .3s ease;
+}
+.skill-card .skill-icon svg { width: 80%; height: 80%; stroke: var(--text-primary); }
+
+.skill-card:hover .skill-icon {
+    background: rgba(220, 38, 38, 0.4);
+    transform: scale(1.1);
+}
+
+/* Titres + tags concis (on réutilise .tech-tag existant pour les pastilles) */
+.skill-name { font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; }
+.skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.skill-tags .tech-tag { margin: 0; }
+
+
+/* Softwares Section */
+.softwares-section {
+    margin-bottom: 80px;
+    --bg-secondary: rgba(59, 130, 246, 0.1);    /* fond carte/logos (bleu léger) */
+    --bg-secondary-hover: rgba(59, 130, 246, 0.15);     /* survol léger */
+
+}
+
+/* Renforcement en mode sombre (meilleur contraste) */
+body.dark-mode .softwares-section {
+    --bg-secondary: rgba(59, 130, 246, 0.14);
+    --bg-secondary-hover: rgba(59, 130, 246, 0.22);
+}
+  
+/* (On garde l’assombrissement au survol des logos logiciels) */
+.softwares-section .software-card:hover .software-logo {
+    background: rgba(59, 130, 246, 0.40);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.softwares-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.software-card {
+    background: var(--bg-secondary); /* au lieu de rgba(255, 255, 255, 0.05) */
+    padding: 18px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1); /* au lieu de var(--border-color) */
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+    animation-delay: calc(var(--index) * 0.1s);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.software-card:hover {
+    transform: translateY(-5px);
+    background: var(--bg-secondary-hover); /* au lieu de rgba(255, 255, 255, 0.08) */
+    border-color: var(--primary);
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
+}
+
+.software-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.software-card:hover .skill-name,
+.software-card:hover .software-name,
+.software-card:hover .software-description {
+    color: var(--primary);
+}
+
+/* CSS pour la classe ajoutée par JavaScript */
+.software-name-adobe, 
+.software-name-google {
+    font-size: 1.0rem !important; /* Réduit de 1.2rem à 1.0rem */
+}
+
+/* Garder la taille normale sur mobile et tablette */
+@media (max-width: 909px) {
+    .software-name-adobe {
+        font-size: 1.2rem !important; /* Remet la taille normale sur mobile */
+    }
+}
+
+.software-level {
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    margin-bottom: 10px; /* Ajoute un espace sous les étoiles */
+}
+
+.software-logo {
+    width: 75px;
+    height: 75px;
+    min-width: 75px; /* Empêche le logo de rétrécir */
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.software-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* filter: brightness(0) invert(1); */ /* Supprimez ou commentez cette ligne */
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+/* Alternative plus spécifique si ça ne marche toujours pas *
+.software-logo .logo-full,
+.software-logo img.logo-full {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}*/
+
+/* Retirer le padding du conteneur pour ce logo */
+.software-logo:has(.logo-full) {
+    padding: 0;
+    overflow: hidden;
+}
+
+.software-card:hover .software-logo {
+    background: rgba(59, 130, 246, 0.4);
+    transform: scale(1.1);
+}
+
+.software-card:hover .software-logo img {
+    opacity: 1;
+}
+
+.star {
+    width: 20px;
+    height: 20px;
+    color: #FFFAB6; /* Jaune blanc (émoji iOS) */
+    stroke: #FBC821; /* Jaune orangé (contour émoji iOS) */
+    stroke-width: 1.5;
+}
+
+.star.half {
+    color: #FFFAB6; /* Jaune blanc (émoji iOS) */
+    stroke: #FBC821; /* Jaune orangé (contour émoji iOS) */
+    position: relative;
+}
+
+.star.empty {
+    opacity: 0.3;
+    fill: none;
+    stroke: #FBC821; /* Jaune orangé (plus proche de l'émoji iOS) */
+    stroke-width: 2;
+}
+
+.software-description {
+    font-size: 0.9rem;
+    color: var(--text-muted); /* au lieu de #888 */
+    margin: 0;
+}
+
+/* Largeur large par défaut */
+.software-card-wide {
+    grid-column: span 2; /* largeur double */
+}
+
+/* Sur tablette, ne plus forcer le centrage ni la ligne seule */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .software-card-wide {
+        grid-column: span 2; /* conserve la largeur */
+        margin: 0; /* supprime le centrage */
+        justify-self: start; /* reste aligné avec les autres */
+    }
+}
+
+
+/* Sur mobile : revenir à 1 colonne */
+@media (max-width: 767px) {
+    .software-card-wide {
+        grid-column: span 1;
+    }
+}
+
+.fun-fact {
+    font-size: 0.8rem;
+    color: var(--red);
+    font-style: italic;
+    margin-top: 8px;
+    margin-bottom: 0;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.software-card:hover .fun-fact {
+    opacity: 1;
+    transform: translateX(3px);
+}
+
+/* Responsive : sur mobile, revenir à 1 colonne */
+@media (max-width: 768px) {
+    .software-card-wide {
+        grid-column: span 1;
+    }
+}
+
+/* Languages Section */
+.languages-section {
+    background: var(--card-bg);
+    padding: 60px;
+    border-radius: 30px;
+    margin-bottom: 100px;
+    margin-top: 100px; /* Ajouter cette ligne */
+}
+
+.languages-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colonnes par défaut */
+    gap: 40px; /* Réduit de 40px à 20px */
+}
+
+/* Quand l'espace devient insuffisant, passer en 2x2 */
+@media (max-width: 768px) {
+    .languages-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+        gap: 30px;
+        padding: 0 0px;
+    }
+}
+
+/* Mobile très petit : 1 colonne */
+@media (max-width: 400px) {
+    .languages-grid {
+        grid-template-columns: 1fr; /* UNE seule colonne */
+        gap: 15px;
+        padding: 0 20px;
+    }
+}
+
+.language-item {
+    text-align: center;
+    opacity: 0;
+    animation: scaleIn 0.6s ease forwards;
+    animation-delay: calc(var(--index) * 0.1s);
+    transition: transform 0.3s ease;
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.language-flag {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    position: relative;
+}
+
+.flag-svg {
+    width: 90px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid rgb(103 103 109);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet au survol */
+.language-item:hover .flag-svg {
+    transform: scale(1.1);
+    border-color: var(--primary);
+}
+
+.language-name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* défaut */
+.language-item { --lang-accent: var(--primary); }
+
+/* overrides par langue */
+.language-item.lang-english { --lang-accent: #ff002b; }
+.language-item.lang-french  { --lang-accent: #007bff; }
+.language-item.lang-spanish { --lang-accent: #faa200; }
+.language-item.lang-arabic  { --lang-accent: #00c95a; }
+
+/* au survol : tout suit l’accent */
+.language-item:hover { color: var(--lang-accent); }
+.language-item:hover .flag-svg { border-color: var(--lang-accent); }
+.language-item:hover .language-description { color: inherit !important; }
+
+
+.language-description {
+    color: var(--text-muted); /* au lieu de #888 */
+    font-weight: 500;
+}
+
+.language-item:hover .language-description {
+    color: var(--primary);
+}
+
+/* Interests Section */
+.interests-section {
+    background: var(--card-bg);
+    padding: 60px 60px 12px;    /* ← bas fortement réduit */
+    border-radius: 30px;
+    margin-bottom: 0;           /* ← aucun écart sous la section */
+    margin-top: 100px; /* Ajouter cette ligne */
+}
+
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    justify-items: center; /* Centre les éléments dans leurs cellules */
+}
+
+/* Alternative plus robuste pour différentes tailles d'écran */
+@media (min-width: 480px) and (max-width: 909px) {
+    .interests-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .interest-item:nth-child(3):last-child {
+        grid-column: 1 / -1;
+        justify-self: center;
+    }
+}
+
+.interest-item {
+    text-align: center;
+    opacity: 0;
+    animation: scaleIn 0.6s ease forwards;
+    animation-delay: calc(var(--index) * 0.1s);
+    transition: transform 0.3s ease;
+}
+
+.interest-icon {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    position: relative;
+}
+
+/* Style pour les images SVG des centres d'intérêt */
+.interest-svg {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+/* Effet au survol */
+.interest-item:hover .interest-svg {
+    transform: scale(1.1);
+}
+
+.interest-name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.interest-item:hover .interest-name {
+    color: var(--primary);
+}
+
+.interest-description {
+    color: var(--text-muted); /* au lieu de #888 */
+    font-weight: 500;
+}
+
+.interest-item:hover .interest-description {
+    color: var(--primary);
+}
+
+
+
+/* ===== EXPERIENCE PAGE ===== */
+
+.experience-page {
+    padding: 120px 50px 30px !important;
+    max-width: 1400px; /* Plus large pour accommoder les deux colonnes */
+    margin: 0 auto;
+}
+
+.experience-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    margin-top: 120px;
+}
+
+.timeline-section {
+    position: relative;
+}
+
+.section-timeline-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px; /* CHANGER de "10px" à "40px" */
+    text-align: center;
+    color: var(--text-primary); /* au lieu de var(--primary) */
+    /* min-height: 60px; /* AJOUTER cette ligne */
+    /* display: flex; /* AJOUTER cette ligne */
+    /* align-items: center; /* AJOUTER cette ligne */
+    /* justify-content: center; /* AJOUTER cette ligne */
+}
+
+/* Timeline générale */
+.timeline {
+    position: relative;
+    padding: 40px 0;
+    padding-top: 0; /* AJOUTER cette ligne */
+}
+
+.timeline-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+/* Ligne verticale pour chaque section */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 30px; /* au lieu de 50% */
+    top: 0; /* CHANGER de "top: 30px" à "top: 0" */
+    bottom: 30px;
+    width: 2px;
+    background: #000000; /* Blanc par défaut en mode sombre */
+    transform: translateX(-50%);
+}
+
+body.dark-mode .timeline::before {
+    background: #FFFFFF;
+}
+
+.timeline-logo {
+    width: 75px;
+    height: 75px;
+    min-width: 75px;
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.timeline-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* filter: brightness(0) invert(1); */ /* Supprimez ou commentez cette ligne */
+    opacity: 1; /* Au lieu de 0.8 */
+    transition: all 0.3s ease;
+}
+
+.logo-full {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important; /* ou 'contain' selon votre préférence */
+    padding: 0 !important;
+}
+
+/* Retirer le padding du conteneur pour ce logo */
+.timeline-logo:has(.logo-full) {
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Logo full mais réduit */
+.logo-full.logo-reduced {
+    width: 85% !important;  /* Ajustez ce pourcentage selon vos besoins */
+    height: 85% !important;
+    margin: auto; /* Centre le logo dans son conteneur */
+}
+
+/* Logo full mais réduit (HORIZONTALEMENT) */
+.logo-full.logo-reduced-horizontal {
+    width: 80% !important;  /* Ajustez ce pourcentage selon vos besoins */
+    height: 40% !important;
+    margin: auto; /* Centre le logo dans son conteneur */
+}
+
+/* Classe générique pour tous les logos thématiques */
+.logo-dark {
+    display: none;
+}
+
+.logo-light {
+    display: block;
+}
+
+/* Mode sombre */
+body.dark-mode .logo-light {
+    display: none;
+}
+
+body.dark-mode .logo-dark {
+    display: block;
+}
+
+.contact-logo.montreuil-dark,
+.contact-logo.montreuil-light {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;  /* Même taille que les autres logos */
+    height: 70%;
+    object-fit: contain;
+}
+
+/* Si :has() n'est pas supporté, utilisez cette alternative : *
+.timeline-logo.full-container {
+    padding: 0;
+}*/
+
+.timeline-item {
+    margin-bottom: 50px; /* au lieu de 60px, ou ajustez selon vos besoins */
+    width: calc(100% - 50px); /* au lieu de 50% */
+    margin-left: 30px; /* pour laisser de la place à gauche */
+    padding-left: 40px; /* garder le padding */
+    padding-right: 0;
+    justify-content: flex-start; /* au lieu de flex-end */
+}
+
+/* Optionnel : retirer la marge du dernier élément */
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-content {
+    background: var(--bg-secondary);
+    padding: 25px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+    position: relative;
+    max-width: none; /* ou une valeur plus grande comme 700px */
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: scale(1.02);
+    border-color: var(--primary);
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
+}
+
+.timeline-content:hover .timeline-logo {
+    background: rgba(59, 130, 246, 0.4);
+    transform: scale(1.05);
+}
+
+.timeline-content:hover .timeline-logo img {
+    opacity: 1;
+}
+
+.timeline-info {
+    flex: 1;
+}
+
+.timeline-icon {
+    position: absolute;
+    top: 50%; /* Retour au centre */
+    /* SUPPRIMER la ligne: transform: translateY(-50%); /* Ajouté pour centrer verticalement */
+    left: -62px; /* position fixe à gauche */
+    right: auto;
+    width: 40px;
+    height: 40px;
+    background: var(--gradient-1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: 0 0 0 4px #FFFFFF;
+    z-index: 1; /* Ajouté pour s'assurer qu'il est au-dessus */
+}
+
+/* AJOUTEZ cette nouvelle règle pour compenser le décalage */
+.timeline-item .timeline-icon {
+    top: calc(50% - 15px); /* Compense le gap de timeline-header */
+}
+
+.timeline-icon svg {
+    display: none;
+}
+
+/* Timeline icon avec SVG */
+.timeline-icon-svg {
+    background: var(--bg-primary-dark) !important; /* Fond noir */
+    color: #FFFFFF; /* Icônes blanches */
+    box-shadow: 0 0 0 4px #FFFFFF;
+    transition: all 0.3s ease;
+}
+
+.timeline-icon-svg svg {
+    width: 20px;
+    height: 20px;
+    stroke: var(--bg-primary-dark);
+}
+
+/* Effet au survol */
+.timeline-content:hover .timeline-icon-svg {
+    /* NE PAS ajouter de transform ici --- transform: translateY(-50%) scale(1.1); /* Garde le centrage vertical */
+    background: var(--bg-primary-dark) !important;
+}
+
+/* Mode clair - Inversion des icônes timeline */
+body.dark-mode .timeline-icon-svg {
+    background: #FFFFFF !important;
+    color: var(--bg-primary-dark);
+    box-shadow: 0 0 0 4px var(--bg-primary-dark);
+}
+
+body.dark-mode .timeline-icon-svg svg {
+    stroke: var(--bg-primary-dark);
+}
+
+body.dark-mode .timeline-content:hover .timeline-icon-svg {
+    background: #FFFFFF !important;
+}
+
+/* Ajuster les marges existantes */
+.timeline-date {
+    color: var(--text-primary);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.timeline-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--primary);
+}
+
+.timeline-company {
+    color: var(--text-muted);
+    margin-bottom: 0;
+}
+
+/* Marges uniformes pour toutes les listes dans la timeline */
+
+.timeline-description {
+    line-height: 1.6;
+    color: var(--text-primary);
+    margin-top: 0;
+    margin-bottom: 0; /* Assure une marge uniforme */
+}
+
+/* Style uniforme pour toutes les listes dans les descriptions */
+.timeline-description li {
+    margin-left: 20px; /* Marge uniforme à gauche */
+    margin-bottom: 8px; /* Espace uniforme entre les éléments */
+    padding-left: 5px; /* Petit espace après la puce */
+    list-style-type: disc; /* Force les puces rondes */
+    list-style-position: outside; /* Place les puces à l'extérieur */
+    text-indent: 0; /* Pas d'indentation supplémentaire */
+    padding-left: 10px; /* Espace pour aligner le texte après la puce */
+}
+
+/* Supprime la marge du dernier élément de liste */
+.timeline-description li:last-child {
+    margin-bottom: 0;
+}
+
+/* S'assurer que les paragraphes dans les descriptions ont aussi des marges uniformes */
+.timeline-description p {
+    margin-bottom: 8px;
+}
+
+.timeline-description p:last-child {
+    margin-bottom: 0;
+}
+
+/* Style spécifique pour les éléments de liste mixés avec du texte */
+.timeline-description > li {
+    margin-top: 8px; /* Ajoute un espace avant la première puce si elle suit du texte */
+}
+
+.timeline-description > li:first-child {
+    margin-top: 8px; /* Espace uniforme même pour le premier élément */
+}
+
+/* Responsive - garde les mêmes marges sur mobile */
+@media (max-width: 768px) {
+    .timeline-description li {
+        margin-left: 18px; /* Légèrement réduit sur mobile */
+        margin-bottom: 6px; /* Espace légèrement réduit sur mobile */
+        padding-left: 8px; /* Ajuste le padding pour mobile */
+    }
+    
+    .timeline-description > li:first-child {
+        margin-top: 6px;
+    }
+}
+
+/* Colonne gauche (Expériences professionnelles) en rouge */
+.timeline-left .timeline-title {
+    color: var(--red) !important; /* Rouge au lieu du bleu */
+}
+
+.timeline-left .timeline-content {
+    background: rgba(220, 38, 38, 0.05) !important; /* Fond rouge léger */
+}
+
+.timeline-left .timeline-content:hover {
+    border-color: var(--red) !important; /* Bordure rouge au survol */
+    box-shadow: 0 10px 30px rgba(220, 38, 38, 0.4) !important; /* Ombre rouge */
+    background: rgba(220, 38, 38, 0.08) !important; /* Fond rouge au survol */
+}
+
+/* AJOUTER : Fond des logos par défaut en rouge */
+.timeline-left .timeline-logo {
+    background: rgba(220, 38, 38, 0.1) !important; /* Fond logo rouge par défaut */
+}
+
+.timeline-left .timeline-content:hover .timeline-logo {
+    background: rgba(220, 38, 38, 0.4) !important; /* Fond logo rouge au survol */
+}
+
+/* Colonne droite (Parcours scolaire) en bleu principal */
+.timeline-right .timeline-title {
+    color: var(--primary) !important; /* Bleu principal (#3B82F6) */
+}
+
+.timeline-right .timeline-content {
+    background: rgba(59, 130, 246, 0.05) !important; /* Fond bleu principal léger */
+}
+
+.timeline-right .timeline-content:hover {
+    border-color: var(--primary) !important; /* Bordure bleu principal au survol */
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4) !important; /* Ombre bleu principal */
+    background: rgba(59, 130, 246, 0.08) !important; /* Fond bleu principal au survol */
+}
+
+/* Fond des logos par défaut en bleu principal */
+.timeline-right .timeline-logo {
+    background: rgba(59, 130, 246, 0.1) !important;
+}
+
+.timeline-right .timeline-content:hover .timeline-logo {
+    background: rgba(59, 130, 246, 0.4) !important;
+}
+
+/* Badge collé à la date (style proche de project-level) */
+.date-badge{
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: .85rem;
+    line-height: 1;
+    font-weight: 700;
+    margin-left: 0;         /* géré plus bas */
+    white-space: nowrap;    /* le badge reste sur une seule “capsule” */
+}
+  
+/* Couleurs par colonne */
+.timeline-left  .date-badge{  background: rgba(220,38,38,.15); color: #DC2626; } /* rouge */
+.timeline-right .date-badge{  background: rgba(59,130,246,.15); color: #3B82F6; } /* bleu */
+
+/* (optionnel) mode sombre, un peu plus d’opacité */
+body.dark-mode .timeline-left  .date-badge{  background: rgba(220,38,38,.22); }
+body.dark-mode .timeline-right .date-badge{  background: rgba(59,130,246,.22); }
+
+/* Exception : "Bac +3" doit reprendre le code couleur de project-level (rouge) */
+.timeline-content .timeline-date .date-badge.red {
+    background: var(--red);
+    color: #fff;
+}
+
+/* La ligne de date occupe la largeur et pousse le badge à droite */
+.timeline-content .timeline-date {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px 10px; /* espace entre libellé et badge si besoin */
+}
+  
+/* Badge à l'extrême droite de la carte */
+.timeline-content .timeline-date .date-badge {
+    margin-left: auto;
+}
+
+/* === TEMPORARY OVERRIDE — date-badge = couleurs des boutons "Voir la présentation" ===
+   Bouton modal (.project-link) => background: rgb(0,160,100); color: #fff
+   On applique la même teinte :
+   - Texte du badge  : rgb(0,160,100)
+   - Fond du badge   : rgba(0,160,100,0.15) (clair) / 0.22 (sombre)
+   Pour revenir à l’ancien système (rouge/bleu, exception Bac+3, etc.),
+   commente ou supprime ce bloc. Les anciennes règles restent intactes plus haut. */
+
+.timeline-content .timeline-date .date-badge,
+.timeline-content .timeline-date .date-badge.date-level {
+    color: rgb(0,160,100) !important;
+    background: rgba(0,160,100,0.15) !important;
+}
+   
+body.dark-mode .timeline-content .timeline-date .date-badge,
+body.dark-mode .timeline-content .timeline-date .date-badge.date-level {
+    background: rgba(0,160,100,0.22) !important;
+}
+
+/* === /TEMPORARY OVERRIDE === */   
+
+/* Responsive */
+
+/* Tablette */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .experience-container {
+        gap: 40px; /* Réduit l'espace entre colonnes */
+    }
+
+    .timeline::before {
+        left: 30px; /* Position X de la ligne */
+    }
+    
+    .timeline-icon {
+        left: -47px !important; /* Position X de l'icône */
+    }
+
+    .timeline-item {
+        width: calc(100% - 40px); /* Augmente la largeur */
+        margin-left: 20px;
+        padding-left: 35px;
+    }
+}
+
+@media (max-width: 1200px) and (min-width: 769px) {
+    .experience-container {
+        gap: 30px;
+        max-width: 1200px;
+    }
+    
+    .timeline-content {
+        max-width: 100%;
+    }
+
+    .section-timeline-title {
+        min-height: 70px; /* Force la même hauteur */
+    }
+    
+    .timeline {
+        padding-top: 0; /* S'assure que les deux démarrent au même niveau */
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    /* Section Expérience - Responsive */
+    .experience-container {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .experience-page {
+        padding: 120px 20px 80px; /* au lieu de 50px */
+    }
+
+    .timeline-item {
+        /* width: calc(100% - 30px); */
+        padding-left: 40px; /* RÉDUIRE de 70px à 40px */
+        margin-left: 10px; /* RÉDUIRE aussi la marge */
+    }
+    
+    .timeline::before {
+        left: 20px; /* Position X de la ligne verticale */
+    }
+    
+    .timeline-icon {
+        left: -62px !important; /* Position X de l'icône */
+        /* Pour centrer : left = position ligne - (largeur icône / 2) */
+        /* Exemple : 30px - 20px = 10px */
+        top: 50% !important; /* Force le centrage sur mobile */
+        transform: translateY(-50%) !important; /* Garde seulement le centrage vertical */
+    }
+    
+    .timeline-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .timeline-logo {
+        width: 60px;
+        height: 60px;
+        min-width: 60px;
+    }
+    
+    .section-timeline-title {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .timeline {
+        padding: 20px 0;
+    }
+    
+    .timeline-content {
+        margin-right: 10px; /* Marge à droite de 20px */
+        /* padding: 20px; */
+    }
+
+    .timeline-content .timeline-date {
+        justify-content: flex-start; /* on n’essaie plus d'étirer */
+        flex-wrap: wrap;
+        gap: 0 8px;     /* espace horizontal seulement quand c’est sur la même ligne */
+    }
+
+    .timeline-content .timeline-date .date-badge {
+        margin-left: 0 !important;  /* aucun “blanc” en début de ligne quand le badge revient à la ligne */
+    }
+}
+
+
+
+/* ===== PROJECTS PAGE ===== */
+
+.projects-page {
+    padding: 120px 30px 80px; /* Réduit de 50px à 30px */
+    max-width: 1400px;
+    margin: 0 auto;
+}
+@media (max-width: 1200px) {
+    .projects-page {
+        padding: 120px 30px 80px; /* Au lieu de 20px sur mobile */
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-page {
+        padding: 120px 30px 80px; /* Au lieu de 20px sur mobile */
+    }
+}
+
+.projects-filter {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+/* 2x2 dès que l'espace est insuffisant (mobile/tablette) */
+@media (max-width: 768px) {
+    .projects-filter {
+      display: grid;                 /* remplace le flex */
+      grid-template-columns: 1fr 1fr;
+      gap: 14px 24px;                /* (row-gap / column-gap) ajuste si besoin */
+    }
+  
+    /* Colonne de gauche : alignée vers la droite (vers le centre) */
+    .projects-filter .filter-btn:nth-child(1),
+    .projects-filter .filter-btn:nth-child(3) {
+      justify-self: end;
+      text-align: right;
+    }
+  
+    /* Colonne de droite : alignée vers la gauche (vers le centre) */
+    .projects-filter .filter-btn:nth-child(2),
+    .projects-filter .filter-btn:nth-child(4) {
+      justify-self: start;
+      text-align: left;
+    }
+  }  
+
+.filter-btn {
+    padding: 10px 25px;
+    background: var(--bg-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    font-size: 0.9rem;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--gradient-1);
+    border-color: transparent;
+    /* transform: translateY(-2px); */
+    color: #fff !important; /* Force le texte en blanc */
+    font-weight: bold;
+}
+
+.projects-count {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-primary);
+    margin: 40px 0 30px 0;
+    opacity: 0;
+    animation: fadeIn 0.6s ease forwards;
+    animation-delay: 0.4s;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+/* Responsive automatique quand l'écran est trop petit */
+@media (max-width: 1200px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animation pour les projets */
+.fadeInUp {
+    animation: fadeInUp 0.5s ease; /* au lieu de '... ease forwards' */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project-card {
+    background: var(--card-bg); /* au lieu de rgba(255, 255, 255, 0.03) */
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid #000000;
+    box-shadow: 0 0 0 4px transparent; /* 4px transparents */
+    box-sizing: border-box; /* Important pour que la bordure soit incluse dans la taille */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Mode clair - bordure noire */
+body.dark-mode .project-card {
+    border: 1px solid #FFFFFF;
+    box-shadow: 0 0 0 4px transparent; /* 4px transparents */
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--primary); /* Garde la bordure blanche */
+    box-shadow: 0 0 0 4px var(--primary), 0 20px 40px rgba(255, 255, 255, 0.3) !important; /* 4px bleus + ombre */
+}
+
+/* Mode clair - bordure noire au survol */
+body.dark-mode .project-card:hover {
+    border: 1px solid var(--primary); 
+    box-shadow: 0 0 0 4px var(--primary), 0 20px 40px rgba(255, 255, 255, 0.3) !important; /* 4px bleus + ombre */
+}
+
+/* === PRESETS CATÉGORIES === */
+.project-card[data-category="strategies"],
+.project-modal.modal-strategies {
+    --cat-color: var(--cat-strategies);
+    --cat-bg-soft: var(--cat-strategies-soft);
+}
+
+.project-card[data-category="creations"],
+.project-modal.modal-creations {
+    --cat-color: var(--cat-creations);
+    --cat-bg-soft: var(--cat-creations-soft);
+}
+
+.project-card[data-category="analyses"],
+.project-modal.modal-analyses {
+    --cat-color: var(--cat-analyses);
+    --cat-bg-soft: var(--cat-analyses-soft);
+}
+
+/* === APPLICATION DES PRESETS === */
+.project-card[data-category] .tech-tag /*,
+.project-card[data-category] .project-category /*,
+.project-modal .modal-project-category */ {
+    background: var(--cat-bg-soft) !important;
+    color: var(--cat-color) !important;
+}
+
+.project-card[data-category] .project-category {
+    background: var(--cat-color) !important;
+    color: #FFFFFF !important;
+    font-weight: bold;
+}
+
+/* Override ciblé : retire le gras uniquement des tech-tag */
+/* .project-card[data-category] .tech-tag { font-weight: normal !important; } /* ou 'normal' */
+
+.project-image {
+    width: 100%;
+    height: auto;
+    max-height: 250px; /* Taille maximale raisonnable */
+    object-fit: cover;
+    aspect-ratio: 16/9; /* Maintient le ratio 1920x1080 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: 900;
+    border-bottom: 1px solid #000000;
+    color: rgba(255,255,255,0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Mode clair - bordure noire */
+body.dark-mode .project-image {
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.project-image img {
+    width: 100%; /* Réduit la taille de l'image à 80% du conteneur */
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Frame 50px */
+.icon-frame {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Icône rendue via CSS uniquement */
+.icon-frame::after {
+    content: "";
+    display: block;
+    width: 70%;
+    height: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+/* Couleurs de frame selon data-category */
+.project-card[data-category="strategies"] .icon-frame { background-color: var(--cat-strategies); }
+.project-card[data-category="creations"]  .icon-frame { background-color: var(--cat-creations); }
+.project-card[data-category="analyses"]   .icon-frame { background-color: var(--cat-analyses); }
+
+/* SVG par data-category (en CSS uniquement) */
+.project-card[data-category="strategies"] .icon-frame::after {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='10'/><polygon points='16.24,7.76 14.12,14.12 7.76,16.24 9.88,9.88'/></svg>");
+}
+.project-card[data-category="creations"] .icon-frame::after {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 19.5l7-7 3 3-7 7-3-3z'/><path d='M18 13.5l-1.5-7.5L2 2.5l3.5 14.5L13 18.5l5-5z'/><path d='M2 2.5l7.586 7.586'/><circle cx='11' cy='11.5' r='2'/></svg>");
+}
+.project-card[data-category="analyses"] .icon-frame::after {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='11' cy='11' r='8'/><path d='m21.5 21.5-4.35-4.35' stroke-width='3'/><path d='M8.5 8a4 4 0 0 0 0 6'/></svg>");
+}
+
+.project-image .icon-frame {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 0;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    pointer-events: none;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.1); /* Zoom de 110% au survol */
+}
+
+.project-card:hover .project-image::after {
+    opacity: 1;
+}
+
+.project-card[data-category="strategies"] .project-image {
+    background: linear-gradient(135deg, #7C3AED 0%, #A855F7 50%, #C084FC 100%) !important;
+}
+.project-card[data-category="creations"] .project-image {
+    background: linear-gradient(135deg, #EA580C 0%, #F97316 50%, #FB923C 100%) !important;
+}
+.project-card[data-category="analyses"] .project-image {
+    background: linear-gradient(135deg, #0D9488 0%, #14B8A6 50%, #2DD4BF 100%) !important;
+}
+
+/*
+.project-card[data-category="strategies"] .project-separator {
+    background: var(--cat-strategies) !important;
+}
+.project-card[data-category="creations"] .project-separator {
+    background: var(--cat-creations) !important;
+}
+.project-card[data-category="analyses"] .project-separator {
+    background: var(--cat-analyses) !important;
+}
+*/
+
+/* Ajouter après la ligne 1808 dans style.css */
+.filter-btn[onclick*="all"]:not(.active) {
+    background: rgba(59, 130, 246, 0.2); /* Bleu léger */
+}
+
+.filter-btn:not(.active)[onclick*="strategies"] {
+    background: rgba(124, 58, 237, 0.2);
+}
+.filter-btn:not(.active)[onclick*="creations"] {
+    background: rgba(234, 88, 12, 0.2);
+}
+.filter-btn:not(.active)[onclick*="analyses"] {
+    background: rgba(13, 148, 136, 0.2);
+}
+
+.filter-btn:not(.active):hover {
+    background: var(--gradient-1) !important;
+    border-color: transparent !important;
+    transform: translateY(-2px) !important;
+    color: #fff !important;
+    font-weight: bold !important;
+    box-shadow: 0 5px 20px rgba(59, 130, 246, 0.4) !important;
+}
+
+.project-separator {
+    width: 100%;
+    height: 20px;
+    border-bottom: 1px solid #000000; /* Bordure noire en mode clair */
+}
+
+/* Mode clair - bordures noires */
+body.dark-mode .project-separator {
+    border-bottom: 1px solid #FFFFFF; /* Bordure blanche en mode sombre */
+}
+
+/* Conteneur pour les outils/logiciels */
+.project-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #000000; /* Noir par défaut en mode clair */
+}
+
+/* Mode clair - bordure noire */
+body.dark-mode .project-tools {
+    border-bottom: 1px solid #FFFFFF;
+}
+
+/* Style inversé pour les tags d'outils */
+.tool-tag {
+    padding: 5px 12px;
+    background: rgba(0, 0, 0, 0.9); /* Fond noir/clair */
+    color: #FFFFFF; /* Texte blanc */
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* Mode clair - Inversion des tool-tags */
+body.dark-mode .tool-tag {
+    background: #FFFFFF; /* Fond blanc */
+    color: #000000; /* Texte noir */
+}
+
+body.dark-mode .tool-tag:hover {
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.3);
+}
+
+.tools-label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--text-primary);
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.tools-label svg {
+    width: 14px;
+    height: 14px;
+    fill: var(--text-primary);
+}
+
+.project-content {
+    padding: 30px; /* padding normal */
+    position: relative; /* AJOUTER cette ligne */
+}
+
+.project-category {
+    display: inline-block;
+    padding: 5px 15px;
+    background: rgba(0, 0, 0, 0.9); /* Fond noir/sombre */
+    color: #FFFFFF; /* Texte blanc */
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Mode sombre - Inversion de project-category */
+body.dark-mode .project-category {
+    background: #FFFFFF; /* Fond blanc */
+    color: #000000; /* Texte noir */
+}
+
+.project-level {
+    display: inline-block;
+    padding: 5px 15px;
+    background: var(--red); /* Rouge avec opacité */
+    border-radius: 15px;
+    font-size: 0.8rem;
+    color: #FFFFFF; /* Rouge plus intense pour le texte */
+    margin-bottom: 15px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-weight: bold;
+}
+
+/* Génération automatique du texte */
+.project-card[data-level="but1"] .project-level::after {
+    content: "BUT 1";
+}
+
+.project-card[data-level="but2"] .project-level::after {
+    content: "BUT 2";
+}
+
+.project-card[data-level="but3"] .project-level::after {
+    content: "BUT 3";
+}
+
+/* Lire "project-category" AVANT "project-level" lorsqu'ils se chevauchent */
+.project-card .project-category { position: relative; z-index: 2; }
+.project-card .project-level    { z-index: 1; } /* déjà en position: absolute */
+
+/* Force le retour à la ligne après la catégorie quand chevauchent */
+.project-card.badges-stacked .project-category::after {
+    content: none;
+}
+
+.project-card.badges-stacked .project-category { margin-bottom: 4px !important; }
+
+/* Level conserve sa largeur (non déformée) et se place juste sous la catégorie */
+.project-card.badges-stacked .project-level {
+  position: static !important;      /* quitte le absolute uniquement si chevauchent */
+  top: auto !important;
+  right: auto !important;
+  display: inline-flex !important;   /* largeur auto selon le contenu */
+  width: max-content;
+  white-space: nowrap;               /* pas de retour interne dans le badge */
+  margin: 0 0 15px 0 !important;   /* même marge finale vers le titre que .project-category (15px) */
+}  
+
+.project-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.project-description {
+    color: var(--text-muted); /* au lieu de #888 */
+    line-height: 1.6;
+    margin-bottom: 15px; /* au lieu de 20px */
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 5px; /* LIGNE EN PLUS */
+}
+
+.tech-tag {
+    padding: 5px 12px;
+    background: var(--bg-secondary); /* au lieu de rgba(255, 255, 255, 0.05) */
+    color: var(--text-secondary); /* au lieu de #ccc */
+    border-radius: 12px;
+    font-size: 0.8rem;
+}
+
+.project-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    /* background: var(--primary); */
+    background: rgb(0, 160, 100);
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.project-link:hover {
+    /* background: #60A5FA; */
+    background: #10B981;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+}
+
+.project-link svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* ===== STYLES POUR LA MODAL DE PROJET ===== */
+
+/* CORRECTIONS POUR LES MODALES DE PROJETS */
+
+/* 1. FIX DU CURSEUR - Assurer que le curseur reste visible dans les modales */
+.project-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 10000; /* Modale en arrière-plan */
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    cursor: none; /* AJOUTÉ - Force le curseur personnalisé */
+}
+
+.project-modal.active {
+    display: flex;
+    opacity: 1;
+}
+
+/* Assurer que le curseur reste au-dessus de la modale */
+.cursor,
+.cursor-follower {
+    z-index: 10001 !important; /* MODIFIÉ - Au-dessus de la modale (10000) */
+}
+
+/* 2. AUGMENTATION DE LA LARGEUR DE LA MODALE */
+.modal-content {
+    background: var(--bg-primary);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 1000px; /* MODIFIÉ - Augmenté de 800px à 1000px */
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+    border: 2px solid var(--border-color);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    cursor: none; /* AJOUTÉ - Force le curseur personnalisé dans la modale */
+}
+
+.project-modal.active .modal-content {
+    transform: scale(1);
+}
+
+/* 3. ASPECT-RATIO 16/9 POUR L'IMAGE DU PROJET */
+.modal-project-image {
+    width: 160px; /* MODIFIÉ - Augmenté pour garder une taille décente avec le ratio 16/9 */
+    height: 90px; /* MODIFIÉ - Calculé pour le ratio 16/9 (160/9*16 = 90) */
+    aspect-ratio: 16/9; /* AJOUTÉ - Force le ratio 16/9 */
+    border-radius: 15px;
+    object-fit: cover;
+    border: 2px solid var(--primary);
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer; /* GARDÉ - Le bouton de fermeture garde le curseur normal */
+    color: var(--text-secondary);
+    transition: color 0.3s ease;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.modal-close:hover {
+    color: var(--primary);
+    background: var(--bg-secondary);
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.modal-project-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+}
+
+.modal-project-info > div { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+
+/* Bouton catégorie dans la modal (caché par défaut) */
+.modal-category-badge {
+    display: none;                /* JS l’activera pour les 3 projets demandés */
+    align-items: center;
+    gap: 8px;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 20px;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 0.9rem;
+    line-height: 1;
+    pointer-events: none;         /* purement informatif */
+    margin-right: 0px;
+}
+
+/* Icône (vector) gérée en CSS uniquement */
+.modal-category-badge::before {
+    content: "";
+    display: inline-block;
+    width: 14px;    /* au lieu de 18px */
+    height: 14px;   /* au lieu de 18px */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+/* Couleur de fond selon la catégorie (classe appliquée sur .project-modal) */
+.project-modal.modal-strategies .modal-category-badge { background-color: var(--cat-strategies); }
+.project-modal.modal-creations  .modal-category-badge { background-color: var(--cat-creations); }
+.project-modal.modal-analyses   .modal-category-badge { background-color: var(--cat-analyses); }
+
+/* Vecteur (SVG) selon la catégorie */
+.project-modal.modal-strategies .modal-category-badge::before {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='10'/><polygon points='16.24,7.76 14.12,14.12 7.76,16.24 9.88,9.88'/></svg>");
+}
+.project-modal.modal-creations .modal-category-badge::before {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 19.5l7-7 3 3-7 7-3-3z'/><path d='M18 13.5l-1.5-7.5L2 2.5l3.5 14.5L13 18.5l5-5z'/><path d='M2 2.5l7.586 7.586'/><circle cx='11' cy='11.5' r='2'/></svg>");
+}
+.project-modal.modal-analyses .modal-category-badge::before {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='11' cy='11' r='8'/><path d='m21.5 21.5-4.35-4.35' stroke-width='3'/><path d='M8.5 8a4 4 0 0 0 0 6'/></svg>");
+}
+
+
+.modal-project-category {
+    background: var(--cat-bg-soft) !important;
+    color: var(--cat-color) !important;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 0;
+    line-height: 1;        /* évite le surcroît de hauteur */
+}
+
+/* Mode sombre - Inversion des modal-project-category 
+body.dark-mode .modal-project-category {
+    background: #FFFFFF; /* Fond blanc 
+    color: #000000; /* Texte noir 
+} */
+
+.modal-project-level {
+    background: var(--red);
+    color: #FFFFFF;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-left: 0px;
+    line-height: 1;        /* évite le surcroît de hauteur */
+}
+
+.modal-project-category, .modal-project-level { line-height: 1; }
+
+@media (max-width: 768px) {
+    .modal-project-info > div {
+      justify-content: center; /* centre catbadge + category + level */
+    }
+  }
+  
+.modal-section {
+    margin-bottom: 30px;
+}
+
+.modal-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.modal-section h3::before {
+    content: '';
+    width: 4px;
+    height: 20px;
+    background: var(--primary);
+    border-radius: 2px;
+}
+
+.modal-description {
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.modal-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.detail-item {
+    background: var(--bg-secondary);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+}
+
+.detail-label {
+    font-weight: bold;
+    color: var(--text-primary);
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.detail-value {
+    color: var(--text-secondary);
+}
+
+.collaborators-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.collaborator-tag {
+    background: var(--gradient-1);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Styles pour la section Outils dans les modales (style simple comme Collaborateurs) */
+.modal-tools-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Style inversé pour les tags d'outils (même que dans les project-card) */
+.modal-tool-tag {
+    padding: 8px 15px;
+    background: rgba(0, 0, 0, 0.9); /* Fond noir/sombre */
+    color: #FFFFFF; /* Texte blanc */
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.modal-tool-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Mode sombre - Inversion des modal-tool-tags */
+body.dark-mode .modal-tool-tag {
+    background: #FFFFFF; /* Fond blanc */
+    color: #000000; /* Texte noir */
+}
+
+body.dark-mode .modal-tool-tag:hover {
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.3);
+}
+
+.modal-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.modal-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: rgb(0, 160, 100);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer; /* GARDÉ - Les liens gardent le curseur normal */
+}
+
+.modal-link:hover {
+    background: #10B981;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(16, 185, 129, 0.4);
+}
+
+.modal-link svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Styles pour le bouton "En savoir plus" */
+.project-card[data-has-modal="true"] .project-image {
+    cursor: pointer;
+    position: relative;
+}
+
+/* Flou/opacité appliqué directement sur la frame image */
+.project-card[data-has-modal="true"] .project-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.project-card[data-has-modal="true"]:hover .project-image::after {
+    opacity: 1;
+}
+
+/* 1. ICÔNE SEULE - 8rem */
+.project-card[data-has-modal="true"] .project-image::before {
+    content: '\f06e';
+    font-family: "ForkAwesome", sans-serif;
+    font-size: 8rem;
+    font-weight: 100; /* AJOUTÉ - Très fin (100-900, défaut=400) */
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFFFFF;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+/* 2. FLOU COMPLET - Original intact */
+.project-card[data-has-modal="true"] .project-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+/* 3. TEXTE SEUL - 2rem */
+.project-card[data-has-modal="true"] .project-content::before {
+    content: 'En savoir plus';
+    font-family: "Inter", sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    position: absolute;
+    top: -95px; /* Ajustez cette valeur pour positionner le texte */
+    left: 50%;
+    transform: translateX(-50%);
+    color: #FFFFFF;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 2;
+    text-align: center;
+    pointer-events: none;
+    white-space: nowrap; /* AJOUTÉ - Force sur une seule ligne */
+}
+
+/* SURVOL pour les 3 éléments */
+.project-card[data-has-modal="true"]:hover .project-image::before,
+.project-card[data-has-modal="true"]:hover .project-image::after,
+.project-card[data-has-modal="true"]:hover .project-content::before {
+    opacity: 1;
+}
+
+.project-card[data-has-modal="true"]:hover .project-image::before {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.02);
+}
+
+
+
+/* Styles pour la liste des valeurs multiples */
+.detail-value-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.detail-value-list .detail-value {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    padding: 2px 0;
+}
+
+/* Styles pour les outils avec logos */
+.modal-tools-with-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 8px;
+}
+
+.tool-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: var(--bg-secondary);
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.tool-item:hover {
+    background: var(--bg-secondary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .tool-item:hover {
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.1);
+}
+
+.tool-logo {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    padding: 2px;
+}
+
+.tool-logo-img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.tool-name {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+/* Responsive pour les outils avec logos */
+@media (max-width: 768px) {
+    .modal-tools-with-logos {
+        gap: 10px;
+    }
+    
+    .tool-item {
+        padding: 6px 10px;
+    }
+    
+    .tool-logo {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .tool-logo-img {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .tool-name {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-tools-with-logos {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .tool-item {
+        justify-content: flex-start;
+    }
+}
+
+/* Ajustement pour la section détails avec plus d'éléments */
+@media (max-width: 768px) {
+    .modal-details {
+        grid-template-columns: 1fr; /* Force une seule colonne sur mobile */
+        gap: 15px;
+    }
+    
+    .detail-item {
+        padding: 12px;
+    }
+}
+
+/* Amélioration de l'affichage des auteurs */
+.detail-value-list .detail-value {
+    margin-left: 10px;
+    position: relative;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    padding: 2px 0;
+}
+
+.detail-value-list .detail-value:before {
+    content: "•";
+    color: var(--primary);
+    margin-right: 8px;
+    font-weight: bold;
+    margin-left: -10px;
+}
+
+/* Style spécial pour Sami BENDRISS - coloré mais pas en gras */
+.detail-value-list .detail-value .author-highlight {
+    color: var(--primary);
+    font-weight: normal;
+}
+
+body.dark-mode .detail-value-list .detail-value .author-highlight {
+    color: var(--primary-light);
+}
+
+/* Alternative : style en tags pour les auteurs */
+.authors-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.author-tag {
+    background: var(--gradient-1);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* RESPONSIVE - Adaptations pour mobile */
+@media (max-width: 1200px) {
+    .modal-content {
+        max-width: 900px; /* AJOUTÉ - Largeur réduite sur tablette */
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        padding: 30px 20px;
+        margin: 20px;
+        max-width: 95%; /* MODIFIÉ - Prend presque toute la largeur sur mobile */
+    }
+
+    .modal-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .modal-project-image {
+        width: 120px; /* MODIFIÉ - Taille réduite sur mobile mais garde le ratio 16/9 */
+        height: 67.5px; /* MODIFIÉ - Calculé pour le ratio 16/9 (120/16*9 = 67.5) */
+    }
+
+    .modal-details {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-links {
+        justify-content: center;
+    }
+
+    .modal-tool-tag {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        max-width: 100%; /* AJOUTÉ - Pleine largeur sur très petits écrans */
+        margin: 10px;
+        padding: 25px 15px;
+    }
+
+    .modal-project-image {
+        width: 96px; /* MODIFIÉ - Encore plus petit sur très petits écrans */
+        height: 54px; /* MODIFIÉ - Calculé pour le ratio 16/9 (96/16*9 = 54) */
+    }
+}
+
+/* Styles pour les liens de documents plus grands */
+.modal-links-large {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.modal-link-large {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 25px;
+    background: rgb(0, 160, 100);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    min-width: 160px;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 160, 100, 0.3);
+}
+
+.modal-link-large:hover {
+    background: #10B981;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+}
+
+.modal-link-large svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+/* Responsive pour les liens larges */
+@media (max-width: 768px) {
+    .modal-links-large {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+    }
+    
+    .modal-link-large {
+        width: 100%;
+        min-width: auto;
+        padding: 12px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-links-large {
+        gap: 12px;
+    }
+    
+    .modal-link-large {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .modal-link-large svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* Styles pour la modal dynamique */
+.detail-value-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.detail-value-list .detail-value {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    padding: 2px 0;
+}
+
+.modal-tools-with-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 8px;
+}
+
+.tool-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: var(--bg-secondary);
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.tool-item:hover {
+    background: var(--bg-secondary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .tool-item:hover {
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.1);
+}
+
+.tool-logo {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    padding: 2px;
+}
+
+.tool-logo-img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.tool-name {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.modal-links-large {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.modal-link-large {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 25px;
+    background: rgb(0, 160, 100);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    min-width: 160px;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 160, 100, 0.3);
+}
+
+.modal-link-large:hover {
+    background: #10B981;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+}
+
+.modal-link-large svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.detail-value-list .detail-value {
+    margin-left: 10px;
+    position: relative;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    padding: 2px 0;
+}
+
+.detail-value-list .detail-value:before {
+    content: "•";
+    color: var(--primary);
+    margin-right: 8px;
+    font-weight: bold;
+    margin-left: -10px;
+}
+
+/* Style spécial pour Sami BENDRISS - coloré mais pas en gras */
+.detail-value-list .detail-value .author-highlight {
+    color: var(--primary);
+    font-weight: normal;
+}
+
+body.dark-mode .detail-value-list .detail-value .author-highlight {
+    color: var(--primary-light);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .modal-tools-with-logos {
+        gap: 10px;
+    }
+    
+    .tool-item {
+        padding: 6px 10px;
+    }
+    
+    .tool-logo {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .tool-logo-img {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .tool-name {
+        font-size: 0.8rem;
+    }
+    
+    .modal-links-large {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+    }
+    
+    .modal-link-large {
+        width: 100%;
+        min-width: auto;
+        padding: 12px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-tools-with-logos {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .tool-item {
+        justify-content: flex-start;
+    }
+    
+    .modal-links-large {
+        gap: 12px;
+    }
+    
+    .modal-link-large {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .modal-link-large svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-details {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .detail-item {
+        padding: 12px;
+    }
+}
+
+
+
+/* ===== CONTACT PAGE ===== */
+
+.contact-page {
+    padding: 120px 50px 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    /* align-items est par défaut "stretch" ce qui aligne en haut */
+}
+
+.contact-info {
+    opacity: 0;
+    animation: slideRightFade 0.8s ease forwards;
+    animation-delay: 0.4s;
+}
+
+.contact-info h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: var(--primary);
+}
+
+/* Contact — centrer les titres de la colonne gauche et droite */
+.contact-info h2,
+.contact-form h2 {
+    text-align: center;
+}
+
+/* Contact — "On discute ?" en rouge CSS */
+.contact-form h2 {
+    color: var(--red);
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* au lieu de var(--border-color)*/
+    background: var(--card-bg);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    background: var(--bg-secondary);
+    transform: translateX(10px);
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    /*background: var(--gradient-1);*/
+    background: #FFFFFF; /* Fond blanc */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+/* Style pour les icônes SVG */
+.contact-icon-svg {
+    background: #000000 !important; /* Fond noir */
+    color: #FFFFFF; /* Icônes blanches */
+}
+
+.contact-icon-svg svg {
+    width: 24px;
+    height: 24px;
+    stroke: #FFFFFF; /* Contour blanc */
+}
+
+/* Mode clair - Inversion des icônes contact */
+body.dark-mode .contact-icon-svg {
+    background: #FFFFFF !important; /* Fond blanc */
+    color: #000000; /* Icônes noires */
+}
+
+body.dark-mode .contact-icon-svg svg {
+    stroke: #000000; /* Contour noir */
+}
+
+/* LinkedIn - Mode sombre par défaut */
+/* Mode sombre (par défaut) : logo clair */
+.linkedin-dark {
+    display: none;
+}
+
+.linkedin-light {
+    display: block;
+}
+
+/* Mode clair : logo sombre */
+body.dark-mode .linkedin-light {
+    display: none;
+}
+
+body.dark-mode .linkedin-dark {
+    display: block;
+}
+
+/* Fonds des conteneurs d'icônes */
+/* Mode sombre : fond noir */
+.contact-icon-logo {
+    background: #000000 !important;
+}
+
+/* Mode clair : fond blanc */
+body.dark-mode .contact-icon-logo {
+    background: #FFFFFF !important;
+}
+
+/* IMPORTANT : Conserver le positionnement dans le cercle */
+.contact-logo.linkedin,
+.contact-logo.linkedin-dark,
+.contact-logo.linkedin-light {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+}
+
+/* Fonds des conteneurs d'icônes */
+.contact-icon-logo {
+    position: relative; /* Nécessaire pour l'absolute des enfants */
+    overflow: hidden;
+    background: #000000 !important;
+}
+
+body.dark-mode .contact-icon-logo {
+    background: #FFFFFF !important;
+}
+
+/*body.dark-mode .contact-logo {
+    filter: brightness(0) invert(1); /* Pour inverser le logo LinkedIn */
+} */
+
+.contact-logo {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+    /*filter: brightness(0) invert(1); /* Pour avoir le logo en blanc */
+}
+
+/* Si vous voulez le logo LinkedIn en couleur */
+.contact-icon:has(img[alt="LinkedIn"]) {
+    background: #0A66C2 !important; /* Couleur officielle LinkedIn */
+}
+
+/* .contact-icon:has(img[alt="LinkedIn"]) .contact-logo {
+    filter: brightness(0) invert(1); /* Logo blanc sur fond bleu */
+}
+
+/* Effet au survol */
+.contact-item:hover .contact-icon:has(img[alt="LinkedIn"]) {
+    background: #004182; /* Bleu plus foncé au survol */
+}
+
+.contact-details h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.contact-details a {
+    color: var(--text-muted);
+    text-decoration: none;
+    /* transition: color 0.3s ease; */
+    transition:
+        color .25s ease,
+        text-decoration-color .25s ease,
+        text-underline-offset .25s ease,
+        font-weight .25s steps(1, end);  /* adoucit la perception du passage au 550 */
+}
+
+/* H3 et lien en bleu quand on survole la ligne entière */
+.contact-item:hover .contact-details h3,
+.contact-item:hover .contact-details a {
+    color: var(--blue, #3B82F6);
+    transition: color 0.3s ease;
+}
+
+/* APRÈS — HOVER uniquement si un lien est survolé (ou focus clavier) */
+.contact-item:has(.contact-details a[href]:hover) .contact-details h3,
+.contact-item:has(.contact-details a[href]:hover) .contact-details a,
+.contact-item:has(.contact-details a[href]:focus-visible) .contact-details h3,
+.contact-item:has(.contact-details a[href]:focus-visible) .contact-details a {
+  color: var(--blue, #3B82F6);
+}
+
+.contact-details a[href]:hover,
+.contact-details a[href]:focus-visible {
+    color: var(--primary);
+    text-decoration: underline; /* souligner uniquement si <a href> */
+    text-decoration-color: currentColor;
+    text-underline-offset: 2px;
+    /* font-weight: 550; /* semi-gras sur le lien seulement */
+    outline: none;
+}
+
+/* Accessibilité : même style au focus clavier */
+.contact-details a:focus-visible {
+    color: var(--blue, #3B82F6);
+    text-decoration: underline;
+    font-weight: 550;
+    outline: none;
+}
+
+.contact-form {
+    opacity: 0;
+    animation: slideLeftFade 0.8s ease forwards;
+    animation-delay: 0.6s;
+}
+
+.contact-form h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+/* Kicker sous "On discute ?" — même taille que h2 */
+.contact-form .contact-kicker {
+    font-size: 1.4rem;     /* identique à .contact-form h2 */
+    line-height: 1.35;   /* confortable en paragraphe */
+    margin: 6px 0 20px;  /* garde l’air sous le texte */
+    /* font-weight: 400;    /* non gras, comme .about-text p */
+    font-weight: bold;    /* non gras, comme .about-text p */
+    color: var(--text-secondary);
+}
+
+.form-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+/* Supprimez ou commentez cette règle */
+/* .form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+} */
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 18px 20px;
+    background: var(--input-bg); /* au lieu de rgba(255, 255, 255, 0.05) */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* au lieu de var(--border-color)*/
+    border-radius: 10px;
+    color: var(--text-primary); /* au lieu de #fff */
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Style des placeholders */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--placeholder-color); /* au lieu de rgba(255, 255, 255, 0.5) */
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+
+/* Effet au focus */
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: var(--bg-secondary-hover);
+}
+
+.form-group input:focus::placeholder,
+.form-group textarea:focus::placeholder {
+    opacity: 0.7;
+    transform: translateX(5px);
+}
+
+.form-group textarea {
+    min-height: 150px; /* Réduire de 150px à 120px (on passe de 6 lignes d'écriture à 5 lignes) */
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 22px;
+    background: var(--gradient-1);
+    border: none;
+    border-radius: 10px;
+    color: #FFFFFF; /* Couleur du texte blanc */
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.send-icon {
+    width: 25px;
+    height: 25px;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
+}
+
+/* Centrage des sections de contact en responsive */
+@media (max-width: 600px) {
+    .contact-content {
+        grid-template-columns: 1fr; /* Une seule colonne */
+        gap: 40px;
+        text-align: center; /* Centre tout le contenu */
+    }
+    
+    .contact-info,
+    .contact-form {
+        width: 100%;
+        margin: 0 auto; /* Centre chaque section dans sa frame */
+        text-align: center; /* Centre le contenu interne */
+    }
+    
+    /* Centre les titres */
+    .contact-info h2,
+    .contact-form h2 {
+        text-align: center;
+        margin: 0 auto 30px auto;
+    }
+    
+    /* Centre les éléments de contact tout en gardant l'alignement à gauche du texte */
+    .contact-item {
+        margin: 0 auto 30px auto; /* Centre chaque item */
+        max-width: 100%;
+        text-align: left; /* Garde le texte aligné à gauche dans chaque item */
+    }
+    
+    /* Centre le formulaire */
+    .contact-form form {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+/* Centrage parfait sur très petits écrans */
+@media (max-width: 400px) {
+    .contact-page {
+        padding: 120px 30px 80px; /* Réduit le padding latéral */
+    }
+    
+    .contact-content {
+        gap: 40px; /* Réduit l'espace entre les sections */
+        margin: 0 auto; /* Centre le contenu */
+        max-width: 100%; /* Utilise toute la largeur disponible */
+    }
+    
+    .contact-info,
+    .contact-form {
+        margin: 0 auto; /* Centre chaque section */
+        width: 100%;
+        padding: 0; /* Retire tout padding supplémentaire */
+    }
+    
+    .contact-item {
+        margin-left: 0; /* Retire la marge gauche */
+        margin-right: 0; /* Retire la marge droite */
+        padding: 15px; /* Réduit le padding interne */
+    }
+    
+    /* Centrage des titres */
+    .contact-info h2,
+    .contact-form h2 {
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 28px 20px;
+    margin-top: auto;
+    border-top: 1px solid var(--border-color); /* au lieu de rgba(255, 255, 255, 0.1) */
+    color: var(--text-dim); /* au lieu de #666 */
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+    nav {
+        padding: 15px 20px;
+    }
+    .timeline-header {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background: rgba(10, 10, 10, 0.98);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: right 0.3s ease;
+    }
+
+    /* AJOUTER : Forcer le texte en blanc dans le menu mobile */
+    .nav-links a {
+        color: #fff !important;
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .menu-toggle {
+        display: flex;
+        z-index: 1001;
+    }
+    
+    .about-content,
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-item,
+    .timeline-item:nth-child(even) {
+        width: 100%;
+        padding-left: 60px;
+        padding-right: 0;
+        margin-left: 0;
+    }
+    
+}
+
+
+
+/* Page Transition Effect */
+.page-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--gradient-1);
+    transform: translateY(-100%);
+    z-index: 9999;
+}
+
+.page-transition.active {
+    animation: slideDown 0.6s ease forwards;
+}
+
+@keyframes slideDown {
+    0% { transform: translateY(-100%); }
+    50% { transform: translateY(0); }
+    100% { transform: translateY(100%); }
+}
+
+/* Style spécifique pour le bouton CV en bleu */
+.btn-cv {
+    /*background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%) !important;*/
+    background: #10B981 !important; /* Couleur bleue Instagram */
+}
+
+.btn-cv:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(16, 185, 129, 0.4) !important;
+}
+
+/* Animation de pulsation avec couleur bleue */
+.cv-button-container .btn-cv {
+    animation: cvPulse 2s ease-in-out infinite;
+}
+
+.cv-button-container {
+    margin-top: 30px;
+    margin-bottom: 30px; /* + espace sous le bouton */
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.4s;
+}
+
+.cv-button-container .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+}
+
+/* AJOUTER - Fixer les dimensions de l'icône CV */
+.cv-svg-icon {
+    width: 20px !important;
+    height: 20px !important;
+    min-width: 20px !important; /* Empêche le rétrécissement */
+    max-width: 20px !important; /* Empêche l'agrandissement */
+    flex-shrink: 0; /* Empêche la compression dans le flexbox */
+}
+
+/* Animation spécifique pour le bouton CV */
+.cv-button-container .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(16, 185, 129, 0.4);
+}
+
+/* Effet de pulsation subtile */
+@keyframes cvPulse {
+    0%, 100% { 
+        transform: scale(1);
+        box-shadow: 0 5px 15px rgba(16, 185, 129, 0.4);
+    }
+    50% { 
+        transform: scale(1.02);
+        box-shadow: 0 5px 20px rgba(16, 185, 129, 0.4);
+    }
+}
+
+.cv-button-container .btn {
+    animation: cvPulse 2s ease-in-out infinite;
+}
+
+.cv-button-container .btn:hover {
+    animation: none;
+}
+
+/* Effet de brillance optionnel */
+.btn-cv::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-cv:hover::before {
+    left: 100%;
+}
+
+/* Forcer la forme circulaire pour tous les éléments ronds */
+.contact-icon,
+.timeline-logo,
+.software-logo,
+.theme-toggle {
+    aspect-ratio: 1 !important; /* Force un ratio 1:1 */
+    /* border-radius: 50% !important; */
+    min-width: var(--size) !important; /* Utilise la largeur comme hauteur minimale */
+    max-width: var(--size) !important;
+    width: var(--size) !important;
+    height: var(--size) !important;
+}
+
+/* Tailles spécifiques */
+.contact-icon {
+    --size: 50px;
+}
+
+.timeline-logo {
+    --size: 75px;
+}
+
+.software-logo {
+    --size: 75px;
+}
+
+.theme-toggle {
+    --size: 50px;
+}
+
+/* En mobile */
+@media (max-width: 768px) {
+    .timeline-logo {
+        --size: 60px;
+    }
+    
+    .theme-toggle {
+        --size: 45px;
+    }
+}
+
+/* Réduire l'espace avant le footer pour toutes les pages sauf index */
+.about-page,
+.experience-page,
+.projects-page,
+.contact-page {
+    padding-bottom: 32px; /* au lieu de 80px */
+}
+
+/* Dernières sections avant footer */
+.interests-section,
+.experience-container,
+.projects-grid,
+.contact-content {
+    margin-bottom: 0px;
+}
+
+
+
+/* ===== STYLES POUR LES MODALES PAR CATÉGORIE ===== */
+
+/* Remplace les 3 règles existantes par celle-ci */
+.project-modal.modal-strategies #modal-dynamic-title,
+.project-modal.modal-creations  #modal-dynamic-title,
+.project-modal.modal-analyses   #modal-dynamic-title {
+    color: var(--text-primary) !important;
+}
+
+/* Modal Stratégies - Violet */
+
+/* .project-modal.modal-strategies #modal-dynamic-title {
+    color: var(--cat-strategies) !important;
+} */
+
+.project-modal.modal-strategies .modal-project-image {
+    border-color: var(--cat-strategies) !important;
+}
+
+.project-modal.modal-strategies .modal-section h3::before {
+    background: var(--cat-strategies) !important;
+}
+
+.project-modal.modal-strategies .detail-value::before {
+    color: var(--cat-strategies) !important;
+}
+
+.project-modal.modal-strategies .author-highlight {
+    color: var(--cat-strategies) !important;
+}
+
+.project-modal.modal-strategies .detail-item {
+    background: rgba(124, 58, 237, 0.05) !important;
+}
+
+.project-modal.modal-strategies .tool-item {
+    background: rgba(124, 58, 237, 0.05) !important;
+}
+
+/* Modal Créations - Orange */
+
+/* .project-modal.modal-creations #modal-dynamic-title {
+    color: var(--cat-creations) !important;
+} */
+
+.project-modal.modal-creations .modal-project-image {
+    border-color: var(--cat-creations) !important;
+}
+
+.project-modal.modal-creations .modal-section h3::before {
+    background: var(--cat-creations) !important;
+}
+
+.project-modal.modal-creations .detail-value::before {
+    color: var(--cat-creations) !important;
+}
+
+.project-modal.modal-creations .author-highlight {
+    color: var(--cat-creations) !important;
+}
+
+.project-modal.modal-creations .detail-item {
+    background: rgba(234, 88, 12, 0.05) !important;
+}
+
+.project-modal.modal-creations .tool-item {
+    background: rgba(234, 88, 12, 0.05) !important;
+}
+
+/* Modal Analyses - Teal */
+
+/* .project-modal.modal-analyses #modal-dynamic-title {
+    color: var(--cat-analyses) !important;
+} */
+
+.project-modal.modal-analyses .modal-project-image {
+    border-color: var(--cat-analyses) !important;
+}
+
+.project-modal.modal-analyses .modal-section h3::before {
+    background: var(--cat-analyses) !important;
+}
+
+.project-modal.modal-analyses .detail-value::before {
+    color: var(--cat-analyses) !important;
+}
+
+.project-modal.modal-analyses .author-highlight {
+    color: var(--cat-analyses) !important;
+}
+
+.project-modal.modal-analyses .detail-item {
+    background: rgba(13, 148, 136, 0.05) !important;
+}
+
+.project-modal.modal-analyses .tool-item {
+    background: rgba(13, 148, 136, 0.05) !important;
+}
