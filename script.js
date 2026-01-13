@@ -807,6 +807,9 @@ const TOOL_LOGOS = {
     'Sora': 'dynamic:chatgpt', // MODIFIÉ
     'CapCut': 'tool-logos/capcut.svg',
     'Figma': 'tool-logos/figma.svg',
+    'Nano Banana': 'tool-logos/gemini.svg',
+    'Google Veo 3': 'tool-logos/gemini.svg',
+    'Code': 'tool-logos/claude.png',
 };
 
 // Base de données des informations spécifiques par projet
@@ -1043,7 +1046,7 @@ const PROJECT_DATA = {
 		tools: ['Google Docs', 'Cairn.info', 'Canva'],
 		links: [
 			{
-				href: 'devoirs/Buitoni-Stratégie-com.pdf',
+				href: 'devoirs/Buitoni-Strategie-com.pdf',
 				text: 'Voir la présentation',
 				icon: 'document'
 			}
@@ -1298,16 +1301,227 @@ const PROJECT_DATA = {
 				icon: 'document'
 			}
 		],
-		description: `Document créatif qui présente l’ensemble de mes textes écrits durant cette année scolaire 
-			2024-2025, pendant les cours d’Expression écrite et orale. Ce recueil rassemble 9 créations littéraires 
-			variées, allant du slam personnel aux chroniques créatives, en passant par des textes libres et des 
+		description: `Document créatif qui présente l’ensemble de mes textes écrits durant cette année scolaire
+			2024-2025, pendant les cours d’Expression écrite et orale. Ce recueil rassemble 9 créations littéraires
+			variées, allant du slam personnel aux chroniques créatives, en passant par des textes libres et des
 			comptes-rendus professionnels, illustrant la diversité des exercices rédactionnels proposés.
 			<br><br>
-			Cette compilation témoigne du développement des compétences créatives et rédactionnelles à travers des 
-			formats multiples : monologue d’un monument historique, réflexions dystopiques, règles de vie inspirées 
-			de Maylis de Kerangal, et analyse d’une table ronde sur l’éducation culturelle. Un parcours d’écriture 
+			Cette compilation témoigne du développement des compétences créatives et rédactionnelles à travers des
+			formats multiples : monologue d’un monument historique, réflexions dystopiques, règles de vie inspirées
+			de Maylis de Kerangal, et analyse d’une table ronde sur l’éducation culturelle. Un parcours d’écriture
 			complet mêlant créativité personnelle et rigueur académique dans un cadre bienveillant d’expression libre.`
 	},
+
+	// NOUVEAUX PROJETS BUT 3
+
+	'maison-francis-kurkdjian': {
+		date: 'Novembre 2025 - Janvier 2026',
+		time: '2 mois',
+		teacher: 'Lisa-Marie DA SILVA OLIVEIRA',
+		authors: ['Sami BENDRISS', 'Imen TAMOUNEIT', 'Diya BHAVSAR', 'Céline SALLOUM', 'Naïma ALI SAÏD'],
+		tools: ['Canva', 'Google Docs', 'Nano Banana', 'Google Veo 3'],
+		links: [
+			{
+				href: 'devoirs/Maison-Francis-Kurkdjian-SAE-Communication-360.pdf',
+				text: 'Voir la présentation',
+				icon: 'document'
+			}
+		],
+		description: `Stratégie de communication 360° complète pour la Maison Francis Kurkdjian, marque de
+			parfumerie de luxe créée par le célèbre parfumeur Francis Kurkdjian. Ce projet développe une approche
+			globale et innovante intégrant tous les canaux de communication pour renforcer la notoriété et l'image
+			de prestige de la maison.
+			<br><br>
+			La stratégie 360° englobe la communication digitale, événementielle, relationnelle et médias, avec un
+			positionnement affirmé dans l'univers du luxe créatif et de l'excellence artisanale française.`
+	},
+
+	'ikea': {
+		date: 'Octobre 2025',
+		time: '2 semaines',
+		teacher: 'Jean-Dominique DALLOZ',
+		authors: ['Sami BENDRISS', 'Imen TAMOUNEIT', 'Diya BHAVSAR'],
+		tools: ['Canva', 'Google Docs'],
+		links: [
+			{
+				href: 'devoirs/IKEA-Communication-durable.pdf',
+				text: 'Voir la présentation',
+				icon: 'document'
+			}
+		],
+		description: `Projet de communication responsable et durable (RSE) pour IKEA, géant mondial de l'ameublement.
+			Cette stratégie RSOCD (Responsabilité Sociétale des Organisations et Communication Durable) examine les
+			engagements environnementaux et sociétaux de l'enseigne suédoise face aux défis écologiques contemporains.
+			<br><br>
+			Le projet analyse les pratiques durables d'IKEA (économie circulaire, matériaux responsables, réduction
+			de l'empreinte carbone) et développe une stratégie de communication authentique valorisant ces actions
+			tout en évitant le greenwashing.`
+	},
+
+	'kreden': {
+		date: 'Novembre 2025 - Janvier 2026',
+		time: '2 mois',
+		teacher: 'Marc BOURGOIS',
+		authors: ['Sami BENDRISS', 'Imen TAMOUNEIT', 'Diya BHAVSAR'],
+		tools: ['Canva', 'Google Docs'],
+		links: [
+			{
+				href: 'devoirs/Kreden-Recommandation.pdf',
+				text: 'Voir la recommandation',
+				icon: 'document'
+			}
+		],
+		description: `Recommandation d'agence complète pour KREDEN, développant une stratégie de marque et un
+			positionnement stratégique adapté aux objectifs de l'entreprise. Ce projet de conseil en communication
+			et branding propose une analyse approfondie de l'identité de marque et des axes de développement.
+			<br><br>
+			La recommandation intègre diagnostic de marque, étude concurrentielle, définition du territoire de
+			communication, plateforme de marque et déclinaison opérationnelle des actions à mettre en œuvre pour
+			renforcer la présence et la cohérence de KREDEN sur son marché.`
+	},
+
+	'nestle': {
+		date: 'Octobre 2025 - Décembre 2025',
+		time: '2 mois',
+		teacher: 'Martine SAVARY',
+		authors: ['Sami BENDRISS', 'Imen TAMOUNEIT', 'Diya BHAVSAR'],
+		tools: ['Canva', 'Google Docs', 'Code'],
+		links: [
+			{
+				href: 'devoirs/Nestle-Dossier-SAE-Communication-sensible.pdf',
+				text: 'Voir le dossier',
+				icon: 'document'
+			},
+            {
+				href: 'devoirs/Nestle-Presentation-SAE-Communication-sensible.pdf',
+				text: 'Voir la présentation',
+				icon: 'document'
+			},
+            {
+				href: 'https://nestle-engagements-audits.netlify.app/',
+				text: 'Voir notre page « Engagements et audits »',
+				icon: 'external'
+			}
+		],
+		description: `Stratégie de communication sensible pour Nestlé, leader mondial de l'agroalimentaire confronté
+			à de nombreuses controverses (eau, nutrition infantile, durabilité). Ce projet aborde les sujets délicats
+			avec une approche éthique, responsable et transparente, dans un contexte de défiance croissante des
+			consommateurs.
+			<br><br>
+			La communication sensible développée propose des réponses stratégiques aux critiques légitimes, tout en
+			valorisant les engagements positifs de l'entreprise. Le projet explore les enjeux de réputation, de
+			légitimité et de reconstruction de la confiance dans un environnement médiatique complexe et scruté.`
+	},
+
+	'pontseine': {
+		date: 'Octobre 2025 - Décembre 2025',
+		time: '2 mois',
+		teacher: 'Nadia HATHROUBI-SAFSAF',
+		authors: ['TP1 - 3ème année, promotion 2025-2026'],
+		tools: ['Canva', 'Google Docs', 'Code', 'Nano Banana'],
+		links: [
+			{
+				href: 'devoirs/Pontseine-Dossier-SAE-Politique.pdf',
+				text: 'Voir le dossier',
+				icon: 'document'
+			},
+			{
+				href: 'devoirs/Pontseine-Presentation-SAE-Politique.pdf',
+				text: 'Voir la présentation',
+				icon: 'document'
+			},
+            {
+				href: 'https://pontseine2026.netlify.app/',
+				text: 'Voir le site de campagne',
+				icon: 'external'
+			}
+		],
+		description: `Dossier complet et présentation pour une campagne de communication politique pour Pontseine,
+			intégrant stratégie électorale, messages clés, plan média et déploiement des actions de campagne. Ce
+			projet développe une approche professionnelle de la communication politique territoriale.
+			<br><br>
+			La stratégie comprend diagnostic du territoire, positionnement politique, construction narrative du
+			candidat, identification des cibles électorales, et déploiement multicanal (réseaux sociaux, médias
+			traditionnels, événements de proximité, supports imprimés) pour maximiser l'impact de la campagne.`
+	},
+
+	'cnrs': {
+		date: 'Novembre 2025',
+		time: '3 semaines',
+		teacher: 'Doria LE FUR',
+		authors: ['Sami BENDRISS', 'Imen TAMOUNEIT', 'Diya BHAVSAR', 'Céline SALLOUM', 'Yasmine LERANDY'],
+		tools: ['Canva', 'Google Docs'],
+		links: [
+			{
+				href: 'devoirs/CNRS-Podcast-Communication-scientifique.pdf',
+				text: 'Voir le projet',
+				icon: 'document'
+			}
+		],
+		description: `Stratégie de communication scientifique pour le CNRS (Centre National de la Recherche
+			Scientifique), visant à vulgariser et diffuser les travaux de recherche auprès du grand public. Ce
+			projet développe une approche pédagogique et accessible pour rendre la science compréhensible et
+			attractive pour tous les publics.
+			<br><br>
+			La communication scientifique proposée intègre storytelling, datavisualisation, formats innovants
+			(vidéos, podcasts, contenus interactifs) et partenariats médias pour valoriser l'excellence de la
+			recherche française tout en suscitant l'intérêt et les vocations scientifiques chez les jeunes générations.`
+	},
+
+	'shs': {
+		date: 'Avril 2025',
+		time: '3 semaines',
+		teacher: 'Marc KAISER',
+		authors: ['Sami BENDRISS'],
+		tools: ['Google Docs', 'Cairn.info'],
+		links: [
+			{
+				href: 'devoirs/SHS-Enquete-terrain.pdf',
+				text: 'Voir le rapport',
+				icon: 'document'
+			}
+		],
+		description: `Enquête de terrain en Sciences Humaines et Sociales basée sur la méthodologie de l'observation,
+			développant une approche rigoureuse d'analyse des comportements et interactions sociales dans un contexte
+			spécifique. Ce projet de BUT 2 applique les fondamentaux de la recherche qualitative en sciences sociales.
+			<br><br>
+			L'enquête suit un protocole méthodologique précis : définition de la problématique, choix du terrain
+			d'observation, grille d'analyse, collecte de données, interprétation des résultats et montée en généralité
+			théorique. Cette démarche scientifique permet de développer un regard analytique sur les phénomènes sociaux
+			contemporains.`
+	},
+
+	'challenge-new': {
+        date: 'Janvier 2026',
+        time: '1 semaine',
+        teacher: 'Jean-Dominique DALLOZ',
+        authors: ['Sami BENDRISS', 'Imen TAMOUNEIT', 'Diya BHAVSAR', 'Naïma ALI SAÏD', 'Tokiana RAKOTONDRAFARA', 'Tom ROBERT', 'Lisa-Marie DA SILVA OLIVEIRA (coach)'],
+        tools: ['Canva', 'Google Docs'],
+        links: [
+            {
+                href: 'devoirs/ATTENDRE-Challenge-Com-Presentation.pdf',
+                text: 'Voir la présentation',
+                icon: 'document'
+            },
+            {
+                href: 'devoirs/ATTENDRE-Challenge-Com-Dossier.pdf',
+                text: 'Dossier final',
+                icon: 'document'
+            },
+            {
+                href: 'devoirs/ATTENDRE-Challenge-Com-Annexes.pdf',
+                text: 'Annexes',
+                icon: 'document'
+            }
+        ],
+        description: `Ce projet s'inscrit dans le cadre du Challenge Local de la Communication 2025,
+            un concours interne organisé par notre IUT. Notre équipe a élaboré une recommandation
+            stratégique complète pour Verifone, leader mondial des solutions de paiement électronique.
+            <br><br>
+            L'objectif était de développer une stratégie de communication innovante pour renforcer
+            la présence de Verifone sur le marché français, en mettant l'accent sur leurs nouvelles
+            solutions de paiement sans contact, ainsi que sur leurs services pour les commerçants.`
+    },
 
 };
 
