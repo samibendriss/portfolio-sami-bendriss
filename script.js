@@ -1609,7 +1609,7 @@ function extractProjectData(projectCard) {
     const levelText = {
         'but1': 'BUT 1',
         'but2': 'BUT 2',
-        'but3': 'BUT 3 App'
+        'but3': 'BUT 3'
     }[level] || 'BUT';
     
     // Extraire et nettoyer l'alt pour la clé
