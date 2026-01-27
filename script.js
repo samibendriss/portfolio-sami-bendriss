@@ -1276,8 +1276,13 @@ const PROJECT_DATA = {
         tools: ['Google Docs', 'Google Sheets', 'Canva'],
         links: [
             {
-                href: 'devoirs/TPM-Montreuil-Communication-Culturelle.pdf',
-                text: "Voir l'appel à projet",
+                href: 'devoirs/TPM-Communication-Culturelle-Dossier.pdf',
+                text: "Voir le dossier",
+                icon: 'document'
+            },
+            {
+                href: 'devoirs/TPM-Communication-Culturelle-Presentation.pdf',
+                text: "Voir la présentation",
                 icon: 'document'
             }
         ],
