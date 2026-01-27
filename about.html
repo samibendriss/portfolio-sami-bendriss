@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,26 +10,29 @@
     <!-- Ajoutez cette ligne pour ForkAwesome -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
 </head>
+
 <body>
-    
+
     <!-- Page Transition -->
     <div class="page-transition" id="pageTransition"></div>
-    
+
     <!-- Theme Toggle Button -->
     <button class="theme-toggle" id="themeToggle" aria-label="Basculer le thème">
         <svg class="moon-icon" viewBox="0 0 24 24">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
         </svg>
         <svg class="sun-icon" viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="5" fill="#fff"/>
-            <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="12" cy="12" r="5" fill="#fff" />
+            <path
+                d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"
+                stroke="#fff" stroke-width="2" stroke-linecap="round" />
         </svg>
     </button>
 
     <!-- Custom Cursor -->
     <div class="cursor" id="cursor"></div>
     <div class="cursor-follower" id="cursorFollower"></div>
-    
+
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
@@ -55,26 +59,33 @@
             <div class="page-header">
                 <h1 class="page-title">À propos de moi</h1>
             </div>
-            
+
             <div class="about-content">
                 <div class="about-text">
                     <h2>Qui suis-je ?</h2>
                     <p>
-                        Je m’appelle Sami Bendriss, j’ai 20 ans et je suis étudiant en 3ème année de BUT Information-Communication 
-                        à l’IUT de Montreuil (Université Paris 8). Mon parcours en communication est guidé par ma <b><mark>curiosité</mark></b> et ma 
-                        <b><mark>volonté (maladive !) d’apprendre</mark></b>, dans un milieu où l’innovation est le maître mot. À l’avenir, j’aimerais davantage 
-                        me positionner dans le <b><span style="color: var(--primary);">secteur du marketing</span></b>, afin d’affiner mes compétences en communication et en vente.
+                        Je m’appelle <b><mark class="red">Sami Bendriss</mark></b>, j’ai 20 ans et je suis étudiant en
+                        3ème
+                        année de BUT Information-Communication
+                        à l’IUT de Montreuil (Université Paris 8). Mon parcours en communication est guidé par ma
+                        <b><mark>curiosité</mark></b> et ma
+                        <b><mark>volonté (maladive !) d’apprendre</mark></b>, dans un milieu où l’innovation est le
+                        maître mot. À l’avenir, j’aimerais davantage
+                        me positionner dans le <b><span style="color: var(--primary);">secteur du marketing</span></b>,
+                        afin d’affiner mes compétences en communication et en vente.
                     </p>
                     <p>
-                        Je suis actuellement à la recherche d’un <b><mark>stage de 3 mois et demi</mark></b> pour <b><mark>mars 2026</mark></b> : il s’agit d’une
-                        opportunité rêvée pour mettre mes services à disposition d’une <b><span style="color: var(--primary);">organisation dynamique</span></b>, où je serais prêt 
+                        Je suis actuellement à la recherche d’un <b><mark>stage de 3 mois et demi</mark></b> pour
+                        <b><mark>mars 2026</mark></b> : il s’agit d’une
+                        opportunité rêvée pour mettre mes services à disposition d’une <b><span
+                                style="color: var(--primary);">organisation dynamique</span></b>, où je serais prêt
                         à relever de nouveaux défis.
                     </p>
                 </div>
-                
+
                 <div class="about-image">
                     <div class="profile-container">
-                        <img src="assets/photo-profil.jpg" class="profile-img-placeholder">
+                        <img src="assets/photo-profil-fond.jpeg" class="profile-img-placeholder">
                     </div>
                 </div>
             </div>
@@ -93,7 +104,8 @@
                         </div>
                         <div class="skill-content">
                             <h3 class="skill-name">Stratégies de communication</h3>
-                            <p class="software-description">Externe, interne, digital, audiovisuel, culturel, événementiel, etc.</p>
+                            <p class="software-description">Externe, interne, digital, audiovisuel, culturel,
+                                événementiel, etc.</p>
                         </div>
                     </div>
 
@@ -117,20 +129,22 @@
                     <div class="software-card skill-card">
                         <div class="skill-icon">
                             <!-- SVG Rédaction (papier, lignes affinées) -->
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round">
-                            <!-- contour (épaisseur générale) -->
-                            <path d="M14 2l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8z" stroke-width="2"/>
-                            <path d="M14 2v6h6" stroke-width="2"/>
-                            <!-- lignes intérieures (affinées) -->
-                            <line x1="8.5" y1="12" x2="15.5" y2="12" stroke-width="1.25"/>
-                            <line x1="8.5" y1="15" x2="17"   y2="15"  stroke-width="1.25"/>
-                            <line x1="8.5" y1="18" x2="13.5" y2="18"  stroke-width="1.25"/>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <!-- contour (épaisseur générale) -->
+                                <path d="M14 2l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8z"
+                                    stroke-width="2" />
+                                <path d="M14 2v6h6" stroke-width="2" />
+                                <!-- lignes intérieures (affinées) -->
+                                <line x1="8.5" y1="12" x2="15.5" y2="12" stroke-width="1.25" />
+                                <line x1="8.5" y1="15" x2="17" y2="15" stroke-width="1.25" />
+                                <line x1="8.5" y1="18" x2="13.5" y2="18" stroke-width="1.25" />
                             </svg>
                         </div>
                         <div class="skill-content">
                             <h3 class="skill-name">Rédaction</h3>
-                            <p class="software-description">Web, print, réseaux sociaux, publicités, communiqués, etc.</p>
+                            <p class="software-description">Web, print, réseaux sociaux, publicités, communiqués, etc.
+                            </p>
                         </div>
                     </div>
 
@@ -147,7 +161,8 @@
                         </div>
                         <div class="skill-content">
                             <h3 class="skill-name">Social media</h3>
-                            <p class="software-description">Stratégie, community management, analyse de la performance</p>
+                            <p class="software-description">Stratégie, community management, analyse de la performance
+                            </p>
                         </div>
                     </div>
 
@@ -155,15 +170,17 @@
                     <div class="software-card skill-card">
                         <div class="skill-icon">
                             <!-- Loupe -->
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
                                 <circle cx="11" cy="11" r="8"></circle>
                                 <path d="m21.5 21.5-4.35-4.35" stroke-width="3"></path>
-                                <path d="M8.5 8a4 4 0 0 0 0 6"/>
-                            </svg>                            
+                                <path d="M8.5 8a4 4 0 0 0 0 6" />
+                            </svg>
                         </div>
                         <div class="skill-content">
                             <h3 class="skill-name">Analyse & veille</h3>
-                            <p class="software-description">Analyse de marché, veille stratégique et concurrentielle.</p>
+                            <p class="software-description">Analyse de marché, veille stratégique et concurrentielle.
+                            </p>
                         </div>
                     </div>
 
@@ -171,7 +188,9 @@
                     <div class="software-card skill-card">
                         <div class="skill-icon">
                             <!-- Mégaphone -->
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="bar-chart-3" class="lucide lucide-bar-chart-3 w-5 h-5">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" data-lucide="bar-chart-3"
+                                class="lucide lucide-bar-chart-3 w-5 h-5">
                                 <path d="M3 3v16a2 2 0 0 0 2 2h16"></path>
                                 <path d="M18 17V9"></path>
                                 <path d="M13 17V5"></path>
@@ -197,7 +216,8 @@
                         </div>
                         <div class="skill-content">
                             <h3 class="skill-name">Présentation orale</h3>
-                            <p class="software-description">Prise de parole, pitch client, gestion du temps et du trac</p>
+                            <p class="software-description">Prise de parole, pitch client, gestion du temps et du trac
+                            </p>
                         </div>
                     </div>
 
@@ -233,28 +253,36 @@
                             <div class="software-level">
                                 <!-- 4 étoiles pleines -->
                                 <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                                 </svg>
                                 <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                                 </svg>
                                 <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                                 </svg>
                                 <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                                 </svg>
                                 <!-- Demi-étoile -->
                                 <svg class="star half" width="16" height="16" viewBox="0 0 24 24">
                                     <defs>
                                         <clipPath id="half-star-clip">
-                                            <rect x="0" y="0" width="12" height="24"/>
+                                            <rect x="0" y="0" width="12" height="24" />
                                         </clipPath>
                                     </defs>
                                     <!-- Contour de l'étoile -->
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="none" stroke="#FBC821" stroke-width="2" opacity="0.3"/>
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                                        fill="none" stroke="#FBC821" stroke-width="2" opacity="0.3" />
                                     <!-- Moitié remplie -->
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor" clip-path="url(#half-star-clip)"/>
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                                        fill="currentColor" clip-path="url(#half-star-clip)" />
                                 </svg>
                             </div>
                             <p class="software-description">Docs, Slides, Sheets, Forms</p>
@@ -271,28 +299,36 @@
                             <div class="software-level">
                                 <!-- 4 étoiles pleines -->
                                 <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                                 </svg>
                                 <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                                 </svg>
                                 <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                                 </svg>
                                 <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                                 </svg>
                                 <!-- Demi-étoile -->
                                 <svg class="star half" width="16" height="16" viewBox="0 0 24 24">
                                     <defs>
                                         <clipPath id="half-star-clip">
-                                            <rect x="0" y="0" width="12" height="24"/>
+                                            <rect x="0" y="0" width="12" height="24" />
                                         </clipPath>
                                     </defs>
                                     <!-- Contour de l'étoile -->
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="none" stroke="#FBC821" stroke-width="2" opacity="0.3"/>
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                                        fill="none" stroke="#FBC821" stroke-width="2" opacity="0.3" />
                                     <!-- Moitié remplie -->
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor" clip-path="url(#half-star-clip)"/>
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                                        fill="currentColor" clip-path="url(#half-star-clip)" />
                                 </svg>
                             </div>
                             <p class="software-description">Word, PowerPoint, Excel</p>
@@ -308,19 +344,25 @@
                             <h3 class="software-name">Canva</h3>
                             <div class="software-level">
                                 <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                                 </svg>
                                 <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                                 </svg>
                                 <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                                 </svg>
                                 <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                                 </svg>
-                                <svg class="star empty" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                <svg class="star empty" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                                 </svg>
                             </div>
                             <p class="software-description">Création de visuels</p>
@@ -336,25 +378,32 @@
                             <h3 class="software-name">Montage vidéo</h3>
                             <div class="software-level">
                                 <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                                 </svg>
                                 <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                                 </svg>
                                 <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                                 </svg>
-                                <svg class="star empty" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                <svg class="star empty" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                                 </svg>
-                                <svg class="star empty" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                <svg class="star empty" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                                 </svg>
                             </div>
                             <p class="software-description">Adobe Premiere Pro, CapCut</p>
                         </div>
                     </div>
-                    
+
                     <!-- Adobe Creative Suite - 2.5/5 étoiles -->
                     <div class="software-card" style="--index: 4">
                         <div class="software-logo">
@@ -364,28 +413,38 @@
                             <h3 class="software-name software-name-adobe">Adobe Creative Suite</h3>
                             <div class="software-level">
                                 <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                                 </svg>
                                 <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                                 </svg>
                                 <!-- Demi-étoile -->
                                 <svg class="star half" width="16" height="16" viewBox="0 0 24 24">
                                     <defs>
                                         <clipPath id="half-star-clip">
-                                            <rect x="0" y="0" width="12" height="24"/>
+                                            <rect x="0" y="0" width="12" height="24" />
                                         </clipPath>
                                     </defs>
                                     <!-- Contour de l'étoile -->
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="none" stroke="#FBC821" stroke-width="2" opacity="0.3"/>
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                                        fill="none" stroke="#FBC821" stroke-width="2" opacity="0.3" />
                                     <!-- Moitié remplie -->
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor" clip-path="url(#half-star-clip)"/>
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                                        fill="currentColor" clip-path="url(#half-star-clip)" />
                                 </svg>
-                                <svg class="star empty" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                <svg class="star empty" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                                 </svg>
-                                <svg class="star empty" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                <svg class="star empty" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                                 </svg>
                             </div>
                             <p class="software-description">Photoshop, Illustrator, InDesign, XD</p>
@@ -401,28 +460,38 @@
                             <h3 class="software-name">WordPress</h3>
                             <div class="software-level">
                                 <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                                 </svg>
                                 <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                                 </svg>
                                 <!-- Demi-étoile -->
                                 <svg class="star half" width="16" height="16" viewBox="0 0 24 24">
                                     <defs>
                                         <clipPath id="half-star-clip">
-                                            <rect x="0" y="0" width="12" height="24"/>
+                                            <rect x="0" y="0" width="12" height="24" />
                                         </clipPath>
                                     </defs>
                                     <!-- Contour de l'étoile -->
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="none" stroke="#FBC821" stroke-width="2" opacity="0.3"/>
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                                        fill="none" stroke="#FBC821" stroke-width="2" opacity="0.3" />
                                     <!-- Moitié remplie -->
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor" clip-path="url(#half-star-clip)"/>
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                                        fill="currentColor" clip-path="url(#half-star-clip)" />
                                 </svg>
-                                <svg class="star empty" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                <svg class="star empty" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                                 </svg>
-                                <svg class="star empty" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                <svg class="star empty" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                                 </svg>
                             </div>
                             <p class="software-description">Éditions de sites Internet</p>
@@ -439,122 +508,136 @@
                             <h3 class="software-name">Codage</h3>
                             <div class="software-level">
                                 <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                                 </svg>
                                 <!-- Demi-étoile -->
                                 <svg class="star half" width="16" height="16" viewBox="0 0 24 24">
                                     <defs>
                                         <clipPath id="half-star-clip">
-                                            <rect x="0" y="0" width="12" height="24"/>
+                                            <rect x="0" y="0" width="12" height="24" />
                                         </clipPath>
                                     </defs>
                                     <!-- Contour de l'étoile -->
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="none" stroke="#FBC821" stroke-width="2" opacity="0.3"/>
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                                        fill="none" stroke="#FBC821" stroke-width="2" opacity="0.3" />
                                     <!-- Moitié remplie -->
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor" clip-path="url(#half-star-clip)"/>
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                                        fill="currentColor" clip-path="url(#half-star-clip)" />
                                 </svg>
-                                <svg class="star empty" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                <svg class="star empty" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                                 </svg>
-                                <svg class="star empty" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                <svg class="star empty" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                                 </svg>
-                                <svg class="star empty" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                <svg class="star empty" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                                 </svg>
                             </div>
                             <p class="software-description">HTML 5, CSS 3, JavaScript, quelques notions de Python</p>
-                            <p class="fun-fact">→ Fun fact : ce site a entièrement été codé en HTML/CSS/JS (à l'aide de l’IA)</p>
+                            <p class="fun-fact">→ Fun fact : ce site a entièrement été codé en HTML/CSS/JS (à l'aide de
+                                l’IA)</p>
                         </div>
                     </div>
                 </div>
-            
-            <div class="languages-section">
-                <h2 class="section-title">Mes langues</h2>
-                <div class="languages-grid">
-                    <div class="language-item lang-french" style="--index: 0">
-                        <div class="language-flag">
-                            <img src="flags/drapeau-france.svg" alt="Français" class="flag-svg">
+
+                <div class="languages-section">
+                    <h2 class="section-title">Mes langues</h2>
+                    <div class="languages-grid">
+                        <div class="language-item lang-french" style="--index: 0">
+                            <div class="language-flag">
+                                <img src="flags/drapeau-france.svg" alt="Français" class="flag-svg">
+                            </div>
+                            <h3 class="language-name">Français</h3>
+                            <p class="language-description">Langue maternelle</p>
                         </div>
-                        <h3 class="language-name">Français</h3>
-                        <p class="language-description">Langue maternelle</p>
-                    </div>
-                    
-                    <div class="language-item lang-english" style="--index: 1">
-                        <div class="language-flag">
-                            <img src="flags/drapeau-usa-uk.svg" alt="Anglais" class="flag-svg">
+
+                        <div class="language-item lang-english" style="--index: 1">
+                            <div class="language-flag">
+                                <img src="flags/drapeau-usa-uk.svg" alt="Anglais" class="flag-svg">
+                            </div>
+                            <h3 class="language-name">Anglais</h3>
+                            <p class="language-description">Niveau B2<br>(Intermédiaire)</p>
                         </div>
-                        <h3 class="language-name">Anglais</h3>
-                        <p class="language-description">Niveau B2<br>(Intermédiaire)</p>
-                    </div>
-                    
-                    <div class="language-item lang-spanish" style="--index: 2">
-                        <div class="language-flag">
-                            <img src="flags/drapeau-espagne.svg" alt="Espagnol" class="flag-svg">
+
+                        <div class="language-item lang-spanish" style="--index: 2">
+                            <div class="language-flag">
+                                <img src="flags/drapeau-espagne.svg" alt="Espagnol" class="flag-svg">
+                            </div>
+                            <h3 class="language-name">Espagnol</h3>
+                            <p class="language-description">Niveau B1<br>(Débutant - Intermédiaire)</p>
                         </div>
-                        <h3 class="language-name">Espagnol</h3>
-                        <p class="language-description">Niveau B1<br>(Débutant - Intermédiaire)</p>
-                    </div>
-                    
-                    <div class="language-item lang-arabic" style="--index: 3">
-                        <div class="language-flag">
-                            <img src="flags/drapeau-algerie.svg" alt="Arabe" class="flag-svg">
+
+                        <div class="language-item lang-arabic" style="--index: 3">
+                            <div class="language-flag">
+                                <img src="flags/drapeau-algerie.svg" alt="Arabe" class="flag-svg">
+                            </div>
+                            <h3 class="language-name">Arabe</h3>
+                            <p class="language-description">Niveau A2<br>(Débutant)</p>
                         </div>
-                        <h3 class="language-name">Arabe</h3>
-                        <p class="language-description">Niveau A2<br>(Débutant)</p>
                     </div>
                 </div>
-            </div>
 
-            <!-- Centres d'intérêt Section -->
-            <div class="interests-section">
-                <h2 class="section-title">Mes centres d’intérêt</h2>
-                <div class="interests-grid">
-                    <!-- Sport -->
-                    <div class="interest-item" style="--index: 0">
-                        <div class="interest-icon">
-                            <img src="vecteurs/Paris_Saint-Germain.svg" alt="Sport" class="interest-svg">
+                <!-- Centres d'intérêt Section -->
+                <div class="interests-section">
+                    <h2 class="section-title">Mes centres d’intérêt</h2>
+                    <div class="interests-grid">
+                        <!-- Sport -->
+                        <div class="interest-item" style="--index: 0">
+                            <div class="interest-icon">
+                                <img src="vecteurs/Paris_Saint-Germain.svg" alt="Sport" class="interest-svg">
+                            </div>
+                            <h3 class="interest-name">Sport</h3>
+                            <p class="interest-description">Football, Formule 1, <br>Basket-ball (NBA), etc.</p>
                         </div>
-                        <h3 class="interest-name">Sport</h3>
-                        <p class="interest-description">Football, Formule 1, <br>Basket-ball (NBA), etc.</p>
-                    </div>
 
-                    <!-- Outils numériques -->
-                    <div class="interest-item" style="--index: 2">
-                        <div class="interest-icon">
-                            <img src="vecteurs/numerique.svg" alt="Outils numériques" class="interest-svg">
+                        <!-- Outils numériques -->
+                        <div class="interest-item" style="--index: 2">
+                            <div class="interest-icon">
+                                <img src="vecteurs/numerique.svg" alt="Outils numériques" class="interest-svg">
+                            </div>
+                            <h3 class="interest-name">Outils numériques</h3>
+                            <p class="interest-description">Intelligences artificielles & Informatique</p>
                         </div>
-                        <h3 class="interest-name">Outils numériques</h3>
-                        <p class="interest-description">Intelligences artificielles & Informatique</p>
-                    </div>
 
-                    <!-- Transports en communs -->
-                    <div class="interest-item" style="--index: 1">
-                        <div class="interest-icon">
-                            <img src="vecteurs/transports.svg" alt="Sport" class="interest-svg">
+                        <!-- Transports en communs -->
+                        <div class="interest-item" style="--index: 1">
+                            <div class="interest-icon">
+                                <img src="vecteurs/transports.svg" alt="Sport" class="interest-svg">
+                            </div>
+                            <h3 class="interest-name">Transports en communs</h3>
+                            <p class="interest-description">En Île-de-France surtout !</p>
                         </div>
-                        <h3 class="interest-name">Transports en communs</h3>
-                        <p class="interest-description">En Île-de-France surtout !</p>
-                    </div>
-                    
-                    <!-- Développement personnel -->
-                    <div class="interest-item" style="--index: 3">
-                        <div class="interest-icon">
-                            <img src="vecteurs/developpement-personnel.svg" alt="Développement personnel" class="interest-svg">
+
+                        <!-- Développement personnel -->
+                        <div class="interest-item" style="--index: 3">
+                            <div class="interest-icon">
+                                <img src="vecteurs/developpement-personnel.svg" alt="Développement personnel"
+                                    class="interest-svg">
+                            </div>
+                            <h3 class="interest-name">Développement personnel</h3>
+                            <p class="interest-description">« L’envie d’apprendre et de toujours s’améliorer »</p>
                         </div>
-                        <h3 class="interest-name">Développement personnel</h3>
-                        <p class="interest-description">« L’envie d’apprendre et de toujours s’améliorer »</p>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
     </div>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2026 Sami Bendriss. • Site conçu avec ❤ • Tous droits réservés.</p>
     </footer>
-        
+
     <script src="script.js"></script>
 </body>
+
 </html>

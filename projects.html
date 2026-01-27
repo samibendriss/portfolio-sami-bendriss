@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,26 +10,29 @@
     <!-- Ajoutez cette ligne pour ForkAwesome -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
 </head>
+
 <body>
-    
+
     <!-- Page Transition -->
     <div class="page-transition" id="pageTransition"></div>
-    
+
     <!-- Theme Toggle Button -->
     <button class="theme-toggle" id="themeToggle" aria-label="Basculer le thème">
         <svg class="moon-icon" viewBox="0 0 24 24">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
         </svg>
         <svg class="sun-icon" viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="5" fill="#fff"/>
-            <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="12" cy="12" r="5" fill="#fff" />
+            <path
+                d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"
+                stroke="#fff" stroke-width="2" stroke-linecap="round" />
         </svg>
     </button>
 
     <!-- Custom Cursor -->
     <div class="cursor" id="cursor"></div>
     <div class="cursor-follower" id="cursorFollower"></div>
-    
+
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
@@ -59,7 +63,7 @@
                     <line x1="6" y1="6" x2="18" y2="18"></line>
                 </svg>
             </button>
-            
+
             <div class="modal-header">
                 <img class="modal-image" src="" alt="">
                 <div class="modal-title-section">
@@ -68,12 +72,13 @@
                     <p class="modal-description"></p>
                 </div>
             </div>
-            
+
             <div class="modal-body">
                 <div class="modal-info-grid">
                     <div class="modal-info-card">
                         <h3>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
                                 <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
                                 <line x1="16" y1="2" x2="16" y2="6"></line>
                                 <line x1="8" y1="2" x2="8" y2="6"></line>
@@ -83,10 +88,11 @@
                         </h3>
                         <p class="modal-date"></p>
                     </div>
-                    
+
                     <div class="modal-info-card">
                         <h3>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
                                 <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                                 <circle cx="9" cy="7" r="4"></circle>
                                 <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
@@ -96,21 +102,24 @@
                         </h3>
                         <div class="modal-collaborators"></div>
                     </div>
-                    
+
                     <div class="modal-info-card">
                         <h3>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z" />
                             </svg>
                             Outils utilisés
                         </h3>
                         <div class="modal-tools"></div>
                     </div>
                 </div>
-                
+
                 <div class="modal-links">
                     <h3>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
                             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                             <polyline points="15 3 21 3 21 9"></polyline>
                             <line x1="10" y1="14" x2="21" y2="3"></line>
@@ -130,7 +139,7 @@
                 <h1 class="page-title">Mes projets scolaires</h1>
                 <p class="page-subtitle">Voici une sélection complète et variée de mes réalisations universitaires !</p>
             </div>
-            
+
             <div class="projects-filter">
                 <button class="filter-btn active" onclick="filterProjects('all')">TOUS</button>
                 <button class="filter-btn" onclick="filterProjects('strategies')">Stratégies</button>
@@ -139,13 +148,35 @@
             </div>
 
             <h2 class="projects-count" id="projectsCount">Chargement …</h2>
-            
+
             <div class="projects-grid">
 
-                <!-- 1) Verifone - Challenge de la com -->
+                <!-- 1) Stade Toulousain - Challenge de la com 2026 -->
+                <div class="project-card" data-category="strategies" data-level="but3" data-has-modal="true">
+                    <div class="project-image">
+                        <img src="images/stade-toulousain-2026.png" alt="stade-toulousain-challenge">
+                        <div class="icon-frame"></div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">CHALLENGE DE LA COM</span>
+                        <span class="project-level"></span>
+                        <h3 class="project-title">Stade Toulousain</h3>
+                        <p class="project-description">
+                            Recommandation stratégique pour le client “Stade Toulousain”, dans le cadre du Challenge
+                            (national) de la Communication 2026 (concours inter-universitaire de France).
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Recommandation</span>
+                            <span class="tech-tag">Analyse</span>
+                            <span class="tech-tag">Présentation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2) Verifone - Challenge de la com 2025 -->
                 <div class="project-card" data-category="strategies" data-level="but2" data-has-modal="true">
                     <div class="project-image">
-                        <img src="images/challenge-verifone.png" alt="challenge-verifone">
+                        <img src="images/verifone-2025.png" alt="verifone-challenge">
                         <div class="icon-frame"></div>
                     </div>
                     <div class="project-content">
@@ -153,7 +184,7 @@
                         <span class="project-level"></span> <!-- NOUVEAU BOUTON -->
                         <h3 class="project-title">Verifone</h3>
                         <p class="project-description">
-                            Recommandation stratégique pour le client “Verifone”, dans le cadre du Challenge (local) 
+                            Recommandation stratégique pour le client “Verifone”, dans le cadre du Challenge (local)
                             de la Communication 2025 (concours interne organisé par notre IUT).
                         </p>
                         <div class="project-tech">
@@ -164,7 +195,29 @@
                     </div>
                 </div>
 
-                <!-- 2) Vidéo Instagram - Pop[lab] -->
+                <!-- 3) Pontseine - Communication politique -->
+                <div class="project-card" data-category="strategies" data-level="but3" data-has-modal="true">
+                    <div class="project-image">
+                        <img src="images/pontseine.png" alt="pontseine">
+                        <div class="icon-frame"></div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">SAE Communication politique</span>
+                        <span class="project-level"></span>
+                        <h3 class="project-title">Pontseine</h3>
+                        <p class="project-description">
+                            Dossier de campagne électorale municipale pour le candidat fictif Kamel Haddad à Pontseine
+                            (ville fictive), créé par l’ensemble de notre TP (groupe de 11 étudiants).
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Campagne</span>
+                            <span class="tech-tag">Politique</span>
+                            <span class="tech-tag">Présentation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4) Maison Populaire - Vidéo Instagram Pop[lab] -->
                 <div class="project-card" data-category="creations" data-level="but2" data-has-modal="true">
                     <div class="project-image">
                         <img src="images/maison-populaire.png" alt="maison-populaire">
@@ -175,7 +228,7 @@
                         <span class="project-level"></span> <!-- NOUVEAU BOUTON -->
                         <h3 class="project-title">Maison Populaire</h3>
                         <p class="project-description">
-                            Projet tuteuré autour de la communication du Pop[lab] de la Maison Populaire de Montreuil, 
+                            Projet tuteuré autour de la communication du Pop[lab] de la Maison Populaire de Montreuil,
                             qui a donné lieu à la création d’une vidéo créative pour leurs réseaux sociaux.
                         </p>
                         <div class="project-tech">
@@ -186,7 +239,51 @@
                     </div>
                 </div>
 
-                <!-- 3) La Fabrique Cookies - SAE Proposer une reco -->
+                <!-- 5) KREDEN - Conseil et marque -->
+                <div class="project-card" data-category="strategies" data-level="but3" data-has-modal="true">
+                    <div class="project-image">
+                        <img src="images/kreden.png" alt="kreden">
+                        <div class="icon-frame"></div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Conseil et marque</span>
+                        <span class="project-level"></span>
+                        <h3 class="project-title">KREDEN</h3>
+                        <p class="project-description">
+                            Dossier de marque pour KREDEN, marque bretonne de sneakers éco-responsables,
+                            incluant positionnement stratégique et plateforme de marque.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Recommandation</span>
+                            <span class="tech-tag">Branding</span>
+                            <span class="tech-tag">Stratégie</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6) Maison Francis Kurkdjian - Communication 360° -->
+                <div class="project-card" data-category="creations" data-level="but3" data-has-modal="true">
+                    <div class="project-image">
+                        <img src="images/maison-francis-kurkdjian.png" alt="maison-francis-kurkdjian">
+                        <div class="icon-frame"></div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">SAE Communication 360°</span>
+                        <span class="project-level"></span>
+                        <h3 class="project-title">Maison Francis Kurkdjian</h3>
+                        <p class="project-description">
+                            Campagne de communication 360° pour le parfum “Grand Soir”,
+                            avec un événement immersif au Louvre Abu Dhabi.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Stratégie 360°</span>
+                            <span class="tech-tag">Luxe</span>
+                            <span class="tech-tag">Recommandation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7) La Fabrique Cookies - SAE Proposer une reco -->
                 <div class="project-card" data-category="strategies" data-level="but2" data-has-modal="true">
                     <div class="project-image">
                         <img src="images/fabrique-cookies.png" alt="fabrique-cookies">
@@ -197,7 +294,7 @@
                         <span class="project-level"></span> <!-- NOUVEAU BOUTON -->
                         <h3 class="project-title">La Fabrique Cookies</h3>
                         <p class="project-description">
-                            Élaboration d’une recommandation d’agence sur la stratégie de communication de 
+                            Élaboration d’une recommandation d’agence sur la stratégie de communication de
                             “La Fabrique Cookies”, une enseigne renommée de cookies artisanaux.
                         </p>
                         <div class="project-tech">
@@ -208,7 +305,29 @@
                     </div>
                 </div>
 
-                <!-- 4) Application mobile “Talaria” - WEBDESIGN -->
+                <!-- 8) Nestlé - Communication sensible -->
+                <div class="project-card" data-category="strategies" data-level="but3" data-has-modal="true">
+                    <div class="project-image">
+                        <img src="images/nestle.png" alt="nestle">
+                        <div class="icon-frame"></div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">SAE Communication sensible</span>
+                        <span class="project-level"></span>
+                        <h3 class="project-title">Nestlé</h3>
+                        <p class="project-description">
+                            Stratégie de communication sensible pour Nestlé France suite au scandale
+                            sanitaire Buitoni de 2022, avec plan de sortie de crise.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Crise</span>
+                            <span class="tech-tag">Stratégie</span>
+                            <span class="tech-tag">Sensible</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9) Application mobile “Talaria” - WEBDESIGN -->
                 <div class="project-card" data-category="creations" data-level="but2" data-has-modal="true">
                     <div class="project-image">
                         <img src="images/talaria-webdesign-inverse.png" alt="talaria-webdesign">
@@ -219,7 +338,7 @@
                         <span class="project-level"></span> <!-- NOUVEAU BOUTON -->
                         <h3 class="project-title">Application mobile “Talaria”</h3>
                         <p class="project-description">
-                            Conception du design d’une application mobile fictive, qui devait cibler la catégorie 
+                            Conception du design d’une application mobile fictive, qui devait cibler la catégorie
                             d’âge des 11-15 ans, à travers des références mythologiques.
                         </p>
                         <div class="project-tech">
@@ -230,8 +349,30 @@
                     </div>
                 </div>
 
-                <!-- 5) Jacquemus X L'Oréal - SAE Stratégie Com Numérique -->
-                <div class="project-card" data-category="strategies" data-level="but2" data-has-modal="true">
+                <!-- 10) CNRS - Communication scientifique -->
+                <div class="project-card" data-category="strategies" data-level="but3" data-has-modal="true">
+                    <div class="project-image">
+                        <img src="images/cnrs.png" alt="cnrs">
+                        <div class="icon-frame"></div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Communication scientifique</span>
+                        <span class="project-level"></span>
+                        <h3 class="project-title">CNRS</h3>
+                        <p class="project-description">
+                            Plan de communication pour le lancement d’un podcast pour le CNRS, visant à rendre la
+                            science accessible et captivante auprès des jeunes adultes de 18 à 30 ans.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Vulgarisation</span>
+                            <span class="tech-tag">Podcast</span>
+                            <span class="tech-tag">Stratégie</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 11) Jacquemus X L’Oréal - SAE Stratégie Com Numérique -->
+                <div class="project-card" data-category="creations" data-level="but2" data-has-modal="true">
                     <div class="project-image">
                         <img src="images/jacquemus-loreal.png" alt="jacquemus-loreal">
                         <div class="icon-frame"></div>
@@ -241,7 +382,7 @@
                         <span class="project-level"></span> <!-- NOUVEAU BOUTON -->
                         <h3 class="project-title">Jacquemus X L’Oréal</h3>
                         <p class="project-description">
-                            Élaboration d’une stratégie de communication digitale pour la création d’un parfum fictif, 
+                            Élaboration d’une stratégie de communication digitale pour la création d’un parfum fictif,
                             en collaboration avec les marques de luxe “Jacquemus” et “L’Oréal”.
                         </p>
                         <div class="project-tech">
@@ -252,7 +393,51 @@
                     </div>
                 </div>
 
-                <!-- 6) Clip vidéo Yseult - Audiovisuel -->
+                <!-- 12) IKEA - RSOCD (Communication durable / RSE) -->
+                <div class="project-card" data-category="strategies" data-level="but3" data-has-modal="true">
+                    <div class="project-image">
+                        <img src="images/ikea.png" alt="ikea">
+                        <div class="icon-frame"></div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">RSOCD - Communication durable</span>
+                        <span class="project-level"></span>
+                        <h3 class="project-title">IKEA</h3>
+                        <p class="project-description">
+                            Stratégie de communication durable pour IKEA, visant à transformer son image de
+                            fast-furniture vers une référence crédible du mobilier responsable.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">RSE</span>
+                            <span class="tech-tag">Durabilité</span>
+                            <span class="tech-tag">Stratégie</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 13) Magazine en ligne “MOD” - Stratégie éditoriale -->
+                <div class="project-card" data-category="creations" data-level="but1" data-has-modal="true">
+                    <div class="project-image">
+                        <img src="images/mod-magazine-noir.png" alt="mod-magazine">
+                        <div class="icon-frame"></div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Stratégie éditoriale</span>
+                        <span class="project-level"></span> <!-- NOUVEAU BOUTON -->
+                        <h3 class="project-title">Magazine en ligne “MOD”</h3>
+                        <p class="project-description">
+                            Création collaborative d’un magazine en ligne “Mode Of the Day”, sur le thème de la mode
+                            et du lifestyle, créé par l’ensemble de notre TP (groupe de 14 étudiants).
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Rédaction</span>
+                            <span class="tech-tag">Travail d’équipe</span>
+                            <span class="tech-tag">Réflexion</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 14) Clip vidéo Yseult - Audiovisuel -->
                 <div class="project-card" data-category="creations" data-level="but2" data-has-modal="true">
                     <div class="project-image">
                         <img src="images/clip-video-slate-inverse-color.png" alt="clip-video-audivisuel">
@@ -263,7 +448,7 @@
                         <span class="project-level"></span> <!-- NOUVEAU BOUTON -->
                         <h3 class="project-title">Clip vidéo - Yseult</h3>
                         <p class="project-description">
-                            Réalisation d’un clip vidéo audiovisuel sur la musique “Indélébile” de la chanteuse Yseult, 
+                            Réalisation d’un clip vidéo audiovisuel sur la musique “Indélébile” de la chanteuse Yseult,
                             avec une exploration visuelle des thèmes de la chanson.
                         </p>
                         <div class="project-tech">
@@ -274,7 +459,7 @@
                     </div>
                 </div>
 
-                <!-- 7) Santé publique France - Campagne de com audiovisuelle -->
+                <!-- 15) Santé publique France - Campagne de com audiovisuelle -->
                 <div class="project-card" data-category="creations" data-level="but2" data-has-modal="true">
                     <div class="project-image">
                         <img src="images/sante-publique-france.png" alt="sante-publique-france">
@@ -285,8 +470,8 @@
                         <span class="project-level"></span> <!-- NOUVEAU BOUTON -->
                         <h3 class="project-title">Santé publique France</h3>
                         <p class="project-description">
-                            Campagne de communication audiovisuelle, qui sensibilise (de manière émotionnelle et humoristique) 
-                            sur l’hyperconnexion pendant les fêtes de fin d’année.
+                            Campagne de communication audiovisuelle, qui sensibilise (de manière émotionnelle et
+                            humoristique) sur l’hyperconnexion pendant les fêtes de fin d’année.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">Rédaction</span>
@@ -296,7 +481,51 @@
                     </div>
                 </div>
 
-                <!-- 8) Xing Fu Tang - Marketing -->
+                <!-- 16) SHS - Enquête de terrain par observation -->
+                <div class="project-card" data-category="analyses" data-level="but2" data-has-modal="true">
+                    <div class="project-image">
+                        <img src="images/shs.png" alt="shs">
+                        <div class="icon-frame"></div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">SHS</span>
+                        <span class="project-level"></span>
+                        <h3 class="project-title">Enquête par observation</h3>
+                        <p class="project-description">
+                            Enquête sociologique de terrain comparant l’aménagement urbain de La Courneuve et
+                            Vélizy-Villacoublay selon l’orientation politique des municipalités.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Méthodologie</span>
+                            <span class="tech-tag">Observation</span>
+                            <span class="tech-tag">Analyse</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 17) TPM Montreuil - Com culturelle -->
+                <div class="project-card" data-category="strategies" data-level="but2" data-has-modal="true">
+                    <div class="project-image">
+                        <img src="images/tpm-theatre.png" alt="tpm-theatre">
+                        <div class="icon-frame"></div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">SAE Communication culturelle</span>
+                        <span class="project-level"></span> <!-- NOUVEAU BOUTON -->
+                        <h3 class="project-title">TPM Montreuil</h3>
+                        <p class="project-description">
+                            Création d’un appel à projet pour le dispositif “Arthécimus” du Théâtre Public
+                            de Montreuil, ciblant des enfants de 10 à 11 ans.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Organisation</span>
+                            <span class="tech-tag">Créativité</span>
+                            <span class="tech-tag">Présentation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 18) Xing Fu Tang - Marketing -->
                 <div class="project-card" data-category="analyses" data-level="but2" data-has-modal="true">
                     <div class="project-image">
                         <img src="images/xing-fu-tang.png" alt="xing-fu-tang">
@@ -307,7 +536,7 @@
                         <span class="project-level"></span> <!-- NOUVEAU BOUTON -->
                         <h3 class="project-title">Xing Fu Tang</h3>
                         <p class="project-description">
-                            Élaboration d’un plan de marchéage pour l’enseigne de bubble teas “Xing Fu Tang”, 
+                            Élaboration d’un plan de marchéage pour l’enseigne de bubble teas “Xing Fu Tang”,
                             une analyse complète sur la stratégie marketing de l’entreprise.
                         </p>
                         <div class="project-tech">
@@ -318,7 +547,7 @@
                     </div>
                 </div>
 
-                <!-- 9) Événement “Mercredi” - EEO -->
+                <!-- 19) Événement "Mercredi" - EEO -->
                 <div class="project-card" data-category="creations" data-level="but2" data-has-modal="true">
                     <div class="project-image">
                         <img src="images/mercredi-netflix.png" alt="mercredi-netflix">
@@ -329,7 +558,7 @@
                         <span class="project-level"></span> <!-- NOUVEAU BOUTON -->
                         <h3 class="project-title">Événement - “Mercredi”</h3>
                         <p class="project-description">
-                            Organisation d’un événement fictif pour la saison 2 de la série Netflix “Mercredi”, 
+                            Organisation d’un événement fictif pour la saison 2 de la série Netflix “Mercredi”,
                             avec création d’une brochure pour les invités de notre soirée.
                         </p>
                         <div class="project-tech">
@@ -340,7 +569,119 @@
                     </div>
                 </div>
 
-                <!-- MASQUÉ - 10) Scandale Buitoni
+                <!-- 20) Magazine “Insurrection” - InDesign -->
+                <div class="project-card" data-category="creations" data-level="but1" data-has-modal="true">
+                    <div class="project-image">
+                        <img src="images/magazine-insurrection.png" alt="magazine-insurrection">
+                        <div class="icon-frame"></div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Création graphique</span>
+                        <span class="project-level"></span> <!-- NOUVEAU BOUTON -->
+                        <h3 class="project-title">Magazine “Insurrection”</h3>
+                        <p class="project-description">
+                            Production d’une gazette fictive qui s’insurge contre les injustices
+                            présentes dans la société actuelle, à travers la thématique de l’art.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">PAO</span>
+                            <span class="tech-tag">Rédaction</span>
+                            <span class="tech-tag">Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 21) SAE Cahier de tendances -->
+                <div class="project-card" data-category="analyses" data-level="but1" data-has-modal="true">
+                    <div class="project-image">
+                        <img src="images/cahier-tendances.png" alt="cahier-tendances">
+                        <div class="icon-frame"></div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">SAE Cahier de tendances</span>
+                        <span class="project-level"></span> <!-- NOUVEAU BOUTON -->
+                        <h3 class="project-title">Les destinations touristiques</h3>
+                        <p class="project-description">
+                            Création d’un cahier de tendances sur le secteur du tourisme, mettant en lumière nos
+                            prédictions sur le futur de ce secteur.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Veille</span>
+                            <span class="tech-tag">Design</span>
+                            <span class="tech-tag">Rédaction</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 22) Disney - Management de la performance et gestion du changement -->
+                <div class="project-card" data-category="analyses" data-level="but2" data-has-modal="true">
+                    <div class="project-image">
+                        <img src="images/disney.png" alt="disney">
+                        <div class="icon-frame"></div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Management de la performance</span>
+                        <span class="project-level"></span> <!-- NOUVEAU BOUTON -->
+                        <h3 class="project-title">The Walt Disney Company</h3>
+                        <p class="project-description">
+                            Élaboration d’une analyse complète du management de la performance de The Walt Disney
+                            Company.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Management</span>
+                            <span class="tech-tag">Analyse</span>
+                            <span class="tech-tag">Benchmarking</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 23) Patrick Roger - Stratégie de com événementielle -->
+                <div class="project-card" data-category="strategies" data-level="but2" data-has-modal="true">
+                    <div class="project-image">
+                        <img src="images/patrick-roger.png" alt="patrick-roger">
+                        <div class="icon-frame"></div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Communication événementielle</span>
+                        <span class="project-level"></span> <!-- NOUVEAU BOUTON -->
+                        <h3 class="project-title">Patrick Roger</h3>
+                        <p class="project-description">
+                            Stratégie de communication événementielle sur la soirée de lancement des nouvelles
+                            créations du chocolatier Patrick Roger.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Événementiel</span>
+                            <span class="tech-tag">Stratégie</span>
+                            <span class="tech-tag">Créativité</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 24) Recueil de textes - EEO -->
+                <div class="project-card" data-category="creations" data-level="but2" data-has-modal="true">
+                    <div class="project-image">
+                        <img src="images/recueil-textes.png" alt="recueil-textes">
+                        <div class="icon-frame"></div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Expression écrite et orale</span>
+                        <span class="project-level"></span> <!-- NOUVEAU BOUTON -->
+                        <h3 class="project-title">Recueil de textes</h3>
+                        <p class="project-description">
+                            Ensemble de mes textes écrits, rédigés durant cette année
+                            scolaire 2024-2025, pendant mes cours d’Expression écrite et orale.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Rédaction</span>
+                            <span class="tech-tag">Créativité</span>
+                            <span class="tech-tag">Valorisation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJETS MASQUÉS -->
+
+                <!-- MASQUÉ - Scandale Buitoni
                 <div class="project-card" data-category="analyses" data-level="but2" data-has-modal="true">
                     <div class="project-image">
                         <img src="images/buitoni.png" alt="buitoni">
@@ -363,29 +704,7 @@
                 </div>
                 -->
 
-                <!-- 11) Magazine en ligne “MOD” - Stratégie éditoriale -->
-                <div class="project-card" data-category="creations" data-level="but1" data-has-modal="true">
-                    <div class="project-image">
-                        <img src="images/mod-magazine-noir.png" alt="mod-magazine">
-                        <div class="icon-frame"></div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-category">Stratégie éditoriale</span>
-                        <span class="project-level"></span> <!-- NOUVEAU BOUTON -->
-                        <h3 class="project-title">Magazine en ligne “MOD”</h3>
-                        <p class="project-description">
-                            Création collaborative d’un magazine en ligne “Mode Of the Day”, sur le thème de la mode 
-                            et du lifestyle, créé par l’ensemble de notre TP (groupe de 15 étudiants).
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Rédaction</span>
-                            <span class="tech-tag">Travail d’équipe</span>
-                            <span class="tech-tag">Réflexion</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- MASQUÉ - 12) Plan de com - Pomme à paume
+                <!-- MASQUÉ - Plan de com - Pomme à paume
                 <div class="project-card" data-category="strategies" data-level="but1" data-has-modal="true">
                     <div class="project-image">
                         <img src="images/pomme-a-paume.png" alt="pomme-a-paume">
@@ -407,74 +726,8 @@
                     </div>
                 </div>
                 -->
-                
-                <!-- 13) Magazine “Insurrection” - InDesign -->
-                <div class="project-card" data-category="creations" data-level="but1" data-has-modal="true">
-                    <div class="project-image">
-                        <img src="images/magazine-insurrection.png" alt="magazine-insurrection">
-                        <div class="icon-frame"></div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-category">Création graphique</span>
-                        <span class="project-level"></span> <!-- NOUVEAU BOUTON -->
-                        <h3 class="project-title">Magazine “Insurrection”</h3>
-                        <p class="project-description">
-                            Production d’une gazette fictive qui s’insurge contre les injustices 
-                            présentes dans la société actuelle, à travers la thématique de l’art.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">PAO</span>
-                            <span class="tech-tag">Rédaction</span>
-                            <span class="tech-tag">Design</span>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- 14) TPM Montreuil - Com culturelle -->
-                <div class="project-card" data-category="strategies" data-level="but2" data-has-modal="true">
-                    <div class="project-image">
-                        <img src="images/tpm-theatre.png" alt="tpm-theatre">
-                        <div class="icon-frame"></div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-category">SAE Communication culturelle</span>
-                        <span class="project-level"></span> <!-- NOUVEAU BOUTON -->
-                        <h3 class="project-title">TPM Montreuil</h3>
-                        <p class="project-description">
-                            Création d’un appel à projet pour le dispositif “Arthécimus” du Théâtre Public 
-                            de Montreuil, ciblant des enfants de 10 à 11 ans.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Organisation</span>
-                            <span class="tech-tag">Créativité</span>
-                            <span class="tech-tag">Présentation</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 15) SAE Cahier de tendances -->
-                <div class="project-card" data-category="analyses" data-level="but1" data-has-modal="true">
-                    <div class="project-image">
-                        <img src="images/cahier-tendances.png" alt="cahier-tendances">
-                        <div class="icon-frame"></div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-category">SAE Cahier de tendances</span>
-                        <span class="project-level"></span> <!-- NOUVEAU BOUTON -->
-                        <h3 class="project-title">Les destinations touristiques</h3>
-                        <p class="project-description">
-                            Création d’un cahier de tendances sur le secteur du tourisme, mettant en lumière nos 
-                            prédictions sur le futur de ce secteur.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Veille</span>
-                            <span class="tech-tag">Design</span>
-                            <span class="tech-tag">Rédaction</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- MASQUÉ - 16) Engie - Com de crise
+                <!-- MASQUÉ - Engie - Com de crise
                 <div class="project-card" data-category="strategies" data-level="but1" data-has-modal="true">
                     <div class="project-image">
                         <img src="images/engie.png" alt="engie">
@@ -497,50 +750,7 @@
                 </div>
                 -->
 
-                <!-- 17) Disney - Managemen de la performance et gestion du changement -->
-                <div class="project-card" data-category="analyses" data-level="but2" data-has-modal="true">
-                    <div class="project-image">
-                        <img src="images/disney.png" alt="disney">
-                        <div class="icon-frame"></div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-category">Management de la performance</span>
-                        <span class="project-level"></span> <!-- NOUVEAU BOUTON -->
-                        <h3 class="project-title">The Walt Disney Company</h3>
-                        <p class="project-description">
-                            Élaboration d’une analyse complète du management de la performance de The Walt Disney Company.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Management</span>
-                            <span class="tech-tag">Analyse</span>
-                            <span class="tech-tag">Benchmarking</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 18) Patrick Roger - Stratégie de com événementielle -->
-                <div class="project-card" data-category="strategies" data-level="but2" data-has-modal="true">
-                    <div class="project-image">
-                        <img src="images/patrick-roger.png" alt="patrick-roger">
-                        <div class="icon-frame"></div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-category">Communication événementielle</span>
-                        <span class="project-level"></span> <!-- NOUVEAU BOUTON -->
-                        <h3 class="project-title">Patrick Roger</h3>
-                        <p class="project-description">
-                            Stratégie de communication événementielle sur la soirée de lancement des nouvelles 
-                            créations du chocolatier Patrick Roger.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Événementiel</span>
-                            <span class="tech-tag">Stratégie</span>
-                            <span class="tech-tag">Créativité</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- MASQUÉ - 19) Yves Rocher - Com numérique
+                <!-- MASQUÉ - Yves Rocher - Com numérique
                 <div class="project-card" data-category="analyses" data-level="but2" data-has-modal="true">
                     <div class="project-image">
                         <img src="images/yves-rocher.png" alt="yves-rocher">
@@ -551,7 +761,7 @@
                         <span class="project-level"></span>
                         <h3 class="project-title">Yves Rocher</h3>
                         <p class="project-description">
-                            Analyse complète de la proposition de valeurs et de la stratégie digitale de l’enseigne de cosmétiques "Yves Rocher".
+                            Analyse complète de la proposition de valeurs et de la stratégie digitale de l’enseigne de cosmétiques “Yves Rocher”.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">Analyse</span>
@@ -562,7 +772,7 @@
                 </div>
                 -->
 
-                <!-- MASQUÉ - 20) ShopNow - Com interne
+                <!-- MASQUÉ - ShopNow - Com interne
                 <div class="project-card" data-category="strategies" data-level="but2" data-has-modal="true">
                     <div class="project-image">
                         <img src="images/shopnow.png" alt="shopnow">
@@ -573,214 +783,13 @@
                         <span class="project-level"></span>
                         <h3 class="project-title">"ShopNow"</h3>
                         <p class="project-description">
-                            Création d’une stratégie de communication interne pour l’entreprise fictive "ShopNow",
+                            Création d’une stratégie de communication interne pour l’entreprise fictive “ShopNow”,
                             spécialisée dans le e-commerce.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">Corporate</span>
                             <span class="tech-tag">Stratégie</span>
                             <span class="tech-tag">Créativité</span>
-                        </div>
-                    </div>
-                </div>
-                -->
-                
-                <!-- 21) Recueil de textes - EEO -->
-                <div class="project-card" data-category="creations" data-level="but2" data-has-modal="true">
-                    <div class="project-image">
-                        <img src="images/recueil-textes.png" alt="recueil-textes">
-                        <div class="icon-frame"></div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-category">Expression écrite et orale</span>
-                        <span class="project-level"></span> <!-- NOUVEAU BOUTON -->
-                        <h3 class="project-title">Recueil de textes</h3>
-                        <p class="project-description">
-                            Ensemble de mes textes écrits, rédigés durant cette année
-                            scolaire 2024-2025, pendant mes cours d’Expression écrite et orale.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Rédaction</span>
-                            <span class="tech-tag">Créativité</span>
-                            <span class="tech-tag">Valorisation</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- NOUVEAUX PROJETS BUT 3 -->
-
-                <!-- 22) Maison Francis Kurkdjian - Communication 360° -->
-                <div class="project-card" data-category="strategies" data-level="but3" data-has-modal="true">
-                    <div class="project-image">
-                        <img src="images/maison-francis-kurkdjian.png" alt="maison-francis-kurkdjian">
-                        <div class="icon-frame"></div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-category">SAE Communication 360°</span>
-                        <span class="project-level"></span>
-                        <h3 class="project-title">Maison Francis Kurkdjian</h3>
-                        <p class="project-description">
-                            Stratégie de communication 360° pour Maison Francis Kurkdjian,
-                            développant une approche globale et innovante pour renforcer la notoriété de la marque.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Stratégie 360°</span>
-                            <span class="tech-tag">Luxe</span>
-                            <span class="tech-tag">Recommandation</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 23) IKEA - RSOCD (Communication durable / RSE) -->
-                <div class="project-card" data-category="strategies" data-level="but3" data-has-modal="true">
-                    <div class="project-image">
-                        <img src="images/ikea.png" alt="ikea">
-                        <div class="icon-frame"></div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-category">RSOCD - Communication durable</span>
-                        <span class="project-level"></span>
-                        <h3 class="project-title">IKEA</h3>
-                        <p class="project-description">
-                            Stratégie de communication responsable et durable (RSE) pour IKEA, axée sur les enjeux
-                            environnementaux et sociétaux dans le secteur de l’ameublement.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">RSE</span>
-                            <span class="tech-tag">Durabilité</span>
-                            <span class="tech-tag">Stratégie</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 24) KREDEN - Conseil et marque (Recommandation agence) -->
-                <div class="project-card" data-category="strategies" data-level="but3" data-has-modal="true">
-                    <div class="project-image">
-                        <img src="images/kreden.png" alt="kreden">
-                        <div class="icon-frame"></div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-category">Conseil et marque</span>
-                        <span class="project-level"></span>
-                        <h3 class="project-title">KREDEN</h3>
-                        <p class="project-description">
-                            Recommandation d’agence complète pour KREDEN, développant une stratégie de marque
-                            et un positionnement stratégique pour accompagner le développement de l’entreprise.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Recommandation</span>
-                            <span class="tech-tag">Branding</span>
-                            <span class="tech-tag">Stratégie</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 25) Nestlé - Communication sensible -->
-                <div class="project-card" data-category="strategies" data-level="but3" data-has-modal="true">
-                    <div class="project-image">
-                        <img src="images/nestle.png" alt="nestle">
-                        <div class="icon-frame"></div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-category">SAE Communication sensible</span>
-                        <span class="project-level"></span>
-                        <h3 class="project-title">Nestlé</h3>
-                        <p class="project-description">
-                            Stratégie de communication sensible pour le scandale Buitoni, 
-                            développant une approche éthique et responsable face aux enjeux controversés de l’entreprise.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Crise</span>
-                            <span class="tech-tag">Stratégie</span>
-                            <span class="tech-tag">Sensible</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 26) Pontseine - Communication politique -->
-                <div class="project-card" data-category="strategies" data-level="but3" data-has-modal="true">
-                    <div class="project-image">
-                        <img src="images/pontseine.png" alt="pontseine">
-                        <div class="icon-frame"></div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-category">SAE Communication politique</span>
-                        <span class="project-level"></span>
-                        <h3 class="project-title">Pontseine</h3>
-                        <p class="project-description">
-                            Stratégie de communication complète pour la campagne municipale de 2026 pour Pontseine (ville fictive),
-                            intégrant stratégie électorale, messages clés et plan d’actions.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Campagne</span>
-                            <span class="tech-tag">Politique</span>
-                            <span class="tech-tag">Présentation</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 27) CNRS - Communication scientifique -->
-                <div class="project-card" data-category="strategies" data-level="but3" data-has-modal="true">
-                    <div class="project-image">
-                        <img src="images/cnrs.png" alt="cnrs">
-                        <div class="icon-frame"></div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-category">Communication scientifique</span>
-                        <span class="project-level"></span>
-                        <h3 class="project-title">CNRS</h3>
-                        <p class="project-description">
-                            Plan de communication pour le lancement d’un podcast pour le CNRS,
-                            visant à vulgariser et diffuser les recherches scientifiques auprès du grand public.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Vulgarisation</span>
-                            <span class="tech-tag">Podcast</span>
-                            <span class="tech-tag">Stratégie</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 28) SHS - Enquête de terrain par observation -->
-                <div class="project-card" data-category="analyses" data-level="but2" data-has-modal="true">
-                    <div class="project-image">
-                        <img src="images/shs.png" alt="shs">
-                        <div class="icon-frame"></div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-category">SHS</span>
-                        <span class="project-level"></span>
-                        <h3 class="project-title">Enquête par observation</h3>
-                        <p class="project-description">
-                            Enquête de terrain en Sciences Humaines et Sociales basée sur l'observation,
-                            développant une méthodologie rigoureuse d'analyse des comportements et interactions sociales.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Méthodologie</span>
-                            <span class="tech-tag">Observation</span>
-                            <span class="tech-tag">Analyse</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 29) Challenge de la com - À venir 
-                <div class="project-card" data-category="strategies" data-level="but2" data-has-modal="true">
-                    <div class="project-image">
-                        <img src="images/challenge-verifone.png" alt="challenge-new">
-                        <div class="icon-frame"></div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-category">CHALLENGE DE LA COM</span>
-                        <span class="project-level"></span>
-                        <h3 class="project-title">ATTENDRE</h3>
-                        <p class="project-description">
-                            Recommandation stratégique pour le client “ATTENDRE”, dans le cadre du Challenge (national)
-                            de la Communication 2026 (avec sélection interne organisé par notre IUT).
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Recommandation</span>
-                            <span class="tech-tag">Analyse</span>
-                            <span class="tech-tag">Présentation</span>
                         </div>
                     </div>
                 </div>
@@ -806,18 +815,19 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="modal-section">
                 <h3>Description détaillée</h3>
                 <p id="modal-dynamic-description" class="modal-description"></p>
             </div>
-            
+
             <div class="modal-section">
                 <h3>Détails du projet</h3>
                 <div class="modal-details">
                     <div class="detail-item">
                         <div class="detail-label">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
                                 <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
                                 <line x1="16" y1="2" x2="16" y2="6"></line>
                                 <line x1="8" y1="2" x2="8" y2="6"></line>
@@ -829,7 +839,8 @@
                     </div>
                     <div class="detail-item">
                         <div class="detail-label">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
                                 <circle cx="12" cy="12" r="10"></circle>
                                 <polyline points="12,6 12,12 16,14"></polyline>
                             </svg>
@@ -852,7 +863,8 @@
                     -->
                     <div class="detail-item">
                         <div class="detail-label">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
                                 <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                                 <circle cx="9" cy="7" r="4"></circle>
                                 <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
@@ -866,8 +878,10 @@
                     </div>
                     <div class="detail-item">
                         <div class="detail-label">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z" />
                             </svg>
                             Outils utilisés
                         </div>
@@ -877,7 +891,7 @@
                     </div>
                 </div>
             </div>
-                        
+
             <div class="modal-section">
                 <div id="modal-dynamic-links" class="modal-links-large">
                     <!-- Les liens seront copiés automatiquement -->
@@ -890,7 +904,8 @@
     <footer>
         <p>&copy; 2026 Sami Bendriss. • Site conçu avec ❤ • Tous droits réservés.</p>
     </footer>
-        
+
     <script src="script.js"></script>
 </body>
+
 </html>

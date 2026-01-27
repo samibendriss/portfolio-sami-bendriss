@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,26 +10,29 @@
     <!-- Ajoutez cette ligne pour ForkAwesome -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
 </head>
+
 <body>
-    
+
     <!-- Page Transition -->
     <div class="page-transition" id="pageTransition"></div>
-    
+
     <!-- Theme Toggle Button -->
     <button class="theme-toggle" id="themeToggle" aria-label="Basculer le thème">
         <svg class="moon-icon" viewBox="0 0 24 24">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
         </svg>
         <svg class="sun-icon" viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="5" fill="#fff"/>
-            <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="12" cy="12" r="5" fill="#fff" />
+            <path
+                d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"
+                stroke="#fff" stroke-width="2" stroke-linecap="round" />
         </svg>
     </button>
 
     <!-- Custom Cursor -->
     <div class="cursor" id="cursor"></div>
     <div class="cursor-follower" id="cursorFollower"></div>
-    
+
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
@@ -56,7 +60,7 @@
                 <h1 class="page-title">Mon parcours</h1>
                 <p class="page-subtitle">Voici un récapitulatif de mes formations et expériences professionnelles.</p>
             </div>
-            
+
             <div class="experience-container">
 
                 <!-- Timeline Expériences Professionnelles (Gauche) -->
@@ -66,34 +70,46 @@
                         <div class="timeline-item" style="--index: 0">
                             <div class="timeline-content">
                                 <div class="timeline-icon timeline-icon-svg">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <circle cx="12" cy="12" r="10"></circle>
                                         <circle cx="12" cy="12" r="3"></circle>
                                     </svg>
                                 </div>
                                 <div class="timeline-header">
                                     <div class="timeline-logo">
-                                        <img src="logos/Paris_SO_Cœur.svg" alt="GPSO 92 Issy" class="logo-full logo-reduced">
+                                        <img src="logos/Paris_SO_Cœur.svg" alt="GPSO 92 Issy"
+                                            class="logo-full logo-reduced">
                                     </div>
                                     <div class="timeline-info">
-                                        <p class="timeline-date">Mai 2025 - Juin 2025<span class="date-badge">8 semaines</span></p>
+                                        <p class="timeline-date">Mai 2025 - Juin 2025<span class="date-badge">8
+                                                semaines</span></p>
                                         <h3 class="timeline-title">Assistant Chargé de communication</h3>
-                                        <p class="timeline-company"><b><mark class="red">Paris SO Cœur (ex-GPSO 92 Issy)</mark> | Issy-les-Moulineaux</b></p>
+                                        <p class="timeline-company"><b><mark class="red">Paris SO Cœur</mark> |
+                                                Issy-les-Moulineaux</b></p>
                                     </div>
                                 </div>
                                 <p class="timeline-description">
                                     Stage effectué dans le cadre de ma <mark class="blue">2ème année de BUT</mark>.
-                                    <li>Réalisation d’une veille concurrentielle des clubs féminins et autres organisations sportives.</li>
-                                    <li>Accompagnement du rebranding du club vers <b><span style="color: var(--red);">“Paris SO Cœur”</span></b> et adaptation de la stratégie de communication.</li>
-                                    <li>Gestion des réseaux sociaux, création de contenus digitaux et presse, pour un <b><span style="color: var(--red);">club de football 100% féminin</span></b>.</li>
                                 </p>
+                                <ul class="timeline-list">
+                                    <li>Réalisation d’une veille concurrentielle des clubs féminins et autres
+                                        organisations sportives.</li>
+                                    <li>Accompagnement du rebranding du club vers <b><span
+                                                style="color: var(--red);">“Paris SO Cœur” (anciennement “GPSO 92
+                                                Issy”)</span></b> et adaptation de la stratégie de communication.</li>
+                                    <li>Gestion des réseaux sociaux, création de contenus digitaux et presse, pour un
+                                        <b><span style="color: var(--red);">club de football 100% féminin</span></b>.
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        
+
                         <div class="timeline-item" style="--index: 1">
                             <div class="timeline-content">
                                 <div class="timeline-icon timeline-icon-svg">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
                                         <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
                                     </svg>
@@ -105,21 +121,27 @@
                                     <div class="timeline-info">
                                         <p class="timeline-date">Juin 2024<span class="date-badge">4 semaines</span></p>
                                         <h3 class="timeline-title">Chargé de communication</h3>
-                                        <p class="timeline-company"><b><mark class="red">Expotentiel 3V</mark> | Drancy</b></p>
+                                        <p class="timeline-company"><b><mark class="red">Expotentiel 3V</mark> |
+                                                Drancy</b></p>
                                     </div>
                                 </div>
                                 <p class="timeline-description">
                                     Stage effectué dans le cadre de ma <mark class="blue">1ère année de BUT</mark>.
-                                        <li>Community management, veille stratégique et concurrentielle des réseaux sociaux.</li>
-                                        <li>Production de contenus vidéos pour une <b><span style="color: var(--red);">association municipale</span></b>.</li>
                                 </p>
+                                <ul class="timeline-list">
+                                    <li>Community management, veille stratégique et concurrentielle des réseaux sociaux.
+                                    </li>
+                                    <li>Production de contenus vidéos pour une <b><span
+                                                style="color: var(--red);">association locale</span></b>.</li>
+                                </ul>
                             </div>
                         </div>
 
-                        <div class="timeline-item" style="--index: 2">
+                        <!-- <div class="timeline-item" style="--index: 2">
                             <div class="timeline-content">
                                 <div class="timeline-icon timeline-icon-svg">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
                                         <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
                                     </svg>
@@ -129,16 +151,19 @@
                                         <img src="logos/Amundi.svg" alt="Amundi" class="logo-full">
                                     </div>
                                     <div class="timeline-info">
-                                        <p class="timeline-date">Janvier 2020<span class="date-badge">1 semaine</span></p>
+                                        <p class="timeline-date">Janvier 2020<span class="date-badge">1 semaine</span>
+                                        </p>
                                         <h3 class="timeline-title">Stage de 3ème (collège)</h3>
-                                        <p class="timeline-company"><b><mark class="red">Amundi Asset Management</mark> | Paris</b></p>
+                                        <p class="timeline-company"><b><mark class="red">Amundi Asset Management</mark>
+                                                | Paris</b></p>
                                     </div>
                                 </div>
                                 <p class="timeline-description">
-                                    Stage d’observation au sein du <b><span style="color: var(--red);">service informatique</span></b>.
+                                    Stage d’observation au sein du <b><span style="color: var(--red);">service
+                                            informatique</span></b>.
                                 </p>
                             </div>
-                        </div>
+                        </div> -->
 
                     </div>
                 </div>
@@ -150,54 +175,72 @@
                         <div class="timeline-item" style="--index: 0">
                             <div class="timeline-content">
                                 <div class="timeline-icon timeline-icon-svg">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
                                         <path d="M6 12v5c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2v-5"></path>
                                     </svg>
                                 </div>
                                 <div class="timeline-header">
                                     <div class="timeline-logo">
-                                        <img src="logos/IUT-Montreuil_Infocom-white.svg" alt="IUT Montreuil" class="logo-invert logo-light">
-                                        <img src="logos/IUT-Montreuil_Infocom-black.svg" alt="IUT Montreuil" class="logo-invert logo-dark">
+                                        <img src="logos/IUT-Montreuil_Infocom-white.svg" alt="IUT Montreuil"
+                                            class="logo-invert logo-light">
+                                        <img src="logos/IUT-Montreuil_Infocom-black.svg" alt="IUT Montreuil"
+                                            class="logo-invert logo-dark">
                                     </div>
                                     <div class="timeline-info">
-                                        <p class="timeline-date">2023 - 2026<span class="date-badge red">Niveau Bac +3</span></p>
+                                        <p class="timeline-date">2023 - 2026<span class="date-badge red">Niveau Bac
+                                                +3</span></p>
                                         <h3 class="timeline-title">BUT Information Communication</h3>
-                                        <p class="timeline-company"><b><mark class="blue">IUT de Montreuil</mark> - Université Paris 8</b></p>
+                                        <p class="timeline-company"><b><mark class="blue">IUT de Montreuil</mark> -
+                                                Université Paris 8</b></p>
                                     </div>
                                 </div>
                                 <p class="timeline-description">
-                                    Parcours <b><span style="color: var(--primary)">Communication des organisations</span></b>.
-                                    <br>Formation pluridisciplinaire développant analyse, conception et mise en œuvre de stratégies de communication dans les <b><span style="color: var(--primary);">entreprises</span></b>, <b><span style="color: var(--primary);">agences</span></b>, <b><span style="color: var(--primary);">associations</span></b> et <b><span style="color: var(--primary);">organismes publics</span></b>.
+                                    Parcours <b><span style="color: var(--primary)">Communication des
+                                            organisations</span></b>.
+                                </p>
+                                <p class="timeline-description">
+                                    Formation pluridisciplinaire développant analyse, conception et mise en œuvre de
+                                    stratégies de communication dans les <b><span
+                                            style="color: var(--primary);">entreprises</span></b>, <b><span
+                                            style="color: var(--primary);">agences</span></b>, <b><span
+                                            style="color: var(--primary);">associations</span></b> et <b><span
+                                            style="color: var(--primary);">organismes publics</span></b>.
                                 </p>
                             </div>
                         </div>
-                        
+
                         <div class="timeline-item" style="--index: 1">
                             <div class="timeline-content">
                                 <div class="timeline-icon timeline-icon-svg">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
                                         <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
                                     </svg>
                                 </div>
                                 <div class="timeline-header">
                                     <div class="timeline-logo">
-                                        <img src="logos/campus-drancy.png" alt="Lycée Paul le Rolland" class="logo-full">
+                                        <img src="logos/campus-drancy.png" alt="Lycée Paul le Rolland"
+                                            class="logo-full">
                                     </div>
                                     <div class="timeline-info">
-                                        <p class="timeline-date">2020 - 2023<span class="date-badge">Mention Assez bien</span></p>
+                                        <p class="timeline-date">2020 - 2023<span class="date-badge">Mention Assez
+                                                bien</span></p>
                                         <h3 class="timeline-title">Baccalauréat Général</h3>
-                                        <p class="timeline-company"><b><mark class="blue">Lycée Paul le Rolland</mark> | Drancy</b></p>
+                                        <p class="timeline-company"><b><mark class="blue">Lycée Paul le Rolland</mark> |
+                                                Drancy</b></p>
                                     </div>
                                 </div>
                                 <p class="timeline-description">
-                                    <b><span style="color: var(--primary);">Spécialités :</span></b> Numérique et sciences informatiques, Maths.
+                                    <b><span style="color: var(--primary);">Spécialités :</span></b> Numérique et
+                                    sciences informatiques, Maths.
                                 </p>
                             </div>
                         </div>
 
-                        <div class="timeline-item" style="--index: 2">
+                        <!-- <div class="timeline-item" style="--index: 2">
                             <div class="timeline-content">
                                 <div class="timeline-icon timeline-icon-svg">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -218,10 +261,10 @@
                                 <p class="timeline-description">
                                 </p>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
-                
+
             </div>
         </section>
     </div>
@@ -230,7 +273,8 @@
     <footer>
         <p>&copy; 2026 Sami Bendriss. • Site conçu avec ❤ • Tous droits réservés.</p>
     </footer>
-        
+
     <script src="script.js"></script>
 </body>
+
 </html>
