@@ -248,6 +248,12 @@ body.dark-mode .theme-toggle .sun-icon {
         z-index: 9998;
         transition: all 0.3s ease;
     }
+
+    /* Curseur personnalisé dans les modales (desktop uniquement) */
+    .project-modal,
+    .modal-content {
+        cursor: none;
+    }
 }
 
 /* Page Container */
@@ -2240,23 +2246,20 @@ body.dark-mode .timeline-content .timeline-date .date-badge.date-level {
 /* ===== PROJECTS PAGE ===== */
 
 .projects-page {
-    padding: 120px 30px 80px;
-    /* Réduit de 50px à 30px */
+    padding: 120px 40px 80px;
     max-width: 1400px;
     margin: 0 auto;
 }
 
 @media (max-width: 1200px) {
     .projects-page {
-        padding: 120px 30px 80px;
-        /* Au lieu de 20px sur mobile */
+        padding: 120px 40px 80px;
     }
 }
 
 @media (max-width: 768px) {
     .projects-page {
-        padding: 120px 30px 80px;
-        /* Au lieu de 20px sur mobile */
+        padding: 120px 40px 80px;
     }
 }
 
@@ -2442,12 +2445,8 @@ body.dark-mode .project-card:hover {
 
 .project-image {
     width: 100%;
-    height: auto;
-    max-height: 250px;
-    /* Taille maximale raisonnable */
-    object-fit: cover;
     aspect-ratio: 16/9;
-    /* Maintient le ratio 1920x1080 */
+    /* Maintient le ratio 16:9 */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2851,8 +2850,7 @@ body.dark-mode .project-category {
     align-items: center;
     padding: 20px;
     box-sizing: border-box;
-    cursor: none;
-    /* AJOUTÉ - Force le curseur personnalisé */
+    /* Curseur par défaut sur mobile/tablette */
 }
 
 .project-modal.active {
@@ -2882,8 +2880,7 @@ body.dark-mode .project-category {
     transition: transform 0.3s ease;
     border: 2px solid var(--border-color);
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    cursor: none;
-    /* AJOUTÉ - Force le curseur personnalisé dans la modale */
+    /* Curseur par défaut sur mobile/tablette */
 }
 
 .project-modal.active .modal-content {

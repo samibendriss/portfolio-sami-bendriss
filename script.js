@@ -55,29 +55,59 @@ document.addEventListener('DOMContentLoaded', function () {
     // Custom Cursor - UNIQUEMENT sur desktop (min-width: 1024px) avec hover
     const cursor = document.getElementById('cursor');
     const cursorFollower = document.getElementById('cursorFollower');
-    const isDesktopWithHover = window.matchMedia('(min-width: 1024px) and (hover: hover)').matches;
+    const desktopMediaQuery = window.matchMedia('(min-width: 1024px) and (hover: hover)');
 
-    if (cursor && cursorFollower && isDesktopWithHover) {
+    // Fonction pour mettre à jour la visibilité du curseur
+    function updateCursorVisibility(isDesktop) {
+        if (cursor && cursorFollower) {
+            if (isDesktop) {
+                cursor.style.display = 'block';
+                cursorFollower.style.display = 'block';
+                document.body.style.cursor = 'none';
+            } else {
+                cursor.style.display = 'none';
+                cursorFollower.style.display = 'none';
+                document.body.style.cursor = 'auto';
+            }
+        }
+    }
+
+    // Appliquer au chargement
+    updateCursorVisibility(desktopMediaQuery.matches);
+
+    // Écouter les changements de taille d'écran
+    desktopMediaQuery.addEventListener('change', (e) => {
+        updateCursorVisibility(e.matches);
+    });
+
+    if (cursor && cursorFollower) {
         document.addEventListener('mousemove', (e) => {
-            cursor.style.left = `${e.clientX}px`;
-            cursor.style.top = `${e.clientY}px`;
+            // Ne déplacer le curseur que si on est en mode desktop
+            if (desktopMediaQuery.matches) {
+                cursor.style.left = `${e.clientX}px`;
+                cursor.style.top = `${e.clientY}px`;
 
-            setTimeout(() => {
-                cursorFollower.style.left = `${e.clientX - 10}px`;
-                cursorFollower.style.top = `${e.clientY - 10}px`;
-            }, 100);
+                setTimeout(() => {
+                    cursorFollower.style.left = `${e.clientX - 10}px`;
+                    cursorFollower.style.top = `${e.clientY - 10}px`;
+                }, 100);
+            }
         });
 
         // Cursor hover effect
         const updateCursorTargets = () => {
             document.querySelectorAll('a, button, .project-card, .skill-card, .contact-item').forEach(el => {
                 el.addEventListener('mouseenter', () => {
-                    cursor.style.transform = 'scale(1.5)';
-                    cursorFollower.style.transform = 'scale(1.5)';
+                    if (desktopMediaQuery.matches) {
+                        cursor.style.transform = 'scale(1.5)';
+                        cursorFollower.style.transform = 'scale(1.5)';
+                    }
                 });
                 el.addEventListener('mouseleave', () => {
-                    cursor.style.transform = 'scale(1)';
-                    cursorFollower.style.transform = 'scale(1)';
+                    if (desktopMediaQuery.matches) {
+                        cursor.style.transform = 'scale(1)';
+                        cursorFollower.style.transform = 'scale(1)';
+                    }
                 });
             });
         };
@@ -906,9 +936,12 @@ const PROJECT_DATA = {
             un concours interne organisé par notre IUT. Notre équipe a élaboré une recommandation 
             stratégique complète pour Verifone, leader mondial des solutions de paiement électronique.
             <br><br>
-            L’objectif était de développer une stratégie de communication innovante pour renforcer 
-            la présence de Verifone sur le marché français, en mettant l’accent sur leurs nouvelles 
-            solutions de paiement sans contact, ainsi que sur leurs services pour les commerçants.`
+            Face à la montée en puissance des Fintech (Zettle, SumUp), Verifone était devenu 
+            <mark>“invisible” malgré son expertise historique</mark>. Notre mission : faire passer la marque 
+            « de l’ombre à la lumière » en réaffirmant son rôle essentiel dans l’écosystème du paiement 
+            français. Nous avons proposé un positionnement fort (« Le lien invisible qui fluidifie le 
+            parcours client »), déployé à travers un plan d’actions 360° : événement B2B immersif, présence 
+            renforcée au Paris Retail Week, refonte digitale et stratégie de relations presse ciblée.`
     },
     // 3) Pontseine - Communication politique (déplacé ici depuis la fin)
     'pontseine': {
@@ -916,6 +949,7 @@ const PROJECT_DATA = {
         time: '2 mois',
         teacher: 'Nadia HATHROUBI-SAFSAF',
         authors: ['TP1 - 3ème année, promotion 2025-2026'],
+        highlightAuthors: 'all',
         tools: ['Canva', 'Google Docs', 'Code', 'Nano Banana'],
         links: [
             {
@@ -1180,6 +1214,7 @@ const PROJECT_DATA = {
         time: '5 mois',
         teacher: 'Stan VINCENT',
         authors: ['TP3 - 1ère année, promotion 2023-2024'],
+        highlightAuthors: 'all',
         tools: ['WordPress', 'Pinterest', 'Adobe Illustrator', 'Google Docs'],
         links: [
             {
@@ -1756,13 +1791,32 @@ function populateDynamicModal(data) {
     const authorsContainer = document.getElementById('modal-dynamic-authors');
     authorsContainer.innerHTML = '';
     const authors = specificData.authors || ['Sami BENDRISS'];
+
+    // Support du mot-clé 'all' pour surligner tous les auteurs
+    let highlightAuthors = specificData.highlightAuthors || [];
+    if (highlightAuthors === 'all') {
+        highlightAuthors = authors; // Surligner tous les auteurs
+    }
+
     authors.forEach(author => {
         const authorDiv = document.createElement('div');
         authorDiv.className = 'detail-value';
 
-        // Mettre Sami BENDRISS en couleur (mais pas en gras)
+        // Vérifier si l'auteur doit être surligné avec <mark>
+        const shouldHighlightWithMark = highlightAuthors.some(
+            name => author.toUpperCase().includes(name.toUpperCase())
+        );
+
+        // Mettre Sami BENDRISS en couleur (author-highlight)
         if (author.toUpperCase().includes('SAMI BENDRISS')) {
-            authorDiv.innerHTML = `<span class="author-highlight">${author}</span>`;
+            if (shouldHighlightWithMark) {
+                authorDiv.innerHTML = `<mark><span class="author-highlight">${author}</span></mark>`;
+            } else {
+                authorDiv.innerHTML = `<span class="author-highlight">${author}</span>`;
+            }
+        } else if (shouldHighlightWithMark) {
+            // Surligner avec <mark> les autres noms spécifiés
+            authorDiv.innerHTML = `<mark>${author}</mark>`;
         } else {
             authorDiv.textContent = author;
         }
