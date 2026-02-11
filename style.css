@@ -377,7 +377,7 @@ nav.scrolled {
 }
 
 .logo-svg {
-    height: 2rem;
+    height: 2.5rem;
     /* Ajustez la taille selon vos besoins */
     width: auto;
     display: block;
@@ -419,12 +419,11 @@ nav.scrolled {
     position: relative;
 }
 
-.logo-svg-home {
+/* .logo-svg-home {
     height: 2.5rem;
-    /* Plus grand que les 2rem normaux */
     width: auto;
     display: block;
-}
+} */
 
 /* Supprimer la barre horizontale pour le logo home */
 .logo-home::after {
