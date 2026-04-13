@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Calque_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 240 158">
-  <!-- Generator: Adobe Illustrator 29.6.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 207)  -->
+<svg id="Calque_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1024 674.13">
+  <!-- Generator: Adobe Illustrator 30.2.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 1)  -->
   <defs>
     <style>
       .st0 {
@@ -28,10 +28,10 @@
       }
     </style>
   </defs>
-  <polygon class="st4" points="0 121 0 120 36.64 84.07 72.93 119.64 37.36 156.93 0 121"/>
-  <polygon class="st1" points="240 120 240 121 204 158 202 158 167.02 120.5 201.47 84.94 203.99 84.44 240 120"/>
-  <polygon class="st5" points="121 0 155.93 37.36 119.64 72.93 84.07 37.36 119 0 121 0"/>
-  <polygon class="st0" points="119.64 84.07 156.04 120.5 120.36 156.93 83.96 120.5 119.64 84.07"/>
-  <polygon class="st3" points="78.5 42.02 114.04 78.5 77.64 114.93 42.07 78.64 78.5 42.02"/>
-  <polygon class="st2" points="161.5 42.02 197.93 78.64 162.36 114.93 125.96 78.5 161.5 42.02"/>
+  <polygon class="st4" points="0 516.27 0 512 156.33 358.7 311.17 510.46 159.4 669.57 0 516.27"/>
+  <polygon class="st1" points="1024 512 1024 516.27 870.4 674.13 861.87 674.13 712.62 514.13 859.61 362.41 870.36 360.28 1024 512"/>
+  <polygon class="st5" points="516.27 0 665.3 159.4 510.46 311.17 358.7 159.4 507.73 0 516.27 0"/>
+  <polygon class="st0" points="510.46 358.7 665.77 514.13 513.54 669.57 358.23 514.13 510.46 358.7"/>
+  <polygon class="st3" points="334.93 179.29 486.57 334.93 331.26 490.37 179.5 335.53 334.93 179.29"/>
+  <polygon class="st2" points="689.07 179.29 844.5 335.53 692.74 490.37 537.43 334.93 689.07 179.29"/>
 </svg>

@@ -1,13 +1,22 @@
-<svg
-   xmlns="http://www.w3.org/2000/svg"
-   viewBox="0 0 64 88">
-  <path
-     d="M 42,0 64,22 53,24 42,22 40,11 Z"
-     fill="#188038" />
-  <path
-     d="M 42,22 V 0 H 6 C 2.685,0 0,2.685 0,6 v 76 c 0,3.315 2.685,6 6,6 h 52 c 3.315,0 6,-2.685 6,-6 V 22 Z"
-     fill="#34a853" />
-  <path
-     d="M 12,34 V 63 H 52 V 34 Z M 29.5,58 H 17 v -7 h 12.5 z m 0,-12 H 17 V 39 H 29.5 Z M 47,58 H 34.5 V 51 H 47 Z M 47,46 H 34.5 V 39 H 47 Z"
-     fill="#fff" />
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 744.73 1024">
+  <!-- Generator: Adobe Illustrator 30.2.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 1)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #34a853;
+      }
+
+      .st1 {
+        fill: #fff;
+      }
+
+      .st2 {
+        fill: #188038;
+      }
+    </style>
+  </defs>
+  <path class="st2" d="M488.73,0l256,256-128,23.27-128-23.27-23.27-128L488.73,0Z"/>
+  <path class="st0" d="M488.73,256V0H69.82C31.24,0,0,31.24,0,69.82v884.36c0,38.57,31.24,69.82,69.82,69.82h605.09c38.57,0,69.82-31.24,69.82-69.82V256h-256Z"/>
+  <path class="st1" d="M139.64,395.64v337.45h465.45v-337.45H139.64ZM343.27,674.91h-145.45v-81.45h145.45v81.45ZM343.27,535.27h-145.45v-81.45h145.45v81.45ZM546.91,674.91h-145.45v-81.45h145.45v81.45ZM546.91,535.27h-145.45v-81.45h145.45v81.45Z"/>
 </svg>

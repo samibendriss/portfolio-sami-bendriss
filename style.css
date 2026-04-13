@@ -60,6 +60,11 @@ html {
     --cat-strategies-soft: rgba(124, 58, 237, 0.15);
     --cat-creations-soft: rgba(234, 88, 11, 0.15);
     --cat-analyses-soft: rgba(12, 148, 136, 0.15);
+    
+    /* Couleurs des Étoiles et Bagde */
+    --star-fill: #FFFAB6;
+    --star-stroke: #FBC821;
+    --badge-learning-text: #1E1E1E;
 }
 
 .spacer {
@@ -1225,14 +1230,17 @@ body.dark-mode .softwares-section {
 
 /* CSS pour la classe ajoutée par JavaScript */
 .software-name-adobe,
-.software-name-google {
+.software-name-google,
+.software-name-llm {
     font-size: 1.0rem !important;
     /* Réduit de 1.2rem à 1.0rem */
 }
 
 /* Garder la taille normale sur mobile et tablette */
 @media (max-width: 909px) {
-    .software-name-adobe {
+    .software-name-adobe,
+    .software-name-google,
+    .software-name-llm {
         font-size: 1.2rem !important;
         /* Remet la taille normale sur mobile */
     }
@@ -1297,27 +1305,38 @@ body.dark-mode .softwares-section {
 .star {
     width: 20px;
     height: 20px;
-    color: #FFFAB6;
+    color: var(--star-fill);
     /* Jaune blanc (émoji iOS) */
-    stroke: #FBC821;
+    stroke: var(--star-stroke);
     /* Jaune orangé (contour émoji iOS) */
     stroke-width: 1.5;
 }
 
 .star.half {
-    color: #FFFAB6;
+    color: var(--star-fill);
     /* Jaune blanc (émoji iOS) */
-    stroke: #FBC821;
+    stroke: var(--star-stroke);
     /* Jaune orangé (contour émoji iOS) */
     position: relative;
 }
 
 .star.empty {
-    opacity: 0.3;
     fill: none;
-    stroke: #FBC821;
+    stroke: var(--star-stroke);
     /* Jaune orangé (plus proche de l'émoji iOS) */
     stroke-width: 2;
+}
+
+.badge-learning {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    background: var(--star-fill);
+    color: var(--badge-learning-text);
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1.5px solid var(--star-stroke);
+    letter-spacing: 0.5px;
 }
 
 .software-description {
@@ -1708,6 +1727,13 @@ body.dark-mode .timeline::before {
     height: 85% !important;
     margin: auto;
     /* Centre le logo dans son conteneur */
+}
+
+.logo-full.logo-reduced-80 {
+    width: 80% !important;
+    height: 80% !important;
+    margin: auto;
+    object-fit: contain !important;
 }
 
 /* Logo full mais réduit (HORIZONTALEMENT) */
@@ -3728,6 +3754,17 @@ body.dark-mode .tool-item:hover {
 .modal-link-large.modal-link-adobexd:hover {
     background: #E656DE;
     box-shadow: 0 8px 25px rgba(230, 86, 222, 0.4);
+}
+
+/* Style pour les liens Figma */
+.modal-link-large.modal-link-figma {
+    background: #4E49FC;
+    box-shadow: 0 4px 15px rgba(78, 73, 252, 0.3);
+}
+
+.modal-link-large.modal-link-figma:hover {
+    background: #3D38D9;
+    box-shadow: 0 8px 25px rgba(61, 56, 217, 0.4);
 }
 
 .modal-link-large svg {

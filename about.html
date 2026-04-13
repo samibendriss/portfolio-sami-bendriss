@@ -10,11 +10,15 @@
     <!-- Ajoutez cette ligne pour ForkAwesome -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
 
+    <!-- Umami Analytics -->
+    <script defer src="https://cloud.umami.is/script.js"
+        data-website-id="71db388e-5b6b-4294-be55-52288b6d0a24"></script>
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
         gtag('config', 'G-NK5YG9SRTD');
@@ -87,8 +91,9 @@
                         afin d’affiner mes compétences en communication et en vente.
                     </p>
                     <p>
-                        Je suis actuellement à la recherche d’un <b><mark>stage</mark></b> de minimum <b><mark>3 mois et demi</mark></b> pour
-                        <b><mark>mars 2026</mark></b> : il s’agit d’une
+                        Je suis actuellement à la recherche d’une <b><mark>alternance</mark></b> de <b><mark>12
+                                mois</mark></b> pour
+                        <b><mark>septembre 2026</mark></b> en vue d’un futur master : il s’agit d’une
                         opportunité rêvée pour mettre mes services à disposition d’une <b><span
                                 style="color: var(--primary);">organisation dynamique</span></b>, où je serais prêt
                         à relever de nouveaux défis.
@@ -160,7 +165,7 @@
                         </div>
                     </div>
 
-                    <!-- 5) Social media -->
+                    <!-- 5) Réseaux sociaux -->
                     <div class="software-card skill-card">
                         <div class="skill-icon">
                             <!-- Partage -->
@@ -172,7 +177,7 @@
                             </svg>
                         </div>
                         <div class="skill-content">
-                            <h3 class="skill-name">Social media</h3>
+                            <h3 class="skill-name">Réseaux sociaux</h3>
                             <p class="software-description">Stratégie, community management, analyse de la performance
                             </p>
                         </div>
@@ -199,7 +204,7 @@
                     <!-- 6) Marketing Webmarketing -->
                     <div class="software-card skill-card">
                         <div class="skill-icon">
-                            <!-- Mégaphone -->
+                            <!-- Graphique -->
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round" data-lucide="bar-chart-3"
                                 class="lucide lucide-bar-chart-3 w-5 h-5">
@@ -254,6 +259,32 @@
 
             <section class="softwares-section">
                 <h2 class="section-title">Mes logiciels</h2>
+                <svg width="0" height="0" class="hidden-svgs"
+                    style="position: absolute; width: 0; height: 0; overflow: hidden;" aria-hidden="true">
+                    <defs>
+                        <symbol id="icon-star-full" viewBox="0 0 24 24">
+                            <path stroke="var(--star-stroke)" stroke-width="1.5" fill="var(--star-fill)"
+                                stroke-linejoin="round"
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </symbol>
+                        <symbol id="icon-star-half" viewBox="0 0 24 24">
+                            <clipPath id="half-clip">
+                                <rect x="0" y="0" width="12" height="24" />
+                            </clipPath>
+                            <path stroke="var(--star-stroke)" stroke-width="2" fill="none" opacity="0.3"
+                                stroke-linejoin="round"
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            <path stroke="var(--star-stroke)" stroke-width="1.5" fill="var(--star-fill)"
+                                clip-path="url(#half-clip)" stroke-linejoin="round"
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </symbol>
+                        <symbol id="icon-star-empty" viewBox="0 0 24 24">
+                            <path stroke="var(--star-stroke)" stroke-width="2" fill="none" opacity="0.3"
+                                stroke-linejoin="round"
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </symbol>
+                    </defs>
+                </svg>
                 <div class="softwares-grid">
                     <!-- Google Workspace - 4.5/5 étoiles -->
                     <div class="software-card" style="--index: 0">
@@ -264,37 +295,21 @@
                             <h3 class="software-name software-name-google">Google Workspace</h3>
                             <div class="software-level">
                                 <!-- 4 étoiles pleines -->
-                                <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                <svg class="star">
+                                    <use href="#icon-star-full"></use>
                                 </svg>
-                                <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                <svg class="star">
+                                    <use href="#icon-star-full"></use>
                                 </svg>
-                                <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                <svg class="star">
+                                    <use href="#icon-star-full"></use>
                                 </svg>
-                                <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                <svg class="star">
+                                    <use href="#icon-star-full"></use>
                                 </svg>
                                 <!-- Demi-étoile -->
-                                <svg class="star half" width="16" height="16" viewBox="0 0 24 24">
-                                    <defs>
-                                        <clipPath id="half-star-clip">
-                                            <rect x="0" y="0" width="12" height="24" />
-                                        </clipPath>
-                                    </defs>
-                                    <!-- Contour de l'étoile -->
-                                    <path
-                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                                        fill="none" stroke="#FBC821" stroke-width="2" opacity="0.3" />
-                                    <!-- Moitié remplie -->
-                                    <path
-                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                                        fill="currentColor" clip-path="url(#half-star-clip)" />
+                                <svg class="star half">
+                                    <use href="#icon-star-half"></use>
                                 </svg>
                             </div>
                             <p class="software-description">Docs, Slides, Sheets, Forms</p>
@@ -310,37 +325,21 @@
                             <h3 class="software-name">Pack Office</h3>
                             <div class="software-level">
                                 <!-- 4 étoiles pleines -->
-                                <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                <svg class="star">
+                                    <use href="#icon-star-full"></use>
                                 </svg>
-                                <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                <svg class="star">
+                                    <use href="#icon-star-full"></use>
                                 </svg>
-                                <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                <svg class="star">
+                                    <use href="#icon-star-full"></use>
                                 </svg>
-                                <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                <svg class="star">
+                                    <use href="#icon-star-full"></use>
                                 </svg>
                                 <!-- Demi-étoile -->
-                                <svg class="star half" width="16" height="16" viewBox="0 0 24 24">
-                                    <defs>
-                                        <clipPath id="half-star-clip">
-                                            <rect x="0" y="0" width="12" height="24" />
-                                        </clipPath>
-                                    </defs>
-                                    <!-- Contour de l'étoile -->
-                                    <path
-                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                                        fill="none" stroke="#FBC821" stroke-width="2" opacity="0.3" />
-                                    <!-- Moitié remplie -->
-                                    <path
-                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                                        fill="currentColor" clip-path="url(#half-star-clip)" />
+                                <svg class="star half">
+                                    <use href="#icon-star-half"></use>
                                 </svg>
                             </div>
                             <p class="software-description">Word, PowerPoint, Excel</p>
@@ -355,163 +354,146 @@
                         <div class="software-content">
                             <h3 class="software-name">Canva</h3>
                             <div class="software-level">
-                                <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                <svg class="star">
+                                    <use href="#icon-star-full"></use>
                                 </svg>
-                                <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                <svg class="star">
+                                    <use href="#icon-star-full"></use>
                                 </svg>
-                                <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                <svg class="star">
+                                    <use href="#icon-star-full"></use>
                                 </svg>
-                                <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                <svg class="star">
+                                    <use href="#icon-star-full"></use>
                                 </svg>
-                                <svg class="star empty" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2">
-                                    <path
-                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                <svg class="star empty">
+                                    <use href="#icon-star-empty"></use>
                                 </svg>
                             </div>
                             <p class="software-description">Création de visuels</p>
                         </div>
                     </div>
 
-                    <!-- Montage vidéo - 3/5 étoiles -->
+                    <!-- Réseaux sociaux - 3.5/5 étoiles -->
                     <div class="software-card" style="--index: 3">
                         <div class="software-logo">
-                            <img src="icones/premiere-pro.svg" alt="Montage vidéo" class="logo-full">
+                            <img src="icones/wechat.svg" alt="Réseaux sociaux" class="logo-full">
+                        </div>
+                        <div class="software-content">
+                            <h3 class="software-name">Réseaux sociaux</h3>
+                            <div class="software-level">
+                                <svg class="star">
+                                    <use href="#icon-star-full"></use>
+                                </svg>
+                                <svg class="star">
+                                    <use href="#icon-star-full"></use>
+                                </svg>
+                                <svg class="star">
+                                    <use href="#icon-star-full"></use>
+                                </svg>
+                                <!-- Demi-étoile -->
+                                <svg class="star half">
+                                    <use href="#icon-star-half"></use>
+                                </svg>
+                                <svg class="star empty">
+                                    <use href="#icon-star-empty"></use>
+                                </svg>
+                            </div>
+                            <p class="software-description">LinkedIn, Instagram, TikTok, YouTube, etc.</p>
+                        </div>
+                    </div>
+
+                    <!-- IA génératives - 3.5/5 étoiles -->
+                    <div class="software-card" style="--index: 3">
+                        <div class="software-logo">
+                            <!-- <img src="icones/claude.svg" alt="Claude"> -->
+                            <img src="icones/claude-alternate.svg" alt="Claude" class="logo-full">
+                        </div>
+                        <div class="software-content">
+                            <h3 class="software-name software-name-llm">LLM (IA génératives)</h3>
+                            <div class="software-level">
+                                <svg class="star">
+                                    <use href="#icon-star-full"></use>
+                                </svg>
+                                <svg class="star">
+                                    <use href="#icon-star-full"></use>
+                                </svg>
+                                <svg class="star">
+                                    <use href="#icon-star-full"></use>
+                                </svg>
+                                <!-- Demi-étoile -->
+                                <svg class="star half">
+                                    <use href="#icon-star-half"></use>
+                                </svg>
+                                <svg class="star empty">
+                                    <use href="#icon-star-empty"></use>
+                                </svg>
+                            </div>
+                            <p class="software-description">Claude, ChatGPT, Gemini</p>
+                        </div>
+                    </div>
+
+                    <!-- Outils en vrac à rajouter = Trello, Meta Business, Mailchimp / Brevo, Asana, Google Analytics, Google Ads, Figma, Feedly, Hootsuite -->
+
+                    <!-- Montage vidéo - 3/5 étoiles -->
+                    <div class="software-card" style="--index: 4">
+                        <div class="software-logo">
+                            <img src="icones/adobe-premiere-pro.svg" alt="Montage vidéo" class="logo-full">
                         </div>
                         <div class="software-content">
                             <h3 class="software-name">Montage vidéo</h3>
                             <div class="software-level">
-                                <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                <svg class="star">
+                                    <use href="#icon-star-full"></use>
                                 </svg>
-                                <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                <svg class="star">
+                                    <use href="#icon-star-full"></use>
                                 </svg>
-                                <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                <svg class="star">
+                                    <use href="#icon-star-full"></use>
                                 </svg>
-                                <svg class="star empty" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2">
-                                    <path
-                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                <svg class="star empty">
+                                    <use href="#icon-star-empty"></use>
                                 </svg>
-                                <svg class="star empty" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2">
-                                    <path
-                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                <svg class="star empty">
+                                    <use href="#icon-star-empty"></use>
                                 </svg>
                             </div>
-                            <p class="software-description">Adobe Premiere Pro, CapCut</p>
+                            <p class="software-description">Adobe Premiere Pro, PlayPlay, CapCut</p>
                         </div>
                     </div>
 
                     <!-- Adobe Creative Suite - 2.5/5 étoiles -->
-                    <div class="software-card" style="--index: 4">
+                    <div class="software-card" style="--index: 5">
                         <div class="software-logo">
-                            <img src="icones/adobe.png" alt="Adobe Creative Suite">
+                            <img src="icones/adobe.svg" alt="Adobe Creative Suite">
                         </div>
                         <div class="software-content">
                             <h3 class="software-name software-name-adobe">Adobe Creative Suite</h3>
                             <div class="software-level">
-                                <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                <svg class="star">
+                                    <use href="#icon-star-full"></use>
                                 </svg>
-                                <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                <svg class="star">
+                                    <use href="#icon-star-full"></use>
                                 </svg>
                                 <!-- Demi-étoile -->
-                                <svg class="star half" width="16" height="16" viewBox="0 0 24 24">
-                                    <defs>
-                                        <clipPath id="half-star-clip">
-                                            <rect x="0" y="0" width="12" height="24" />
-                                        </clipPath>
-                                    </defs>
-                                    <!-- Contour de l'étoile -->
-                                    <path
-                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                                        fill="none" stroke="#FBC821" stroke-width="2" opacity="0.3" />
-                                    <!-- Moitié remplie -->
-                                    <path
-                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                                        fill="currentColor" clip-path="url(#half-star-clip)" />
+                                <svg class="star half">
+                                    <use href="#icon-star-half"></use>
                                 </svg>
-                                <svg class="star empty" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2">
-                                    <path
-                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                <svg class="star empty">
+                                    <use href="#icon-star-empty"></use>
                                 </svg>
-                                <svg class="star empty" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2">
-                                    <path
-                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                <svg class="star empty">
+                                    <use href="#icon-star-empty"></use>
                                 </svg>
                             </div>
-                            <p class="software-description">Photoshop, Illustrator, InDesign, XD</p>
+                            <p class="software-description">Illustrator, InDesign, Photoshop, XD</p>
                         </div>
                     </div>
 
-                    <!-- WordPress - 2.5/5 étoiles -->
-                    <div class="software-card" style="--index: 3">
-                        <div class="software-logo">
-                            <img src="icones/wordpress.svg" alt="Montage vidéo">
-                        </div>
-                        <div class="software-content">
-                            <h3 class="software-name">WordPress</h3>
-                            <div class="software-level">
-                                <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                                </svg>
-                                <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                                </svg>
-                                <!-- Demi-étoile -->
-                                <svg class="star half" width="16" height="16" viewBox="0 0 24 24">
-                                    <defs>
-                                        <clipPath id="half-star-clip">
-                                            <rect x="0" y="0" width="12" height="24" />
-                                        </clipPath>
-                                    </defs>
-                                    <!-- Contour de l'étoile -->
-                                    <path
-                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                                        fill="none" stroke="#FBC821" stroke-width="2" opacity="0.3" />
-                                    <!-- Moitié remplie -->
-                                    <path
-                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                                        fill="currentColor" clip-path="url(#half-star-clip)" />
-                                </svg>
-                                <svg class="star empty" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2">
-                                    <path
-                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                                </svg>
-                                <svg class="star empty" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2">
-                                    <path
-                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                                </svg>
-                            </div>
-                            <p class="software-description">Éditions de sites Internet</p>
-                        </div>
-                    </div>
-
-                    <!-- HTML - 1.5/5 étoiles -->
-                    <div class="software-card software-card-wide" style="--index: 4">
+                    <!-- Codage - 2.5/5 étoiles -->
+                    <div class="software-card" style="--index: 6">
                         <div class="software-logo">
                             <img src="logos/HTML-white.svg" alt="Codage" class="logo-invert logo-light">
                             <img src="logos/HTML-dark.svg" alt="Codage" class="logo-invert logo-dark">
@@ -519,47 +501,169 @@
                         <div class="software-content">
                             <h3 class="software-name">Codage</h3>
                             <div class="software-level">
-                                <svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                <svg class="star">
+                                    <use href="#icon-star-full"></use>
+                                </svg>
+                                <svg class="star">
+                                    <use href="#icon-star-full"></use>
                                 </svg>
                                 <!-- Demi-étoile -->
-                                <svg class="star half" width="16" height="16" viewBox="0 0 24 24">
-                                    <defs>
-                                        <clipPath id="half-star-clip">
-                                            <rect x="0" y="0" width="12" height="24" />
-                                        </clipPath>
-                                    </defs>
-                                    <!-- Contour de l'étoile -->
-                                    <path
-                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                                        fill="none" stroke="#FBC821" stroke-width="2" opacity="0.3" />
-                                    <!-- Moitié remplie -->
-                                    <path
-                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                                        fill="currentColor" clip-path="url(#half-star-clip)" />
+                                <svg class="star half">
+                                    <use href="#icon-star-half"></use>
                                 </svg>
-                                <svg class="star empty" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2">
-                                    <path
-                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                <svg class="star empty">
+                                    <use href="#icon-star-empty"></use>
                                 </svg>
-                                <svg class="star empty" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2">
-                                    <path
-                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                                </svg>
-                                <svg class="star empty" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2">
-                                    <path
-                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                <svg class="star empty">
+                                    <use href="#icon-star-empty"></use>
                                 </svg>
                             </div>
-                            <p class="software-description">HTML 5, CSS 3, JavaScript, quelques notions de Python</p>
-                            <p class="fun-fact">→ Fun fact : ce site a entièrement été codé en HTML/CSS/JS (à l'aide de
-                                l’IA)</p>
+                            <p class="software-description">Vibecoding IA (HTML, CSS, JavaScript)</p>
                         </div>
                     </div>
+
+                    <!-- WordPress - 2.5/5 étoiles -->
+                    <div class="software-card" style="--index: 7">
+                        <div class="software-logo">
+                            <img src="icones/wordpress.svg" alt="Montage vidéo">
+                        </div>
+                        <div class="software-content">
+                            <h3 class="software-name">WordPress</h3>
+                            <div class="software-level">
+                                <svg class="star">
+                                    <use href="#icon-star-full"></use>
+                                </svg>
+                                <svg class="star">
+                                    <use href="#icon-star-full"></use>
+                                </svg>
+                                <!-- Demi-étoile -->
+                                <svg class="star half">
+                                    <use href="#icon-star-half"></use>
+                                </svg>
+                                <svg class="star empty">
+                                    <use href="#icon-star-empty"></use>
+                                </svg>
+                                <svg class="star empty">
+                                    <use href="#icon-star-empty"></use>
+                                </svg>
+                            </div>
+                            <p class="software-description">Éditions de sites Internet</p>
+                        </div>
+                    </div>
+
+                    <!-- Figma - 2/5 étoiles -->
+                    <div class="software-card" style="--index: 8">
+                        <div class="software-logo">
+                            <img src="icones/figma.svg" alt="Figma">
+                        </div>
+                        <div class="software-content">
+                            <h3 class="software-name">Figma</h3>
+                            <div class="software-level">
+                                <svg class="star">
+                                    <use href="#icon-star-full"></use>
+                                </svg>
+                                <svg class="star">
+                                    <use href="#icon-star-full"></use>
+                                </svg>
+                                <svg class="star empty">
+                                    <use href="#icon-star-empty"></use>
+                                </svg>
+                                <svg class="star empty">
+                                    <use href="#icon-star-empty"></use>
+                                </svg>
+                                <svg class="star empty">
+                                    <use href="#icon-star-empty"></use>
+                                </svg>
+                            </div>
+                            <p class="software-description">Maquettes & Prototypes</p>
+                        </div>
+                    </div>
+
+                    <!-- Google Analytics - En apprentissage -->
+                    <div class="software-card" style="--index: 9">
+                        <div class="software-logo">
+                            <img src="icones/google-analytics.svg" alt="Google Analytics">
+                        </div>
+                        <div class="software-content">
+                            <h3 class="software-name">Google Analytics</h3>
+                            <div class="software-level">
+                                <span class="badge-learning">EN APPRENTISSAGE</span>
+                            </div>
+                            <p class="software-description">Analyse d’audience Web</p>
+                        </div>
+                    </div>
+
+                    <!-- Google Search Console - En apprentissage -->
+                    <div class="software-card" style="--index: 10">
+                        <div class="software-logo">
+                            <img src="icones/google-search-console.svg" alt="Google Search Console">
+                        </div>
+                        <div class="software-content">
+                            <h3 class="software-name">Google Search Console</h3>
+                            <div class="software-level">
+                                <span class="badge-learning">EN APPRENTISSAGE</span>
+                            </div>
+                            <p class="software-description">Suivi des performances SEO</p>
+                        </div>
+                    </div>
+
+                    <!-- N8N - En apprentissage -->
+                    <div class="software-card" style="--index: 11">
+                        <div class="software-logo">
+                            <img src="icones/n8n.svg" alt="N8N">
+                            <!-- <img src="icones/n8n-alternate.svg" alt="N8N" class="logo-full"> -->
+                        </div>
+                        <div class="software-content">
+                            <h3 class="software-name">N8N</h3>
+                            <div class="software-level">
+                                <span class="badge-learning">EN APPRENTISSAGE</span>
+                            </div>
+                            <p class="software-description">Automatisation de workflows</p>
+                        </div>
+                    </div>
+
+                    <!-- HubSpot - En apprentissage -->
+                    <div class="software-card" style="--index: 12">
+                        <div class="software-logo">
+                            <img src="icones/hubspot.svg" alt="HubSpot" class="logo-full">
+                        </div>
+                        <div class="software-content">
+                            <h3 class="software-name">HubSpot</h3>
+                            <div class="software-level">
+                                <span class="badge-learning">EN APPRENTISSAGE</span>
+                            </div>
+                            <p class="software-description">CRM & Inbound Marketing</p>
+                        </div>
+                    </div>
+
+                    <!-- Brevo - En apprentissage -->
+                    <!-- <div class="software-card" style="--index: 13">
+                        <div class="software-logo">
+                            <img src="icones/brevo.svg" alt="Brevo" class="logo-full">
+                        </div>
+                        <div class="software-content">
+                            <h3 class="software-name">Brevo</h3>
+                            <div class="software-level">
+                                <span class="badge-learning">EN APPRENTISSAGE</span>
+                            </div>
+                            <p class="software-description">Gestion de newsletters</p>
+                        </div>
+                    </div> -->
+
+                    <!-- Swello - En apprentissage -->
+                    <!-- <div class="software-card" style="--index: 14">
+                        <div class="software-logo">
+                            <img src="icones/swello.svg" alt="Swello" class="logo-full">
+                        </div>
+                        <div class="software-content">
+                            <h3 class="software-name">Swello</h3>
+                            <div class="software-level">
+                                <span class="badge-learning">EN APPRENTISSAGE</span>
+                            </div>
+                            <p class="software-description">Gestion des réseaux sociaux</p>
+                        </div>
+                    </div> -->
+
                 </div>
 
                 <div class="languages-section">
@@ -621,12 +725,12 @@
                             <p class="interest-description">Intelligences artificielles & Informatique</p>
                         </div>
 
-                        <!-- Transports en communs -->
+                        <!-- Transports en commun -->
                         <div class="interest-item" style="--index: 1">
                             <div class="interest-icon">
                                 <img src="vecteurs/transports.svg" alt="Sport" class="interest-svg">
                             </div>
-                            <h3 class="interest-name">Transports en communs</h3>
+                            <h3 class="interest-name">Transports en commun</h3>
                             <p class="interest-description">En Île-de-France surtout !</p>
                         </div>
 

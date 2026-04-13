@@ -863,7 +863,7 @@ const TOOL_LOGOS = {
     'Figma': 'tool-logos/figma.svg',
     'Nano Banana': 'tool-logos/gemini.svg',
     'Google Veo 3': 'tool-logos/gemini.svg',
-    'Code': 'tool-logos/claude.png',
+    'Code': 'tool-logos/claude.svg',
 };
 
 // Base de données des informations spécifiques par projet
@@ -1025,6 +1025,34 @@ const PROJECT_DATA = {
             La recommandation intègre diagnostic de marque, étude concurrentielle, définition du territoire de
             communication, plateforme de marque et déclinaison opérationnelle des actions à mettre en œuvre pour
             renforcer la présence et la cohérence de KREDEN sur son marché.`
+    },
+    // 6) Maison Francis Kurkdjian - Communication 360°
+    'atable': {
+        date: 'Février - Mars 2026',
+        time: '1 mois',
+        teacher: 'Marc BOURGOIS',
+        authors: ['Sami BENDRISS', 'Imen TAMOUNEIT', 'Diya BHAVSAR', 'Céline SALLOUM', 'Naïma ALI SAÏD'],
+        tools: ['Canva', 'Google Docs', 'Figma'],
+        links: [
+            {
+                href: 'devoirs/Atable-Entrepreneuriat.pdf',
+                text: 'Voir la présentation',
+                icon: 'document'
+            },
+            {
+                href: 'https://www.figma.com/proto/9m0rCsrBb6XFe397uYQ2UH?node-id=4-26&locale=en',
+                text: 'Voir le prototype Figma',
+                icon: 'external'
+            }
+        ],
+        description: `Projet de création d’entreprise autour d’<mark>ATABLE !</mark>, une application mobile qui permet de trouver 
+            un restaurant adapté à son régime alimentaire (halal, végan, végétarien, sans gluten…) grâce à un système 
+            de <mark>filtres croisés inédit en France</mark>. Le constat de départ : plus de 20 millions de Français 
+            ont au moins une contrainte alimentaire, mais aucune solution existante ne permet de croiser ces besoins.
+            <br><br>
+            Le projet développe l’ensemble de la démarche entrepreneuriale, de l’étude de marché au business plan, 
+            en passant par la stratégie de communication et la réalisation d'un mini-prototype d’application sur Figma. 
+            Notre signature de marque : <mark>« 30 secondes pour mettre tout le monde d’accord. »</mark>`
     },
     // 6) Maison Francis Kurkdjian - Communication 360°
     'maison-francis-kurkdjian': {
@@ -1886,6 +1914,8 @@ function populateDynamicModal(data) {
                 linkClass += ' modal-link-youtube';
             } else if (href.includes('xd.adobe.com')) {
                 linkClass += ' modal-link-adobexd';
+            } else if (href.includes('figma.com')) {
+                linkClass += ' modal-link-figma';
             } else {
                 linkClass += ' modal-link-external';
             }
