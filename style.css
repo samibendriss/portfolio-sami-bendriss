@@ -2118,26 +2118,22 @@ body.dark-mode .timeline-right .date-badge {
     margin-left: auto;
 }
 
-/* === TEMPORARY OVERRIDE — date-badge = couleurs des boutons "Voir la présentation" ===
-   Bouton modal (.project-link) => background: rgb(0,160,100); color: #fff
-   On applique la même teinte :
-   - Texte du badge  : rgb(0,160,100)
-   - Fond du badge   : rgba(0,160,100,0.15) (clair) / 0.22 (sombre)
-   Pour revenir à l’ancien système (rouge/bleu, exception Bac+3, etc.),
-   commente ou supprime ce bloc. Les anciennes règles restent intactes plus haut. */
+/* === OVERRIDE — date-badge = fond vert plein, texte blanc ===
+   Couleurs inversées : fond vert rgb(0,160,100), texte blanc #fff */
 
 .timeline-content .timeline-date .date-badge,
 .timeline-content .timeline-date .date-badge.date-level {
-    color: rgb(0, 160, 100) !important;
-    background: rgba(0, 160, 100, 0.15) !important;
+    color: #FFFFFF !important;
+    background: rgb(0, 160, 100) !important;
 }
 
 body.dark-mode .timeline-content .timeline-date .date-badge,
 body.dark-mode .timeline-content .timeline-date .date-badge.date-level {
-    background: rgba(0, 160, 100, 0.22) !important;
+    color: #FFFFFF !important;
+    background: rgb(0, 160, 100) !important;
 }
 
-/* === /TEMPORARY OVERRIDE === */
+/* === /OVERRIDE === */
 
 /* Responsive */
 
@@ -3300,7 +3296,77 @@ body.dark-mode .modal-tool-tag:hover {
     transform: translate(-50%, -50%) scale(1.02);
 }
 
+/* === RESPONSIVE — Titres, compétences, logiciels, œil === */
 
+/* Tablette */
+@media (max-width: 1024px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .project-card[data-has-modal="true"] .project-image::before {
+        font-size: 5rem;
+    }
+
+    .project-card[data-has-modal="true"] .project-content::before {
+        font-size: 2rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .skill-name {
+        font-size: 1.05rem;
+    }
+
+    .software-name {
+        font-size: 1.05rem;
+    }
+
+    .project-card[data-has-modal="true"] .project-image::before {
+        font-size: 4rem;
+    }
+
+    .project-card[data-has-modal="true"] .project-content::before {
+        font-size: 1.5rem;
+        top: -80px;
+    }
+}
+
+/* Petit mobile */
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+
+    .skill-name {
+        font-size: 0.95rem;
+    }
+
+    .software-name {
+        font-size: 0.95rem;
+    }
+
+    .software-description {
+        font-size: 0.8rem;
+    }
+
+    .project-card[data-has-modal="true"] .project-image::before {
+        font-size: 3rem;
+    }
+
+    .project-card[data-has-modal="true"] .project-content::before {
+        font-size: 1.1rem;
+        top: -65px;
+    }
+}
+
+/* === /RESPONSIVE === */
 
 /* Styles pour la liste des valeurs multiples */
 .detail-value-list {
